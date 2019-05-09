@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="sr">
+<head>
+	<title>Panacea 2.0</title>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	<div class="full-height">
+		<div class="container cnt-2">
+			<h5>Please input the 4 digit code sent to your phone number</h5>
+			<!-- ajax needed to launch modal -->
+			<!-- <form> -->
+			  <div class="form-group">
+			    <input type="text" class="form-control" placeholder="Code">
+			  </div>
+			  <button type="submit" class="btn btn-default" data-toggle="modal" data-target="#error-modal" >Submit</button>
+			<!-- </form> -->
+		</div>
+		<div class="modal fade" id="error-modal" tabindex="-1" role="dialog" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" role="document">
+		    <div class="modal-content">
+		      <div class="modal-body">
+		        An error message.
+		      </div>
+		    </div>
+		  </div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
