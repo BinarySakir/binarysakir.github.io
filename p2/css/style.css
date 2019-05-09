@@ -42,7 +42,7 @@ html, body{
 	padding: 10px 30px;
 	font-size: 22px;
 	border: 0px;
-	border-radius: 6px;
+	border-radius: .25rem;
 }
 .link-und, .link-und:hover, .link-und:active{
 	color: #fff;

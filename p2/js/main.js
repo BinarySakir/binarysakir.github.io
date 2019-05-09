@@ -9,3 +9,10 @@
 // 	opactiy: 1,
 // 	easing: 'ease',
 // 	interval: 150 });
+$(document).ready(function() {
+	ScrollReveal().reveal('.load-hidden', {
+	distance: '20px',
+	easing: 'ease',
+	delay: 0,
+	interval: 150 });
+})
