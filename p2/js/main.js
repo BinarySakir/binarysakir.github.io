@@ -10,9 +10,13 @@
 // 	easing: 'ease',
 // 	interval: 150 });
 $(document).ready(function() {
-	ScrollReveal().reveal('.load-hidden', {
-	distance: '20px',
-	easing: 'ease',
-	delay: 0,
-	interval: 150 });
+	$('.container').css({
+	    'position' : 'absolute',
+	    'left' : '50%',
+	    'top' : '50%',
+	    'margin-left' : -$('.container').outerWidth()/2,
+	    'margin-top' : -$('.container').outerHeight()/2
+	});
+	window.sr = new ScrollReveal();
+	sr.reveal('.load-hidden', { origin: 'left', interval: 150, distance: '20px' });
 })

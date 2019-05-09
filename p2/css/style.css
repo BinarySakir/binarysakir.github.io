@@ -1,17 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow:400,700');
 html, body{
 	font-family: 'Barlow', 'Arial', 'Helvetica', sans-serif;
-	height: 100%;
+	/*height: 100%;*/
 	margin: 0;
 	padding: 0;
 	background-color: #c644fc;
 }
-.load-hidden{
-	/*visibility: hidden;*/
-}
 .full-height{
-	height: 100%;
-	position: relative;
+	/*height: 100%;*/
+	/*position: relative;*/
 	background-color: #c644fc;
 	background: -webkit-linear-gradient(to bottom, #c644fc , #5856d6);
 	background: linear-gradient(to bottom, #c644fc , #5856d6);
@@ -20,12 +17,11 @@ html, body{
 	background-position: center bottom;
 	background-attachment: fixed;
 }
+.load-hidden{
+	visibility: hidden;
+}
 .container{
 	color: #ffffff;
-	position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 100%;
 }
 .cnt-1{
