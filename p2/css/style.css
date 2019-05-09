@@ -4,7 +4,7 @@ html, body{
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	background-color: #FF5E3A;
+	background-color: #c644fc;
 }
 .load-hidden{
 	/*visibility: hidden;*/
@@ -12,7 +12,7 @@ html, body{
 .full-height{
 	height: 100%;
 	position: relative;
-	background-color: #FF5E3A;
+	background-color: #c644fc;
 	background: -webkit-linear-gradient(to bottom, #c644fc , #5856d6);
 	background: linear-gradient(to bottom, #c644fc , #5856d6);
 	background-size: cover;
@@ -61,7 +61,7 @@ html, body{
 .cnt-2 .form-control:active{
 	background-color:#fff;
 	border: 0;
-	font-size: 22px;
+	font-size: 20px;
 }
 .cnt-2 .btn-default{
 	background-color: #42275a;
