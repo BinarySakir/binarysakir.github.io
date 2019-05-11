@@ -19,8 +19,8 @@ $(document).ready(function() {
 	});
 	window.sr = new ScrollReveal();
 	sr.reveal('.load-hidden', { origin: 'left', interval: 150, distance: '20px' });
-  	$('.your-class').slick({
-  		adaptiveHeight: true,
-  		infinite: false,
-	});
+	// $('#form').submit(function(e) {
+ 	//    	show error or submit data
+	// });
+
 })
