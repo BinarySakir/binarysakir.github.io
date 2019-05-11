@@ -1,24 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Barlow:400,700');
-html, body{
-	font-family: 'Barlow', 'Arial', 'Helvetica', sans-serif;
-	/*height: 100%;*/
-	margin: 0;
-	padding: 0;
-	/*background-color: #c644fc;*/
+html {
+    height: 100%;
 }
-.full-height{
-	/*height: 100%;*/
-	/*position: relative;*/
-	/*background-color: #c644fc;*/
-	background: -webkit-linear-gradient(to bottom, #c644fc , #5856d6);
-	background: linear-gradient(to bottom, #c644fc , #5856d6);
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center bottom;
-	background-attachment: fixed;
+body {
+	font-family: 'Barlow', 'Arial', 'Helvetica', sans-serif;
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #c644fc;
+	background: -webkit-gradient(linear, left top, left bottom, from(#EF4DB6), to(#C643FC));
+    background: -moz-linear-gradient(top, #fff, #cbccc8);
+
 }
 .load-hidden{
-	visibility: hidden;
+	/*visibility: hidden;*/
 }
 .container{
 	color: #ffffff;
@@ -63,7 +59,7 @@ html, body{
 	color: #fff;
 	border: 0;
 	font-size: 20px;
-	width: 99%;
+	width: 100%;
 	padding-top: 10px;
 	padding-bottom: 10px;
 	font-weight: 700;
