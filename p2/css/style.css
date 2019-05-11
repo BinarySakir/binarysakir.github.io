@@ -4,12 +4,12 @@ html, body{
 	/*height: 100%;*/
 	margin: 0;
 	padding: 0;
-	background-color: #c644fc;
+	/*background-color: #c644fc;*/
 }
 .full-height{
 	/*height: 100%;*/
 	/*position: relative;*/
-	background-color: #c644fc;
+	/*background-color: #c644fc;*/
 	background: -webkit-linear-gradient(to bottom, #c644fc , #5856d6);
 	background: linear-gradient(to bottom, #c644fc , #5856d6);
 	background-size: cover;
