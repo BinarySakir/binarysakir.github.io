@@ -12,9 +12,12 @@ $(document).ready(function() {
 	    if(i != j){
 		    $('.q'+(i).toString()).hide();
 		    $('.q'+(i+1).toString()).fadeIn("slow");
+		    if(i === (j-1)){
+		    	$('.btn__next').text("Submit");
+		    }
 		    i++;
-	    }else{
-	    	// $('.q'+(i).toString() + ',.btn__next').hide();
+	    }
+	    else{
 	    	alert("Done!"); // Here redirect the user to the result page
 	    }
 	});
