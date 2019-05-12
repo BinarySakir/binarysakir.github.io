@@ -2,65 +2,12 @@
 <html>
 <head>
 	<title>Form</title>
-	<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
-	<style type="text/css">
-		.fc{
-			/*transition: all 300ms;*/
-		}
-		.btn{
-			position: fixed;
-		}
-	</style>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-	<div class="form">
-		<div class="fc q1">
-			<label for="name">Name</label>
-			<input type="text" name="name">
-		</div>
-		<div class="fc q2">
-			<label for="phone">Phone</label>
-			<input type="tel" name="phone">
-		</div>
-		<div class="fc q3">
-			<label for="code">Code</label>
-			<input type="text" name="code">
-		</div>
-	</div>
-	<button class="btn-next">Next</button>
-	<button class="btn-back">Back</button>
+	<input type="text" name="asd">
 	<script type="text/javascript">
-		/*
-			press button
-			send the data to server
-			check if the data is ok
-			if it's ok then show next input field
-			if not then show error
-		*/
-		var i = 1;
-		var j = 3;
-		$('.form .fc').hide();
-		$('.form .q1').show();
-		$('.form .q1').show();
-		$('.btn-next').click(function() {
-		    if(i != j){
-			    $('.q'+(i).toString()).hide();
-			    $('.q'+(i+1).toString()).fadeIn("slow");
-			    i++;
-		    }else{
-		    	$('.q'+(i).toString() + ',.btn-next, .btn-back').hide();
-		    	$('body').append("Done");
-		    }
-		});
-		$('.btn-back').click(function() {
-		    if(i != 1){
-			    $('.q'+(i).toString()).hide();
-			    $('.q'+(i-1).toString()).fadeIn("slow");
-			    i--;
-		    }else{
-		    	return false;
-		    }
-		});
+		$('input').focus();
 	</script>
 </body>
 </html>
