@@ -6,7 +6,7 @@ html, body{
 	font-family: 'Poppins';
 	margin: 0;
 }
-.sr__b{visibility: hidden;}
+.sr__b, .q2, .q3{visibility: hidden;}
 .full-height{
 	height: 100%;
 	background-color: #0e071b;
