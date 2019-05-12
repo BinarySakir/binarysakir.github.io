@@ -6,6 +6,7 @@ html, body{
 	font-family: 'Poppins';
 	margin: 0;
 }
+.sr__b{visibility: hidden;}
 .full-height{
 	height: 100%;
 	background-color: #0e071b;
@@ -52,4 +53,46 @@ html, body{
 	border-bottom: 0.5px solid #fff;
 	padding-bottom: 5px;
 	color: #fff;
+}
+
+.cnt-2{
+	padding: 0 25px;
+}
+.cnt-2 h5{
+	color: #9babff;
+	font-weight: 300;
+	font-size: 18px;
+	margin-bottom: 20px;
+}
+label{
+	color: #9babff;
+	font-family: 'Lato';
+	font-weight: 900;
+	text-transform: uppercase;
+	letter-spacing: 10px;
+	margin-bottom: 8px;
+	font-size: 12px;
+}
+.input_, .input_:hover, .input_:active, .input_:focus{
+	border-radius: 40px;
+	border: 1px solid #9babff;
+	background-color: #18122b;
+	color: #fff;
+	height: auto;
+	padding: 15px 25px;
+	box-shadow: none;
+}
+.btn__b, .btn__b:hover, .btn__b:active, .btn__b:focus{
+	background-color: #fff;
+	padding: 10px 40px;
+	letter-spacing: 10px;
+	color: #0e071b;
+	text-transform: uppercase;
+	font-family: 'Lato';
+	font-weight: 700;
+	font-size: 14px;
+	box-shadow: none;
+}
+.cnt-2 .btn__b{
+	margin-top: 20px;
 }
