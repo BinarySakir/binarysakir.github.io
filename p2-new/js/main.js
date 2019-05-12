@@ -11,9 +11,6 @@
 // 	interval: 150 });
 $(document).ready(function() {
 	window.sr = new ScrollReveal();
-	sr.reveal('.load-hidden', { origin: 'left', interval: 150, distance: '20px' });
-	// $('#form').submit(function(e) {
- 	//    	show error or submit data
-	// });
-
+	sr.reveal('.sr__b', { origin: 'bottom', interval: 150, distance: '20px' });
+	
 })
