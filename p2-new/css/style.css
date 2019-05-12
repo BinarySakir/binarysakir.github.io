@@ -74,7 +74,7 @@ label{
 	font-size: 12px;
 }
 .input_, .input_:hover, .input_:active, .input_:focus{
-	border-radius: 40px;
+	border-radius: 8px;
 	border: 1px solid #9babff;
 	background-color: #18122b;
 	color: #fff;
