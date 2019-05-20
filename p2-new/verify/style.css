@@ -1,15 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 
 html, body{
 	height: 100%;
-	font-family: 'Poppins';
+	font-family: 'Montserrat';
 	margin: 0;
 }
-.sr__b, .qv2, .qv3{visibility: hidden;}
+
+.sr__b{visibility: hidden;}
 .full-height{
 	height: 100%;
-	background-color: #0e071b;
+	background-color: #C644FC;
 	position: relative;
 }
 .container_{
@@ -21,11 +22,23 @@ html, body{
 	color: #fff;
 	width: 100%;
 }
-.cnt-1{ text-align: center; }
-.cnt-1 h5{
-	color: #9babff;
+.cnt-v-1{ text-align: center; padding: 0 25px; }
+.cnt-v-1 h5{
+	color: #ffffff;
 	font-weight: 300;
-	margin-bottom: 25px;
+	margin-bottom: 10px;
+}
+.step .col-6:first-child.active{
+	background-color: #ffffff;
+	color: #C644FC;
+	border-bottom-right-radius: 10px;
+	font-weight: 700;
+}
+.col-6{
+	padding: 10px 0;
+	text-align: center;
+	color: #ffffff;
+
 }
 .btn, .btn:hover, .btn:active, .btn:focus{
 	padding: 10px 45px;
@@ -75,20 +88,19 @@ label{
 }
 .input_, .input_:hover, .input_:active, .input_:focus{
 	border-radius: 8px;
-	border: 1px solid #9babff;
-	background-color: #18122b;
-	color: #fff;
+	border: 0;
+	background-color: #ffffff;
 	height: auto;
 	padding: 15px 25px;
 	box-shadow: none;
-	transition: all 300ms;
 	margin-bottom: 10px;
+	color: #1c1c1e;
 }
 .input__red input,
 .input__red input:hover,
 .input__red input:active,
 .input__red input:focus{
-	border: 1px solid #c02e2e;
+	border: 0;
 }
 .btn__b, .btn__b:hover, .btn__b:active, .btn__b:focus{
 	background-color: #fff;

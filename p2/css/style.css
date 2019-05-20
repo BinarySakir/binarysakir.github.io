@@ -8,9 +8,9 @@ body {
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-color: #c644fc;
+    background-color: #C643FC;
 	background: -webkit-gradient(linear, left top, left bottom, from(#EF4DB6), to(#C643FC));
-    background: -moz-linear-gradient(top, #fff, #cbccc8);
+    background: -moz-linear-gradient(top, #EF4DB6, #C643FC);
 
 }
 .load-hidden{
