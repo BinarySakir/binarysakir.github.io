@@ -13,7 +13,7 @@ $(document).ready(function() {
 		2 : "Please enter a valid phone number.",
 		3 : "Please enter a valid dealer code."
 	};
-	var e = 1;			// validation error
+	var e = 0;			// validation error
 	$('.form_ div').hide();
 	$('.form_ .qv1').show();
 	$('.form_ .qv2, .form_ .qv3').css({

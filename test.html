@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+	<title>Test</title>
+	<style type="text/css">
+		.hidden{visibility: hidden;}
+	</style>
+</head>
+<body>
+	<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+</div>
+	<div class="verify__form hidden">
+		<label></label>
+		<input type="" name="">
+		<br>
+		<button class="back hidden">Back</button>
+		<button class="next">Next</button>
+	</div>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		var formClass = ".verify__form";
+		var totalInput = 3;
+		var counter = 1;
+
+		function inputAttr(object, type, name, placeholder, label){
+			$(object).attr({
+				"type": type,
+				"name": name,
+				"placeholder": placeholder,
+			});
+			$("label").html(label);
+		}
+
+		inputAttr("input", "text", "code", "e.g. CV89UI", "Code");
+
+		$(document).ready(function(){
+			$(formClass).removeClass("hidden");
+			$(".next").click(function(){
+				switch(counter){
+					case 1:
+						inputAttr("input", "tel", "phone", "01XXXXXXXXX", "Phone Number");
+						$(".back").removeClass("hidden");
+						$('.progress-bar').css({
+							"width": "50%"
+						})
+						counter++;
+						break;
+					case 2:
+						inputAttr("input", "text", "auth", "e.g. 90SJUD", "Auth Code");
+						$('.progress-bar').css({
+							"width": "75%"
+						})
+						counter++;
+						break;
+					case 3:
+						$(formClass).hide();
+						$('.progress-bar').css({
+							"width": "100%"
+						})
+						$("body").append("Done!")
+				}
+			});
+			$(".back").click(function(){
+				switch(counter){
+					case 2:
+						inputAttr("input", "text", "code", "e.g. CV89UI", "Code");
+						$(".back").addClass("hidden");
+						$('.progress-bar').css({
+							"width": "25%"
+						})
+						counter--;
+						break;
+					case 3:
+						inputAttr("input", "tel", "phone", "01XXXXXXXXX", "Phone Number");
+						$(".next").removeClass("hidden");
+						$('.progress-bar').css({
+							"width": "50%"
+						})
+						counter--;
+						break;
+				}
+			});
+		});
+	</script>
+</body>
+</html>
