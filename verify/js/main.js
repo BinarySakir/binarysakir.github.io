@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	// Scroll Reveal
-	// window.sr = new ScrollReveal();
-	// sr.reveal('.sr__b', { origin: 'bottom', interval: 150, distance: '20px' });
+	window.sr = new ScrollReveal();
+	sr.reveal('.sr', { origin: 'bottom', interval: 150, distance: '20px' });
 	
 	// verify form
 	var formClass = ".verify_form";
@@ -30,7 +30,7 @@ $(document).ready(function() {
 		switch(counter){
 			case 1:
 				$(currentClass).hide();
-				$(nextClass).fadeIn(500);
+				$(nextClass).fadeIn(1000);
 				$(".progress-bar").css({
 					"width":"33.33%"
 				});
@@ -38,7 +38,7 @@ $(document).ready(function() {
 				counter++; break;
 			case 2:
 				$(currentClass).hide();
-				$(nextClass).fadeIn(500);
+				$(nextClass).fadeIn(1000);
 				$(".progress-bar").css({
 					"width":"66.66%"
 				});
@@ -59,7 +59,7 @@ $(document).ready(function() {
 		switch(counter){
 			case 2:
 				$(currentClass).hide();
-				$(prevClass).fadeIn(500);
+				$(prevClass).fadeIn(1000);
 				$(".progress-bar").css({
 					"width":"0%"
 				});
@@ -67,7 +67,7 @@ $(document).ready(function() {
 				counter--; break;
 			case 3:
 				$(currentClass).hide();
-				$(prevClass).fadeIn(500);
+				$(prevClass).fadeIn(1000);
 				$(".progress-bar").css({
 					"width":"33.33%"
 				});

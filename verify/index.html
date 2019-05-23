@@ -6,16 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-	<!-- <script src="https://unpkg.com/scrollreveal"></script> -->
+	<script src="js/sr.js"></script>
 </head>
 <body>
 	<div class="full-height">
 		<div class="progress">
 			<div class="progress-bar" role="progressbar" style="width: 0%" aria-valuemin="0" aria-valuemax="100"></div>
 		</div>
-		<div class="container_ cnt-1">
+		<div class="sr container_ cnt-1">
 			<div class="verify_form">
 				<div class="q1">
 					<h5>Enter the product code</h5>
@@ -31,8 +32,10 @@
 				</div>
 				<div class="error"></div>
 			</div>
-			<button class="btn btn__b back">BACK</button>
-			<button class="btn btn__b next">NEXT</button>
+			<div class="control">
+				<button class="btn back">BACK</button>
+				<button class="btn btn__b next">NEXT</button>
+			</div>
 		</div>
 	</div>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>

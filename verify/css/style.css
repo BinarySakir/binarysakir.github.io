@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
 
 html, body{
 	height: 100%;
-	font-family: 'Montserrat';
+	font-family: 'Poppins';
 	margin: 0;
 }
 
@@ -13,12 +13,13 @@ html, body{
 	height: 100vh;
 }
 .progress-bar{
-	background-color: #3d3b99;
+	background-color: #063b96;
 }
+.sr{visibility: none;}
 .q2,.q3, .back{display: none;}
 .full-height{
 	height: 100%;
-	background-color: #5856D6;
+	background-color: #0b409c;
 	position: relative;
 }
 .container_{
@@ -27,14 +28,14 @@ html, body{
 	top: 50%;
 	-ms-transform: translateY(-50%);
 	transform: translateY(-50%);
-	color: #fff;
+	color: #311054;
 	width: 100%;
 }
 .cnt-1{ text-align: center; padding: 0 20px; }
 .cnt-1 h5{
 	color: #fff;
-	font-weight: 300;
-	margin-bottom: 10px;
+	font-weight: 700;
+	margin-bottom: 15px;
 }
 .btn, .btn:hover, .btn:active, .btn:focus{
 	padding: 10px 45px;
@@ -73,6 +74,7 @@ html, body{
 	padding: 15px 25px;
 	box-shadow: none;
 	margin-bottom: 10px;
+	outline: 0;
 }
 .input__red input,
 .input__red input:hover,
@@ -80,10 +82,10 @@ html, body{
 .input__red input:focus{
 	border: 1px solid #c02e2e;
 }
+
 .btn__b, .btn__b:hover, .btn__b:active, .btn__b:focus{
 	background-color: #fff;
 	padding: 10px 30px;
-	/*letter-spacing: 10px;*/
 	color: #0e071b;
 	text-transform: uppercase;
 	font-family: 'Lato';
@@ -92,6 +94,13 @@ html, body{
 	box-shadow: none;
 }
 
+.back, .back:hover, .back:active, .back:focus{
+	color: #ffffff;
+	border-bottom: 1px solid #ffffff;
+	padding :0;
+	border-radius: 0;
+	margin-right: 10px;
+}
 .error{
 	text-align: left;
 	color: #c02e2e;
