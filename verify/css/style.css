@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900');
+
+html, body{
+	height: 100%;
+	font-family: 'Montserrat';
+	margin: 0;
+}
+
+.progress{
+	border-radius: 0;
+	background: none;
+	height: 100vh;
+}
+.progress-bar{
+	background-color: #3d3b99;
+}
+.q2,.q3, .back{display: none;}
+.full-height{
+	height: 100%;
+	background-color: #5856D6;
+	position: relative;
+}
+.container_{
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	color: #fff;
+	width: 100%;
+}
+.cnt-1{ text-align: center; padding: 0 20px; }
+.cnt-1 h5{
+	color: #fff;
+	font-weight: 300;
+	margin-bottom: 10px;
+}
+.btn, .btn:hover, .btn:active, .btn:focus{
+	padding: 10px 45px;
+	border-radius: 40px;
+	box-shadow: none;
+}
+.btn__a{
+	background-color: #18122b;
+	color: #ddd;
+	border: 1px solid #9babff;
+	transition: all 500ms;
+}
+.btn__a:hover, .btn__a:focus, .btn__a:active{
+	background-color: #fff;
+	color: #0e071b;
+	border-color: #fff;
+}
+.cnt-1 .d__link{ margin-top: 25px; }
+.cnt-1 .d__link a,
+.cnt-1 .d__link a:hover,
+.cnt-1 .d__link a:active,
+.cnt-1 .d__link a:focus{
+	text-decoration: none;
+	font-weight: 300;
+	border-bottom: 0.5px solid #fff;
+	padding-bottom: 5px;
+	color: #fff;
+}
+
+.input_, .input_:hover, .input_:active, .input_:focus{
+	border-radius: 8px;
+	border: 0;
+	background-color: #ffffff;
+	width: 100%;
+	height: auto;
+	padding: 15px 25px;
+	box-shadow: none;
+	margin-bottom: 10px;
+}
+.input__red input,
+.input__red input:hover,
+.input__red input:active,
+.input__red input:focus{
+	border: 1px solid #c02e2e;
+}
+.btn__b, .btn__b:hover, .btn__b:active, .btn__b:focus{
+	background-color: #fff;
+	padding: 10px 30px;
+	/*letter-spacing: 10px;*/
+	color: #0e071b;
+	text-transform: uppercase;
+	font-family: 'Lato';
+	font-weight: 700;
+	font-size: 14px;
+	box-shadow: none;
+}
+
+.error{
+	text-align: left;
+	color: #c02e2e;
+	margin-bottom: 5px;
+	font-family: 'Lato';
+}
