@@ -1,7 +1,6 @@
 $(document).ready(function() {
 	// Scroll Reveal
-	window.sr = new ScrollReveal();
-	sr.reveal('.sr', { origin: 'bottom', interval: 150, distance: '20px' });
+	ScrollReveal().reveal('.sr__b', { origin: 'bottom', interval: 150, distance: '20px' });
 	
 	// verify form
 	var formClass = ".verify_form";

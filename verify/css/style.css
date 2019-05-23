@@ -10,12 +10,12 @@ html, body{
 .progress{
 	border-radius: 0;
 	background: none;
-	height: 100vh;
+	height: 100%;
 }
 .progress-bar{
 	background-color: #063b96;
 }
-.sr{visibility: none;}
+/*.sr{visibility: none;}*/
 .q2,.q3, .back{display: none;}
 .full-height{
 	height: 100%;
