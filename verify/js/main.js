@@ -2,11 +2,12 @@ $(document).ready(function() {
 	// Scroll Reveal
 	ScrollReveal().reveal('.sr__b', { origin: 'bottom', interval: 150, distance: '20px' });
 	
-	// verify form
+	// Verify Form
 	var formClass = ".verify_form";
 	var counter = 1;
 	var totalInput = 3;
-	var error = 0;
+	var e = 0;		// e = 1 if there is error 
+
 	$(formClass+".q2, "+formClass+".q3, .back").hide();
 	$(formClass+".q2, "+formClass+".q3, .back").css({
 		"display": "all",
@@ -19,36 +20,41 @@ $(document).ready(function() {
 	};
 
 	function displayError(q){
-		console.log(errors[q]);
-	}
+		if( $('.error').is(':empty') ) {
+			$(".error").append(errors[q]);
+		};
+	};
 
 	$(".next").click(function(){
-		// displayError(counter);		//I'm not sure how to validate the form
-		var currentClass = ".q"+counter.toString();
-		var nextClass = ".q"+(counter+1).toString();
-		switch(counter){
-			case 1:
-				$(currentClass).hide();
-				$(nextClass).fadeIn(1000);
-				$(".progress-bar").css({
-					"width":"33.33%"
-				});
-				$(".back").show();
-				counter++; break;
-			case 2:
-				$(currentClass).hide();
-				$(nextClass).fadeIn(1000);
-				$(".progress-bar").css({
-					"width":"66.66%"
-				});
-				counter++; break;
-			case 3:
-				$(".progress-bar").css({
-					"width":"100%"
-				});
-				setTimeout(function() {
-					alert("user will be redirected to result page");
-				}, 1000);
+		if(e != 1){
+			var currentClass = ".q"+counter.toString();
+			var nextClass = ".q"+(counter+1).toString();
+			switch(counter){
+				case 1:
+					$(currentClass).hide();
+					$(nextClass).fadeIn(1000);
+					$(".progress-bar").css({
+						"width":"33.33%"
+					});
+					$(".back").show();
+					counter++; break;
+				case 2:
+					$(currentClass).hide();
+					$(nextClass).fadeIn(1000);
+					$(".progress-bar").css({
+						"width":"66.66%"
+					});
+					counter++; break;
+				case 3:
+					$(".progress-bar").css({
+						"width":"100%"
+					});
+					setTimeout(function() {
+						window.location.replace("result_a.html"); // redirect to result page
+					}, 1000);
+			}
+		}else{
+			displayError(counter);
 		}
 	});
 

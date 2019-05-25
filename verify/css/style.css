@@ -15,7 +15,7 @@ html, body{
 .progress-bar{
 	background-color: #063b96;
 }
-/*.sr{visibility: none;}*/
+.sr__b{visibility: hidden;}
 .q2,.q3, .back{display: none;}
 .full-height{
 	height: 100%;
@@ -103,7 +103,18 @@ html, body{
 }
 .error{
 	text-align: left;
-	color: #c02e2e;
-	margin-bottom: 5px;
+	color: #ffffff;
+	margin-bottom: 10px;
 	font-family: 'Lato';
+}
+
+.cnt-2{ text-align: center; padding: 0 30px; }
+.cnt-2 h5{
+	color: #fff;
+	font-weight: 700;
+	margin-bottom: 15px;
+}
+
+.img-verify{
+	margin-bottom: 20px;
 }
