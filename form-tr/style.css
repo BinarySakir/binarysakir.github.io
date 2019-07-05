@@ -10,7 +10,6 @@ h2{
 }
 input{
 	display: block;
-	margin-bottom: 5px;
 	font-size: 16px;
 	padding: 12px 15px;
 	border: 0;
@@ -21,6 +20,7 @@ input{
 }
 p{
 	cursor: pointer;
+	position: fixed;
 }
 .in2{
 	display: none;
