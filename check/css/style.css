@@ -20,7 +20,7 @@ html, body{
 .progress-bar{
 	background-color: #063b96;
 }
-/*.sr__b{visibility: hidden;}*/
+.sr__b{visibility: hidden;}
 .q2, .q3, .back{display: none;}
 .full-height{
 	height: 100%;
@@ -98,10 +98,8 @@ html, body{
 /*
 	CHECK WARRANTY CODE
 */
-
 .switch-message{
 	font-weight: 700;
-	outline: none;
 	color: #ffffff;
 	cursor: pointer;
 	padding: 0;
@@ -112,3 +110,4 @@ html, body{
 	font-family: 'Lato';
 	margin-bottom: 15px;
 }
+button:focus {outline:0;}
