@@ -9,11 +9,12 @@ $(document).ready(function() {
 		if($(".q1").is(":visible")){
 			$(".q1").hide();
 			$(".q2").css({"display": "initial"});
+			$(".input_").addClass("animated fadeInDown");
 			$(this).text(message_2);
-			// $(".switch-message").append(message_2);
 		}else{
 			$(".q2").hide();
 			$(".q1").css({"display": "initial"});
+			$(".input_").addClass("animated fadeInDown");
 			$(this).text(message_1);
 		}
 	});
