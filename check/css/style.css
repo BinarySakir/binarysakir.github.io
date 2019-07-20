@@ -7,6 +7,40 @@
 	*********************************************************
  */
 
+.navbar{
+	background-color: #ffff;
+-webkit-box-shadow: 0px 10px 28px -9px rgba(0,1,51,0.68);
+-moz-box-shadow: 0px 10px 28px -9px rgba(0,1,51,0.68);
+box-shadow: 0px 10px 28px -9px rgba(0,1,51,0.68);
+
+}
+.navbar-brand img{
+	width: 130px;
+	height: 40px;
+	margin-left: 10px;
+}
+.navbar-toggler{
+	margin-right: 10px;
+}
+.navbar-nav .nav-link{
+	font-size: 16px;
+	color: #0b409c;
+	padding: 10px 0;
+	/*font-family: "Lato";*/
+	font-weight: 900;
+	text-align: center;
+
+}
+.nav-item{
+	border-top: 1px solid #0b409c;
+}
+.nav-item:first-child{border-top: 1px solid #0b409c;}
+.navbar{
+	padding-left: 0;
+	padding-right: 0;
+	padding-bottom: 0;
+}
+
 html, body{
 	height: 100%;
 	font-family: 'Poppins';
