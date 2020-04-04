@@ -1,0 +1,119 @@
+/*
+	light - 7585DC
+	dark - 5F6FED
+*/
+body{
+	font-family: 'Karla', sans-serif;
+	margin: 30px 20px;
+}
+.conv-grp img{ position: fixed; }
+.conv{margin-bottom: 5px}
+.conv .text{
+	padding: 8px 15px;
+	margin-bottom: 6px;
+	display: inline-block;
+	margin-left: 50px;
+	background-color: #fff;
+	border-radius: 10px;
+	border-bottom-left-radius: 0px;
+	-webkit-box-shadow: 0px 7px 15px -5px rgba(150,150,150,0.5);
+	-moz-box-shadow: 0px 7px 15px -5px rgba(150,150,150,0.5);
+	box-shadow: 0px 7px 15px -5px rgba(150,150,150,0.5);
+}
+.conv .time{
+	margin-left: 50px;
+	font-size: 14px;
+	color: #bbb;
+}
+.right{
+	text-align: right;
+}
+.right .text{
+	padding: 8px 15px;
+	background-color: #5F6FED;
+	color: #ffffff;
+	border-radius: 10px;
+	border-bottom-right-radius: 0px;
+}
+@keyframes avReveal{
+	from{
+		transform: scale(0)
+	}
+	to{
+		transform: scale(1)
+	}
+}
+@keyframes textReveal{
+	from{
+		opacity: 0;
+		margin-top: 40px;
+	}
+	to{
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+.conv-grp img {
+	animation-name: avReveal;
+	animation-duration: 1s;
+}
+.conv .text{
+	animation: textReveal;
+	animation-duration: 0.5s;
+}
+
+@keyframes drawerReveal{
+	from{
+		transform: translateY(100%)
+	}
+	to{
+		transform: translateY(0%)
+	}
+}
+@keyframes drawerOnHold{
+	from{
+		transform: scale(1);
+	}to{
+		transform: scale(0.8)
+	}
+}
+.drawer{
+	text-align: center;
+	color: #5F6FED;
+	background: rgb(95,111,237);
+	background: linear-gradient(180deg, rgba(95,111,237,1) 0%, rgba(140,149,195,1) 100%);
+	-webkit-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
+	-moz-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
+	box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	right: 0;
+	max-height: 60%;
+	overflow-y:scroll;
+    overflow-x:hidden;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    animation: drawerReveal;
+    animation-duration: 1s;
+    padding: 15px;
+}
+.drawer .option{
+	font-size: 18px;
+	padding: 15px 5px;
+	background-color: rgba(255,255,255,0.2);
+	color: #ffffff;
+	border-radius: 10px;
+	margin-bottom: 10px;
+	transition: all 200ms;
+}
+.drawer .option:last-child{margin-bottom: 0;}
+.drawer .option:active{
+	/*animation: drawerOnHold;
+	animation-duration: 0.5s;*/
+	transform: scale(0.95);
+}
+.drawer .option.selected{
+	background-color: #fff;
+	color: #5F6FED;
+}
