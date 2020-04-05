@@ -97,7 +97,7 @@ body{
 	-webkit-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
 	-moz-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
 	box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
-	position: fixed;
+	/*position: ;*/
 	width: 100%;
 	bottom: 0;
 	right: 0;

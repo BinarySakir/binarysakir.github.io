@@ -46,6 +46,9 @@ $( document ).ready(function() {
 			callback();
 		});
 	}// }
+
+	// hehehe
+
 	fun(0, function(){
 		setTimeout(function(){
 			fun(1, function(){
