@@ -1,6 +1,6 @@
 // sample.json in compact format
 $( document ).ready(function() {
-	var data = JSON.parse('{"quantity":4,"messages":[["Hi!", "What a nice sunny day!"],"M2","",["M3_1","M3_2"]],"questions":["In the last 14 days, what is your exposure to others who are known to have COVID-19?","Q2","Q3","Q4"],"options":[["O1_1", "O1_2", "O1_3"],["O2_1", "O2_2", "O2_3"],["O3_1", "O3_2", "O3_3"],["O4_1, 04_2, O4_3"]]}');
+	var data = JSON.parse('{"quantity":4,"messages":[["Hi!", "What a nice sunny day!"],"M2","",["M3_1","M3_2"]],"questions":["In the last 14 days, what is your exposure to others who are known to have COVID-19?","Q2","Q3","Q4"],"options":[["I live with someone who has COVID-19", "I\'ve had close contact with someone who has COVID-19", "I\'ve been near someone who has COVID-19", "I\'ve had no exposure"],["O2_1", "O2_2", "O2_3"],["O3_1", "O3_2", "O3_3"],["O4_1, 04_2, O4_3"]]}');
 	var q = data["quantity"];
 	$(".option").click(function(){
 		$(this).toggleClass("selected");
