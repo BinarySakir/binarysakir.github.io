@@ -46,6 +46,7 @@ $( document ).ready(function() {
 				$(".rmsg" + String(i+1) + " .conv").append("<div class='text'>" + s_options[l] + "</div><br>");
 			}
 		});
+		break;
 	}
 });
 
