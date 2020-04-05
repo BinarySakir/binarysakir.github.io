@@ -34,6 +34,7 @@ body{
 	color: #ffffff;
 	border-radius: 10px;
 	border-bottom-right-radius: 0px;
+	text-align: left;
 }
 @keyframes avReveal{
 	from{
@@ -77,6 +78,17 @@ body{
 		transform: scale(0.8)
 	}
 }
+@keyframes drawerHide{
+	from{
+		transform: translateY(0%)
+	}to{
+		transform: translateY(100%);
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+		visibility: hidden;
+	}
+}
 .drawer{
 	text-align: center;
 	color: #5F6FED;
@@ -116,4 +128,11 @@ body{
 .drawer .option.selected{
 	background-color: #fff;
 	color: #5F6FED;
+}
+.proceed{
+	color: white;
+}
+.slideoff{
+	animation: drawerHide;
+	animation-duration: 0.5s;
 }
