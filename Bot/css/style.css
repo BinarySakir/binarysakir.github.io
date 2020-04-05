@@ -6,7 +6,7 @@ body{
 	font-family: 'Karla', sans-serif;
 	margin: 30px 20px;
 }
-.conv-grp img{ position: fixed; }
+.conv-grp img{ position: absolute; }
 .conv{margin-bottom: 5px}
 .conv .text{
 	padding: 8px 15px;
@@ -131,7 +131,7 @@ body{
 	color: #5F6FED;
 }
 .proceed{
-	/*color: white;*/
+	color: white;
 	/*position: fixed;*/
 	/*bottom: 0;*/
 	/*left: 50%;*/

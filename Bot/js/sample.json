@@ -1,32 +1,40 @@
 {
    "quantity": 4,
    "messages":[
-      "M1",
-      "M2",
-      "",
       [
-         "M3_1",
-         "M3_2"
-      ]
+         "Hi!",
+         "Welcome to our chat bot. Let's begin by asking some questions."
+      ],
+      "Thank you.",
+      "Thanks.",
+      ""
    ],
    "questions":[
-      "Q1",
-      "Q2",
-      "Q3",
-      "Q4"
+      "Do you live or work in care facility?",
+      "In the last 14 days, what is your exposure to others who are known to have COVID-19?",
+      "In the last 14 days, have you traveled internationally?",
+      "How old are you?"
    ],
    "options":[
       [
-         "O1_1, O1_2, O1_3"
+         "I live in a long-term care facility",
+         "I've worked in a hospital or other care facility in the past 14 days",
+         "I plan to work in a hospital or other care facility in the next 14 days",
+         "No, I don't live or work in a care facility"
       ],
       [
-         "O2_1, O2_2, O2_3"
+         "I live with someone who has COVID-19",
+         "I've had close contact with someone who has COVID-19",
+         "I've been near someone who has COVID-19",
+         "I've had no exposure"
       ],
       [
-         "O3_1, O3_2, O3_3"
+         "I have traveled internationally", "I have not traveled internationally"
       ],
       [
-         "O4_1, 04_2, O4_3"
+         "Under 18",
+         "Between 18 and 64",
+         "65 or above"
       ]
    ]
 }
