@@ -3,16 +3,36 @@
 	dark - 5F6FED
 */
 body{
-	font-family: 'Karla', sans-serif;
+	font-family: 'Magra', sans-serif;
+	
+	margin-top: 0;
+}
+.chat{
 	margin: 30px 20px;
+}
+.header {
+	margin: 0;
+	color: #5F6FED;
+	text-align: center;
+	padding: 30px;
+	background: rgb(95,111,237);
+background: linear-gradient(180deg, rgba(95,111,237,0.6) 0%, rgba(140,149,195,0) 100%);
+
+}
+.header h1{
+	font-size: 25px;
+}
+.header h2{
+	font-size: 20px;
 }
 .conv-grp img{ position: absolute; }
 .conv{margin-bottom: 5px}
 .conv .text{
-	padding: 15px 15px;
+	border: 1px solid #1c1c1e;
+	padding: 10px;
 	margin-bottom: 6px;
 	display: inline-block;
-	margin-left: 50px;
+	margin-left: 55px;
 	background-color: #fff;
 	border-radius: 10px;
 	border-bottom-left-radius: 0px;
@@ -92,11 +112,11 @@ body{
 .drawer{
 	text-align: center;
 	color: #5F6FED;
-	background-color: #ffffff;
-	-webkit-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
+	/*background-color: #ffffff;*/
+/*	-webkit-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
 	-moz-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
 	box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
-	position: relative;
+*/	position: relative;
 	width: 100%;
 	bottom: 0;
 	right: 0;
@@ -110,13 +130,12 @@ body{
     margin-top: 20px;
 }
 .drawer .option{
-	background-color: #ddd;
+	background-color: #fff;
 	width: 45%;
 	display: inline-block;
 	color: #1c1c1e;
-	-webkit-box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.1);
-	font-size: 18px;
-	padding: 15px 5px;
+	border: 1px solid #1c1c1e;
+	/*padding: 15px 5px;*/
 	border-radius: 10px;
 	margin-bottom: 10px;
 	transition: all 200ms;
@@ -137,9 +156,15 @@ body{
 	/*position: fixed;*/
 	/*bottom: 0;*/
 	/*left: 50%;*/
+	color: #ffffff;
 	margin-top: 10px;
 	text-align: center;
 	font-weight: 700;
+	padding: 10px;
+	background-color: #5F6FED;
+	/*display: inline-block;*/
+	text-align: center;
+	border-radius: 10px;
 	/*transform: translateX(-50%);
 	background: rgb(70,70,70);
 	background: linear-gradient(0deg, rgba(70,70,70,1) 0%, rgba(140,149,195,0) 100%);
@@ -150,6 +175,6 @@ body{
 	animation-duration: 0.5s;
 }
 .sub_d{
-	position: absolute;
+	position: relative;
 	bottom: 0;
 }

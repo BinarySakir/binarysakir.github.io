@@ -5,20 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chat bot</title>
-	<link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Magra:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 </head>
 <body>
-	
+	<div class="header">
+		<img src="lafz.png" style="height: 100px; width: 100px; margin-bottom: 10px;">
+		<h1>Welcome,</h1>
+		<h2>To the LAFZ live assesment test for COVID-19</h2>
+	</div>
+	<div class="chat">
 	<!-- Message format -->
 	<div class="block_1">
-		<div class="conv-grp">
-			<img src="avatar.svg" height="40" width="40">
+		<div class="conv-grp left">
+			<img src="lafz_avatar.png" height="50" width="50">
 			<div class="conv">
-				<div class="text">Hi!</div><br>
-				<div class="text">Welcome to our chat bot. Lets begin by asking some questions.</div>
 				<div class="text">Are you experiencing any of these problems?</div>
 			</div>
 		</div>
@@ -28,16 +31,16 @@
 			</div>
 		</div>
 		<div class="drawer">
-			<div class="option">Severe chest pain</div>
-			<div class="option">Severe Disorientation</div>
+			<div class="option">Severe Chest pain</div>
+			<div class="option">Sever Disorientation</div>
 			<div class="option">Constant chest pain</div>
 			<div class="option">Difficulty breathing</div>
 			<div class="option">Constant lightheadedness</div>
 			<div class='proceed'>Proceed</div>
 		</div>
 	</div>
-	<div class="conv-grp sp_1">
-		<img src="avatar.svg" height="40" width="40">
+	<div class="conv-grp left sp_1">
+		<img src="lafz_avatar.png" height="50" width="50">
 		<div class="conv">
 			<div class="text"><b>You should call 911</b></div><br>
 		</div>
@@ -55,7 +58,7 @@
 	</div>
 	<div class="block_2">
 		<div class="conv-grp left">
-			<img src="avatar.svg" height="40" width="40">
+			<img src="lafz_avatar.png" height="50" width="50">
 			<div class="conv">
 				<div class="text">How old are you?</div>
 			</div>
@@ -73,8 +76,8 @@
 		</div>
 	</div>
 	<div class="block_3">
-		<div class="conv-grp">
-			<img src="avatar.svg" height="40" width="40">
+		<div class="conv-grp left">
+			<img src="lafz_avatar.png" height="50" width="50">
 			<div class="conv">
 				<div class="text">Are you experiencing any of these problems?</div><br>
 			</div>
@@ -92,11 +95,12 @@
 			<div class="option">Vomiting/ diarrhea</div>
 			<div class="option">None of the above</div>
 			<div class='proceed'>Proceed</div>
+			<div class='back'>Prev Question</div>
 		</div>
 	</div>
 	<div class="block_4">
-		<div class="conv-grp">
-			<img src="avatar.svg" height="40" width="40">
+		<div class="conv-grp left">
+			<img src="lafz_avatar.png" height="50" width="50">
 			<div class="conv">
 				<div class="text">Do you have any of these conditions?</div><br>
 			</div>
@@ -127,11 +131,12 @@
 			<div class="option">Disease that makes you cough</div>
 			<div class="option">Disease that makes you harder to cough</div>
 			<div class='proceed'>Proceed</div>
+			<div class='back'>Prev Question</div>
 		</div>
 	</div>
 	<div class="block_5">
 		<div class="conv-grp left">
-			<img src="avatar.svg" height="40" width="40">
+			<img src="lafz_avatar.png" height="50" width="50">
 			<div class="conv">
 				<div class="text">Have you travelled internationally?</div>
 			</div>
@@ -149,7 +154,7 @@
 	</div>
 	<div class="block_6">
 		<div class="conv-grp left">
-			<img src="avatar.svg" height="40" width="40">
+			<img src="lafz_avatar.png" height="50" width="50">
 			<div class="conv">
 				<div class="text">In the last 14 days, have you been in an area where COVID-19 is widespread?</div>
 			</div>
@@ -169,7 +174,7 @@
 	</div>
 	<div class="block_7">
 		<div class="conv-grp left">
-			<img src="avatar.svg" height="40" width="40">
+			<img src="lafz_avatar.png" height="50" width="50">
 			<div class="conv">
 				<div class="text">Tell us your exposure to covid-19 cases.</div>
 			</div>
@@ -194,15 +199,15 @@
 			<div class='proceed'>Proceed</div>
 		</div>
 	</div>
-	<div class="conv-grp sp_2">
-		<img src="avatar.svg" height="40" width="40">
+	<div class="conv-grp left sp_2">
+		<img src="lafz_avatar.png" height="50" width="50">
 		<div class="conv">
 			<div class="text"><b>Contact your work's occupational health manger</b></div><br>
 		</div>
 	</div>
 	<div class="block_8">
 		<div class="conv-grp left">
-			<img src="avatar.svg" height="40" width="40">
+			<img src="lafz_avatar.png" height="50" width="50">
 			<div class="conv">
 				<div class="text">Do you live or work in a care facility?</div>
 			</div>
@@ -225,17 +230,18 @@
 			<div class='proceed'>Proceed</div>
 		</div>
 	</div>
-	<div class="conv-grp sp_3">
-		<img src="avatar.svg" height="40" width="40">
+	<div class="conv-grp left sp_3">
+		<img src="lafz_avatar.png" height="50" width="50">
 		<div class="conv">
 			<div class="text"><b>Contact your facility's care team.</b></div><br>
 		</div>
 	</div>
-	<div class="conv-grp sp_4">
-		<img src="avatar.svg" height="40" width="40">
+	<div class="conv-grp left sp_4">
+		<img src="lafz_avatar.png" height="50" width="50">
 		<div class="conv">
-			<div class="text"><b>Final response</b></div><br>
+			<div class="text"><b>Final Response</b></div><br>
 		</div>
+	</div>
 	</div>
 	<script type="text/javascript" src="js/main2.js"></script>
 	<!-- <script type="text/javascript" src="js/main.js"></script> -->
