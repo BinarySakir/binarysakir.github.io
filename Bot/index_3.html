@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Chat bot</title>
+	<link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body>
+	
+	<!-- Message format -->
+	<div class="block_1">
+		<div class="conv-grp">
+			<img src="avatar.svg" height="40" width="40">
+			<div class="conv">
+				<div class="text">Hi!</div><br>
+				<div class="text">Welcome to our chat bot. Lets begin by asking some questions.</div>
+				<div class="text">Are you experiencing any of these problems?</div>
+			</div>
+		</div>
+		<div class="conv-grp right">
+			<div class="conv">
+			<!-- <div class="text"></div> -->
+			</div>
+		</div>
+		<div class="drawer">
+			<div class="option">Severe chest pain</div>
+			<div class="option">Severe Disorientation</div>
+			<div class="option">Constant chest pain</div>
+			<div class="option">Difficulty breathing</div>
+			<div class="option">Constant lightheadedness</div>
+			<div class='proceed'>Proceed</div>
+		</div>
+	</div>
+	<div class="block_2">
+		<div class="conv-grp left">
+			<img src="avatar.svg" height="40" width="40">
+			<div class="conv">
+				<div class="text">How old are you?</div>
+			</div>
+		</div>
+		<div class="conv-grp right">
+			<div class="conv">
+			<!-- <div class="text"></div> -->
+			</div>
+		</div>
+		<div class="drawer">
+			<div class="option jhamela">Under 18</div>
+			<div class="option">18 - 64</div>
+			<div class="option">65 or above</div>
+			<div class='proceed'>Proceed</div>
+		</div>
+	</div>
+	<div class="block_3">
+		<div class="conv-grp">
+			<img src="avatar.svg" height="40" width="40">
+			<div class="conv">
+				<div class="text">Are you experiencing any of these problems?</div><br>
+			</div>
+		</div>
+		<div class="conv-grp right">
+			<div class="conv">
+			<!-- <div class="text"></div> -->
+			</div>
+		</div>
+		<div class="drawer">
+			<div class="option">Fever or sweating</div>
+			<div class="option">Difficulty breathing</div>
+			<div class="option">Sore throat</div>
+			<div class="option">New & worsening cough</div>
+			<div class="option">Vomiting/ diarrhea</div>
+			<div class="option">None of the above</div>
+			<div class='proceed'>Proceed</div>
+		</div>
+	</div>
+	<div class="block_4">
+		<div class="conv-grp">
+			<img src="avatar.svg" height="40" width="40">
+			<div class="conv">
+				<div class="text">Do you have any of these conditions?</div><br>
+			</div>
+		</div>
+		<div class="conv-grp right">
+			<div class="conv">
+			<!-- <div class="text"></div> -->
+			</div>
+		</div>
+		<div class="drawer">
+			<div class="option">Asthma</div>
+			<div class="option">Chronic lung disease</div>
+			<div class="option">Diabetes</div>
+			<div class="option">Pregnant</div>
+			<div class="option">Kidney failure</div>
+			<div class="option o_m o_m_1">Obesity*</div>
+				<div class="drawer sub_d sub_d_1">
+					<div class="option">Extreme</div>
+					<div class="option">Moderate</div>
+				</div>
+			<div class="option">Liver Cirrhosis</div>
+			<div class="option">Weakened immune system</div>
+			<div class="option o_m o_m_2">Heart Failure</div>
+				<div class="drawer sub_d sub_d_2">
+					<div class="option">Congestive</div>
+					<div class="option">Not Congestive</div>
+				</div>
+			<div class="option">Disease that makes you cough</div>
+			<div class="option">Disease that makes you harder to cough</div>
+			<div class='proceed'>Proceed</div>
+		</div>
+	</div>
+	<div class="block_5">
+		<div class="conv-grp left">
+			<img src="avatar.svg" height="40" width="40">
+			<div class="conv">
+				<div class="text">Have you travelled internationally?</div>
+			</div>
+		</div>
+		<div class="conv-grp right">
+			<div class="conv">
+			<!-- <div class="text"></div> -->
+			</div>
+		</div>
+		<div class="drawer">
+			<div class="option">Yes</div>
+			<div class="option">No</div>
+			<div class='proceed'>Proceed</div>
+		</div>
+	</div>
+	<div class="block_6">
+		<div class="conv-grp left">
+			<img src="avatar.svg" height="40" width="40">
+			<div class="conv">
+				<div class="text">In the last 14 days, have you been in an area where COVID-19 is widespread?</div>
+			</div>
+		</div>
+		<div class="conv-grp right">
+			<div class="conv">
+			<!-- <div class="text"></div> -->
+			</div>
+		</div>
+		<div class="drawer">
+			<div class="option">I live in an area where COVID-19 is widespread</div>
+			<div class="option">I have visited an area where COVID-19 is widesprea</div>
+			<div class="option">I don’t know</div>
+			<div class="option">None of the above</div>
+			<div class='proceed'>Proceed</div>
+		</div>
+	</div>
+	<div class="block_7">
+		<div class="conv-grp left">
+			<img src="avatar.svg" height="40" width="40">
+			<div class="conv">
+				<div class="text">Tell us your exposure to covid-19 cases.</div>
+			</div>
+		</div>
+		<div class="conv-grp right">
+			<div class="conv">
+			<!-- <div class="text"></div> -->
+			</div>
+		</div>
+		<div class="drawer">
+			<div class="option">I live with COVID-19 patient</div>
+			<div class="option">Close Contact (10 mins & above)</div>
+			<div class="option">Close Contact (6 feet and sneezed on)</div>
+			<div class="option">Minimal contact with a COVID 19 patient (6 feet away)</div>
+			<div class="option">Minimal contact with a COVID 19 patient (Not coughed or sneezed one)</div>
+			<div class='proceed'>Proceed</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/main2.js"></script>
+	<!-- <script type="text/javascript" src="js/main.js"></script> -->
+</body>
+</html>

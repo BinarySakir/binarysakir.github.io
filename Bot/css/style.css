@@ -96,11 +96,11 @@ body{
 	-webkit-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
 	-moz-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
 	box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
-	/*position;*/
+	position: relative;
 	width: 100%;
 	bottom: 0;
 	right: 0;
-	max-height: 60%;
+	max-height: 500px;
 	overflow-y:scroll;
     overflow-x:hidden;
     border-radius: 10px;
@@ -111,7 +111,7 @@ body{
 }
 .drawer .option{
 	background-color: #ddd;
-	width: 48%;
+	width: 45%;
 	display: inline-block;
 	color: #1c1c1e;
 	-webkit-box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.1);
@@ -148,4 +148,8 @@ body{
 .slideoff{
 	animation: drawerHide;
 	animation-duration: 0.5s;
+}
+.sub_d{
+	position: absolute;
+	bottom: 0;
 }

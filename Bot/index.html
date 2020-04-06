@@ -27,17 +27,33 @@
 		</div>
 	</div>
 	<div class="drawer">
-		<div class="option">I live with someone who has COVID-19</div>
-		<div class="option">I've had close contact with someone who has COVID-19</div>
-		<div class="option">I've been near someone who has COVID-19</div>
-		<div class="option">I've had no exposure</div>
-		<div class="option">I live with someone who has COVID-19</div>
-		<div class="option">I've had close contact with someone who has COVID-19</div>
-		<div class="option">I've been near someone who has COVID-19</div>
-		<div class="option">I've had no exposure</div>
-		<div class="proceed">Proceed</div>
-	</div> -->
-
+		<div class="option o_m_1">OP1</div>
+		<div class="drawer sub_d_1">
+			<div class="option">Sub</div>
+			<div class="option">Sub</div>
+		</div>
+		<div class="drawer sub_d_1">
+			<div class="option">Sub</div>
+			<div class="option">Sub</div>
+		</div>
+		<div class="option">OP1</div>
+		<div class="option">OP1</div>
+		<div class="option">OP1</div>
+		<div class='proceed'>Proceed</div>
+	</div>
+	<script type="text/javascript">
+		$(".sub_d").css("display","none");
+		$(".o_m").click(function(){
+			$(".sub_d").css("display","");
+			$(".sub_d .option").click(function(){
+				$(".sub_d").addClass("slideoff").fadeOut(500);
+				setTimeout(function(){
+					$(".sub_d").css("display", "none");
+					$(".sub_d").removeClass("slideoff");
+				}, 500);
+			});
+		});
+	</script> -->
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 </body>

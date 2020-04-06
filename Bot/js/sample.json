@@ -3,7 +3,7 @@
    "messages":[
       [
          "Hi!",
-         "Welcome to our chat bot. Let's begin by asking some questions."
+         "Welcome to our chat bot. Lets begin by asking some questions."
       ],
       "",
       "",
@@ -25,6 +25,7 @@
          "Constant chest pain",
          "Difficulty breathing",
          "Constant lightheadedness",
+         "None"
       ],
       [
          "Under 18",
@@ -45,12 +46,10 @@
          "Diabetes",
          "Pregnant?",
          "Kidney failure",
-         "Obesity (Extreme)",
-         "Obesity (Moderate)",
+         ["Obesity", "Extreme", "Moderate"],
          "Liver Cirrhosis",
          "Weakened immune system",
-         "Congestive Heart Failure",
-         "Heart Failure",
+         ["Heart Failure", "Congestive", "Not Congestive"],
          "Disease that makes you cough",
          "Disease that makes you harder to cough"
       ],
