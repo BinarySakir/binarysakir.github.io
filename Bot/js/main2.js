@@ -51,10 +51,17 @@ $(".block_5 .proceed").click(function(){
 });
 $(".block_6 .proceed").click(function(){
 	$(".block_6 .selected").each( function(a){
-		$(".block_6 .right .conv").append("<div class='text'>" + $(".block_5 .selected").eq(a).text() +"</div><br>");
+		$(".block_6 .right .conv").append("<div class='text'>" + $(".block_6 .selected").eq(a).text() +"</div><br>");
 		$(".block_6 .drawer").addClass("slideoff").fadeOut(500);
 	});
 	$(".block_7").show();
+});
+$(".block_7 .proceed").click(function(){
+	$(".block_7 .selected").each( function(a){
+		$(".block_7 .right .conv").append("<div class='text'>" + $(".block_6 .selected").eq(a).text() +"</div><br>");
+		$(".block_7 .drawer").addClass("slideoff").fadeOut(500);
+	});
+	// $(".block_7").show();
 });
 // $(".block_4 .proceed").click(function(){
 
