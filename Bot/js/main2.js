@@ -3,14 +3,23 @@ var block2 = "<div class=\"block_2\"><div class=\"conv-grp\"><img src=\"avatar.s
 $(".option").click(function(){
 	$(this).toggleClass("selected");
 });
-$(".block_2, .block_3, .block_4, .block_5, .block_6, .block_7, .sp_1").hide();
+$(".block_2, .block_3, .block_4, .block_5, .block_6, .block_7, .sp_1, .block_sp_1").hide();
+
 $(".block_1 .proceed").click(function(){
 	$(".selected").each( function(a){
 		$(".block_1 .right .conv").append("<div class='text'>" + $(".selected").eq(a).text() +"</div><br>");
 		$(".block_1 .drawer").addClass("slideoff").fadeOut(500);
 	});
 	$(".sp_1").show();
-	$(".block_2").show();
+	setTimeout(function(){
+		$(".block_sp_1").show();
+		$(".block_sp_1 .proceed").click(function(){
+			$(".block_sp_1 .drawer").addClass("slideoff").fadeOut(500);
+			$(".block_sp_1 .right .conv").append("<div class='text'>I don't have any symptoms</div><br>");
+			$(".block_2").show();
+		})
+	}, 1000);
+
 });
 $(".block_2 .proceed").click(function(){
 	if($(".block_2 .selected").hasClass("jhamela")){
