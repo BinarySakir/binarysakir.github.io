@@ -1,12 +1,13 @@
 // sample.json in compact format
 $( document ).ready(function() {
-	// var data = JSON.parse('{"quantity":4,"messages":[["Hi!", "What a nice sunny day!"],"M2","",["M3_1","M3_2"]],"questions":["In the last 14 days, what is your exposure to others who are known to have COVID-19?","Q2","Q3","Q4"],"options":[["I live with someone who has COVID-19", "I\'ve had close contact with someone who has COVID-19", "I\'ve been near someone who has COVID-19", "I\'ve had no exposure"],["O2_1", "O2_2", "O2_3"],["O3_1", "O3_2", "O3_3"],["O4_1, 04_2, O4_3"]]}');
-	var data = JSON.parse('{"quantity":4,"messages":[["Hi!","Welcome to our chat bot. Let\'s begin by asking some questions."],"Thank you.","Thanks.",""],"questions":["Do you live or work in care facility?","In the last 14 days, what is your exposure to others who are known to have COVID-19?","In the last 14 days, have you traveled internationally?","How old are you?"],"options":[["I live in a long-term care facility","I\'ve worked in a hospital or other care facility in the past 14 days","I plan to work in a hospital or other care facility in the next 14 days","No, I don\'t live or work in a care facility"],["I live with someone who has COVID-19","I\'ve had close contact with someone who has COVID-19","I\'ve been near someone who has COVID-19","I\'ve had no exposure"],["I have traveled internationally","I have not traveled internationally"],["Under 18","Between 18 and 64","65 or above"]]}');
-	var q = data["quantity"];
+	var data = JSON.parse('{"quantity":4,"messages":[["Hi!","Welcome to our chat bot. Let\'s begin by asking some questions."],"","",""],"questions":["Are you experiencing any of these problems?","How old are you?","Are you experiencing any of these problems?","Do you have any of these conditions?","Have you travelled internationally?","In the last 14 days, have you been in an area where COVID-19 is widespread?","Tell us your exposure to covid-19 cases"],"options":[["Severe chest pain","Severe Disorientation","Constant chest pain","Difficulty breathing","Constant lightheadedness"],["Under 18","18 - 64","65 or above"],["Fever or sweating","Difficulty breathing","Sore throat","New & worsening cough","Vomiting/ diarrhea","None of the above"],["Asthma","Chronic lung disease","Diabetes","Pregnant?","Kidney failure","Obesity (Extreme)","Obesity (Moderate)","Liver Cirrhosis","Weakened immune system","Congestive Heart Failure","Heart Failure","Disease that makes you cough","Disease that makes you harder to cough"],["Yes","No"],["An area with widespread COVID-19 case (I traveled there)","An area with widespread COVID-19 case (I live there)","I don’t know","None of the above"],["I live with COVID-19 patient","Close Contact (10 mins & above)","Close Contact (6 feet and sneezed on)","Minimal contact with a COVID 19 patient (6 feet away)","Minimal contact with a COVID 19 patient (Not coughed or sneezed one)"]],"answers":["You should call 911. Based on your reported symptoms, you should seek care immediately.",["This tool is intended for people who are at least 18 years old","18-64","65"]]}')
 	function fun(i, callback) {
 		var m = data["messages"][i];
 		var ques = data["questions"][i];
 		var o = data["options"][i];
+		console.log(m);
+		console.log(ques);
+		console.log(o);
 		$("body").append("<div class='conv-grp cg" + String(i+1) + "'>");
 		$(".cg" + String(i+1)).append('<img src="avatar.svg" height="40" width="40">');
 		$(".cg" + String(i+1)).append("<div class='conv'>");
@@ -20,6 +21,9 @@ $( document ).ready(function() {
 			}
 		}
 		$(".cg" + String(i+1) + " .conv").append("<div class='text'>" + ques + "</div><br>");
+			$('html, body').animate({
+		        scrollTop: $(".cg" + String(i+1) + " .conv").offset().top
+		    }, 2000);
 		var s ="";
 		for(var k = 0; k < o.length; k++){
 			s = s + "<div class='option'>" + o[k] + "</div>"
@@ -35,7 +39,6 @@ $( document ).ready(function() {
 			$(".selected").each( function(a){
 			  s_options.push($(".selected").eq(a).text());                     
 			});
-			console.log(s_options);
 			$(".drawer").addClass("slideoff").fadeOut(500);
 			setTimeout(function(){$(".drawer").remove();}, 500);
 			$("body").append("<div class='conv-grp right rmsg" + String(i+1) + "'>");
@@ -43,7 +46,23 @@ $( document ).ready(function() {
 			for(var l = 0; l < s_options.length; l++){
 				$(".rmsg" + String(i+1) + " .conv").append("<div class='text'>" + s_options[l] + "</div><br>");
 			}
-			callback();
+			if(i === 0){
+				$("body").append("<div class='conv-grp cg_sp_1'>");
+				$(".cg_sp_1").append('<img src="avatar.svg" height="40" width="40">');
+				$(".cg_sp_1").append("<div class='conv'>");
+				$(".cg_sp_1 .conv").append("<div class='text'>" + "You should call 911." + "</div><br>");
+			}
+			if(i === 1){
+				if($(".rmsg" + String(i+1) + " .conv .text").text() === "Under 18"){
+					$("body").append("<div class='conv-grp cg_sp_2'>");
+					$(".cg_sp_2").append('<img src="avatar.svg" height="40" width="40">');
+					$(".cg_sp_2").append("<div class='conv'>");
+					$(".cg_sp_2 .conv").append("<div class='text'>" + "This tool is intended for people who are at least 18 years old." + "</div><br>");
+				}else{ callback(); }
+			}else{
+				callback();
+			}
+			
 		});
 	}// }
 
@@ -52,13 +71,35 @@ $( document ).ready(function() {
 	fun(0, function(){
 		setTimeout(function(){
 			fun(1, function(){
-				setTimeout(function(){
-					fun(2, function(){
-						setTimeout(function(){
-							fun(3);
-						}, 500);
-					});
-				}, 500);
+				if($(".rmsg2 .conv .text").text() === "65 or above"){
+					setTimeout(function(){
+						fun(3, function(){
+							setTimeout(function(){
+								fun(4, function(){
+									setTimeout(function(){
+										fun(5);
+									}, 500);
+								});
+							}, 500);
+						});
+					}, 500);
+				}else{
+					setTimeout(function(){
+						fun(2, function(){
+							setTimeout(function(){
+								fun(3, function(){
+									setTimeout(function(){
+										fun(4, function(){
+											setTimeout(function(){
+												fun(5);
+											}, 500);
+										});
+									}, 500)
+								});
+							}, 500);
+						});
+					}, 500);
+				}
 			});
 		}, 500);
 	});

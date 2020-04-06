@@ -9,7 +9,7 @@ body{
 .conv-grp img{ position: absolute; }
 .conv{margin-bottom: 5px}
 .conv .text{
-	padding: 8px 15px;
+	padding: 15px 15px;
 	margin-bottom: 6px;
 	display: inline-block;
 	margin-left: 50px;
@@ -92,52 +92,55 @@ body{
 .drawer{
 	text-align: center;
 	color: #5F6FED;
-	background: rgb(95,111,237);
-	background: linear-gradient(180deg, rgba(95,111,237,1) 0%, rgba(140,149,195,1) 100%);
+	background-color: #ffffff;
 	-webkit-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
 	-moz-box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
 	box-shadow: 0px -2px 44px 5px rgba(0,0,0,0.28);
-	/*position: ;*/
+	/*position;*/
 	width: 100%;
 	bottom: 0;
 	right: 0;
 	max-height: 60%;
 	overflow-y:scroll;
     overflow-x:hidden;
-    border-top-right-radius: 10px;
-    border-top-left-radius: 10px;
+    border-radius: 10px;
     animation: drawerReveal;
     animation-duration: 1s;
     padding: 15px;
+    margin-top: 20px;
 }
 .drawer .option{
+	background-color: #ddd;
+	width: 48%;
+	display: inline-block;
+	color: #1c1c1e;
+	-webkit-box-shadow: 0px 8px 0px 0px rgba(0,0,0,0.1);
 	font-size: 18px;
 	padding: 15px 5px;
-	background-color: rgba(255,255,255,0.2);
-	color: #ffffff;
 	border-radius: 10px;
 	margin-bottom: 10px;
 	transition: all 200ms;
+	margin-right: 5px;
+	margin-top: 5px;
 
 }
 .drawer .option:last-child{margin-bottom: 0;}
 .drawer .option:active{
-	/*animation: drawerOnHold;
-	animation-duration: 0.5s;*/
 	transform: scale(0.95);
 }
 .drawer .option.selected{
-	background-color: #fff;
-	color: #5F6FED;
+	background-color: #7585DC;
+	color: #ffffff;
 }
 .proceed{
-	color: white;
+	color: #7585DC;
 	/*position: fixed;*/
 	/*bottom: 0;*/
 	/*left: 50%;*/
+	margin-top: 10px;
 	text-align: center;
+	font-weight: 700;
 	/*transform: translateX(-50%);
-	padding: 10px;
 	background: rgb(70,70,70);
 	background: linear-gradient(0deg, rgba(70,70,70,1) 0%, rgba(140,149,195,0) 100%);
 	width: 100%;*/
