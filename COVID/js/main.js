@@ -51,7 +51,10 @@ $(".block_1 .proceed").click(function(){
 $(".block_2 .proceed").click(function(){
 	if($(".block_2 .selected").length === 1){
 		if($(".block_2 .selected").text() === "Under 18"){
-			$(".block_2.conv-grp .conv").append("<div class='text'>This tool is intended for people who are at least 18 years old.</div><br>");
+			if($(".sp_block_2").hasClass("shown") === false){
+				$(".sp_block_2").fadeIn(500);
+				$(".sp_block_2").addClass("shown")
+			}
 			$(".block_2 .selected").removeClass("selected");
 		}
 		else{
