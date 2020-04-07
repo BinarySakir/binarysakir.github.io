@@ -6,7 +6,6 @@ $(".option").click(function(){
 $(".block_2, .block_3, .block_4, .block_5, .block_6, .block_7, .block_8, .sp_1, .sp_2, .sp_3, .sp_4, .block_sp_1").hide();
 $(".block_1 .proceed").click(function(){
 	$(".selected").each( function(a){
-		// $(".block_1 .right .conv").append("<div class='text'>" + $(".selected").eq(a).text() +"</div><br>");
 		$(".block_1 .drawer").addClass("slideoff").fadeOut(500);
 	});
 	$(".sp_1").show();
