@@ -2,6 +2,9 @@ $('.sub_option').hide();
 $('.obes_sub .obes').on('click', function(event) {        
 	$('.obes_sub .sub_option').slideToggle();
 });
+$('.heartf_sub .heartf').on('click', function(event) {        
+	$('.heartf_sub .sub_option').slideToggle();
+});
 $('.close_c').on('click', function(event) {        
 	$('.close_c .sub_option').slideToggle();
 });
