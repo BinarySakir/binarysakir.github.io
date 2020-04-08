@@ -1,7 +1,6 @@
 $('.sub_option').hide();
-// $('.block_2, .block_3, .block_4, .sp_drawer_1, .sp_block_1').hide();
-$('.obes').on('click', function(event) {        
-	$('.sub_option').slideToggle();
+$('.obes_sub .obes').on('click', function(event) {        
+	$('.obes_sub .sub_option').slideToggle();
 });
 $('.close_c').on('click', function(event) {        
 	$('.close_c .sub_option').slideToggle();
@@ -9,19 +8,22 @@ $('.close_c').on('click', function(event) {
 $('.minimal_c').on('click', function(event) {        
 	$('.minimal_c .sub_option').slideToggle();
 });
+$('.kidney').on('click', function(event) {        
+	$('.kidney_sub .sub_option').slideToggle();
+});
 $(".option").click(function(){
 	$(".block_2 .option").removeClass("selected");
 	if(!$(this).hasClass("o_sp")){
 		$(this).toggleClass("selected");
 	}else{
 		$(".sub_option .option").click(function(){
-			if($(".sub_option .option").hasClass("selected")){
-				$(".obes").addClass("selected");
-				$(".o_sp").addClass("selected");
+			if($(this).hasClass("selected")){
+				$(this).addClass("selected");
+				$(this).parent().parent().parent().parent().addClass("selected");
 				
 			}else{
-				$(".obes").removeClass("selected");
-				$(".o_sp").removeClass("selected");
+				$(this).removeClass("selected");
+				$(this).parent().parent().parent().parent().removeClass("selected");
 			}
 		});
 	}
@@ -35,7 +37,9 @@ $(".block_1 .proceed").click(function(){
 	$(".block_1 .drawer .proceed").fadeOut(500);
 	if($(".block_1 .drawer .option").hasClass("selected")){
 		setTimeout(function(){$(".sp_block_1").fadeIn(500);}, 500)
-		$(".sp_drawer_1").fadeIn(500);
+		setTimeout(function(){
+			$(".sp_drawer_1").fadeIn(500);
+		}, 500)
 		$(".sp_drawer_1 .option").click(function(){
 			if($(".sp_drawer_1 .option").hasClass("selected")){
 				// $(".sp_drawer_1").fadeOut(500);
@@ -56,7 +60,7 @@ $(".block_2 .proceed").click(function(){
 				$(".sp_block_2").addClass("shown")
 				$(".second_slide").click(function(){
 					$(".second_slide").removeClass("second_slide");
-					$(".sp_block_2").append($(".sp_block_1"));
+					$("._u18").show();
 				});
 			}
 			$(".block_2 .selected").removeClass("selected");
