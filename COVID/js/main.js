@@ -23,7 +23,7 @@ $('.kidney_sub .kidney').on('click', function(event) {
 
 // go back from block_2 to block_1
 $(".block_1 .option").click(function(){
-	if($(".block_1 .option.none").hasClass("selected")){
+	if($(".block_1 .option.none").hasClass("selected") && $(".block_2 .proceed").is(":visible")){
 		$(".block_1 .option.none").removeClass("selected");
 		$(".block_1 .drawer .proceed").fadeIn(500);
 		$(".block_2").fadeOut(500);
