@@ -2,6 +2,8 @@ function scrollTo(element){
 	$("html, body").animate({ scrollTop: $(element).offset().top }, "slow")
 }
 
+// Show and hide sub options for obesity, kidney etc.
+
 $('.sub_option').hide();
 $('.obes_sub .obes').on('click', function(event) {        
 	$('.obes_sub .sub_option').slideToggle();
@@ -18,12 +20,29 @@ $('.minimal_c_sub .minimal_c').on('click', function(event) {
 $('.kidney_sub .kidney').on('click', function(event) {        
 	$('.kidney_sub .sub_option').slideToggle();
 });
+
+// go back from block_2 to block_1
+$(".block_1 .option").click(function(){
+	if($(".block_1 .option.none").hasClass("selected")){
+		$(".block_1 .option.none").removeClass("selected");
+		$(".block_1 .drawer .proceed").fadeIn(500);
+		$(".block_2").fadeOut(500);
+	}
+});
+
 $(".option").click(function(){
-	$(".block_2 .option").removeClass("selected");
-	$(".block_5 .option").removeClass("selected");
-	if(!$(this).hasClass("o_sp")){
+	$(".block_2 .option").removeClass("selected"); // select only one option at a time
+	$(".block_5 .option").removeClass("selected");  // select only one option at a time
+	if(!$(this).hasClass("o_sp")){	
 		$(this).toggleClass("selected");
+		if($(".block_1 .option.none").hasClass("selected")){
+			$(".block_1 .option").removeClass("selected")
+			$(".block_1 .option.none").addClass("selected")
+			$(".block_1 .drawer .proceed").fadeOut(500);
+			setTimeout(function(){$(".block_2").fadeIn(500); scrollTo(".block_2");}, 500)
+		}
 	}else{
+		// selected sub options
 		$(".sub_option .option").click(function(){
 			if($(this).hasClass("selected")){
 				$(this).addClass("selected");
@@ -37,29 +56,29 @@ $(".option").click(function(){
 	}
 });
 
-// $(".selected").each( function(a){
-// 	$(".block_1 .drawer").addClass("slideoff").fadeOut(500);
-// });
 
 $(".block_1 .proceed").click(function(){
-	$(".block_1 .drawer .proceed").fadeOut(500);
-	if($(".block_1 .drawer .option").hasClass("selected") && $(".block_1 .drawer .option.none").hasClass("selected") === false){
-		setTimeout(function(){$(".sp_block_1").fadeIn(500); scrollTo(".something");}, 500)
-
-		setTimeout(function(){
-			$(".sp_drawer_1").fadeIn(500);
-		}, 500)
-		$(".sp_drawer_1 .option").click(function(){
-			if($(".sp_drawer_1 .option").hasClass("selected")){
-				setTimeout(function(){
-					$(".block_2").fadeIn(500); scrollTo(".block_2");
-				}, 500)
-			}
-		});
-	}else{
-		setTimeout(function(){$(".block_2").fadeIn(500); scrollTo(".block_2");}, 500)
+	if($(".block_1 .selected").length >= 1){
+		$(".block_1 .drawer .proceed").fadeOut(500);
+		if($(".block_1 .drawer .option").hasClass("selected") && $(".block_1 .drawer .option.none").hasClass("selected") === false){
+			setTimeout(function(){$(".sp_block_1").fadeIn(500); scrollTo(".something");}, 500)
+			setTimeout(function(){
+				$(".sp_drawer_1").fadeIn(500);
+			}, 500)
+			$(".sp_drawer_1 .option").click(function(){
+				if($(".sp_drawer_1 .option").hasClass("selected")){
+					setTimeout(function(){
+						$(".block_2").fadeIn(500); scrollTo(".block_2");
+					}, 500)
+				}
+			});
+		}else{
+			setTimeout(function(){$(".block_2").fadeIn(500); scrollTo(".block_2");}, 500)
+		}
 	}
 });
+
+
 $(".block_2 .proceed").click(function(){
 	if($(".block_2 .selected").length === 1){
 		if($(".block_2 .selected").text() === "Under 18"){
