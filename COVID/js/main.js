@@ -102,8 +102,7 @@ $(".option").click(function(){
 	}else{
 		// selected sub options
 		$(".sub_option .option").click(function(){
-			// $(".sub_option .option").parent().find($(".option")).removeClass("selected");
-			// var firstOption = $(this).className;
+			// console.log("ads");
 			if($(this).hasClass("sub_o_1")){
 				if($(this).hasClass("selected")){
 					$(this).removeClass("selected");
@@ -111,7 +110,7 @@ $(".option").click(function(){
 				}
 				else{
 					$(this).addClass("selected");
-					$(".sub_o_2").removeClass("selected");
+					$($(this).parent().find(".sub_o_2")).removeClass("selected");
 					$(this).parent().parent().parent().parent().addClass("selected");
 				}
 			}
@@ -121,20 +120,12 @@ $(".option").click(function(){
 				}
 				else{
 					$(this).addClass("selected");
-					$(".sub_o_1").removeClass("selected");}
+					$($(this).parent().find(".sub_o_1")).removeClass("selected");}
 					$(this).parent().parent().parent().parent().addClass("selected");
 			}
-			if(!$(".sub_o_1").hasClass("selected") && !$(".sub_o_2").hasClass("selected")){
+			if(!$(this).parent().find(".sub_o_1").hasClass("selected") && !$(this).parent().find(".sub_o_2").hasClass("selected")){
 				$(this).parent().parent().parent().parent().removeClass("selected");
 			}
-			// $(this).addClass("selected");
-			// $(this).closest('.option').removeClass("selected");
-			// if($(this).hasClass("selected")){
-			// 	$(this).parent().parent().parent().parent().addClass("selected");
-				
-			// }else{
-			// 	$(this).parent().parent().parent().parent().removeClass("selected");
-			// }
 		});
 	}
 });

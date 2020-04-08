@@ -141,7 +141,7 @@ hr{
 	padding: 5px 0;
 }
 
-.block_2, .block_3, .block_4,  .block_5, .block_6, .block_7, .block_8, .sp_drawer_1, .sp_block_2, .sp_block_3, .sp_block_4, /*.sp_block_5,*/ .sp_block_1, ._u18{
+.block_2, .block_3, .block_4,  .block_5, .block_6, .block_7, .block_8, .sp_drawer_1, .sp_block_2, .sp_block_3, .sp_block_4, .sp_block_5, .sp_block_1, ._u18{
 	display: none;
 }
 
@@ -163,4 +163,12 @@ hr{
 .sp_drawer_1{
 	padding-bottom: 0;
 	margin-bottom: 0;
+}
+
+.sp_block_5 .row{
+	margin-bottom: 10px;
+}
+.sp_block_5 p{
+	font-size: 18px;
+	font-weight: 700;
 }
