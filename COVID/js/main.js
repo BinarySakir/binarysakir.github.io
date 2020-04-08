@@ -197,7 +197,7 @@ $(".block_6 .proceed").click(function(){
 	if($(".block_6 .selected").length >= 1){
 		if($(".block_6 .selected").hasClass("exp") && !$(".block_6 .proceed").hasClass("to7")){
 			$(".block_6 .proceed").addClass("to7")
-			$(".sp_block_3").show();
+			$(".sp_block_3").fadeIn(500);
 		}
 		else if($(".block_6 .proceed").hasClass("to7")){
 			$(".block_6 .drawer .proceed").fadeOut(500);

@@ -168,11 +168,13 @@ hr{
 	padding-bottom: 0;
 	margin-bottom: 0;
 }
-
-.sp_block_4 .row, .sp_block_5 .row{
+.sp_block_3{
+	color: #1c1c1e;
+}
+.sp_block_3 .row, .sp_block_4 .row, .sp_block_5 .row{
 	margin-bottom: 10px;
 }
-.sp_block_4 p, .sp_block_5 p{
+.sp_block_3 p, .sp_block_4 p, .sp_block_5 p{
 	font-size: 18px;
 	font-weight: 700;
 }
