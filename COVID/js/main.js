@@ -99,9 +99,10 @@ $(".option").click(function(){
 			}
 			$(".block_2 .selected").removeClass("selected");
 		}
-	}else{
-		// selected sub options
-		$(".sub_option .option").click(function(){
+	}
+});
+
+$(".sub_option .option").click(function(){
 			console.log("ads");
 			if($(this).hasClass("sub_o_1")){
 				if($(this).hasClass("selected")){
@@ -126,9 +127,6 @@ $(".option").click(function(){
 				$(this).parent().parent().parent().parent().removeClass("selected");
 			}
 		});
-	}
-});
-
 
 $(".block_1 .proceed").click(function(){
 	if($(".block_1 .selected").length >= 1){
