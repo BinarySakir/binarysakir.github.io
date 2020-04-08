@@ -58,7 +58,7 @@ $(".block_5 .option").click(function(){
 $(".option").click(function(){
 	$(".block_2 .option").removeClass("selected"); // select only one option at a time
 	$(".block_5 .option").removeClass("selected");  // select only one option at a time
-	if(!$(this).hasClass("o_sp")){	
+	if(!$(this).hasClass("o_sp") && !$(this).parent().parent().parent().parent().hasClass("o_sp")){	
 		$(this).toggleClass("selected");
 		if($(".block_1 .option.none").hasClass("selected")){
 			$(".block_1 .option").removeClass("selected")
@@ -86,8 +86,6 @@ $(".option").click(function(){
 		if($(".block_6 .option.none").hasClass("selected")){
 			$(".block_6 .option").removeClass("selected")
 			$(".block_6 .option.none").addClass("selected")
-			// $(".block_6 .drawer .proceed").fadeOut(500);
-			// setTimeout(function(){$(".block_7").fadeIn(500);}, 500)
 		}
 		if($(".block_2 .selected").text() === "Under 18"){
 			if($(".sp_block_2").hasClass("shown") === false){
@@ -104,12 +102,39 @@ $(".option").click(function(){
 	}else{
 		// selected sub options
 		$(".sub_option .option").click(function(){
-			if($(this).hasClass("selected")){
-				$(this).parent().parent().parent().parent().addClass("selected");
-				
-			}else{
+			// $(".sub_option .option").parent().find($(".option")).removeClass("selected");
+			// var firstOption = $(this).className;
+			if($(this).hasClass("sub_o_1")){
+				if($(this).hasClass("selected")){
+					$(this).removeClass("selected");
+
+				}
+				else{
+					$(this).addClass("selected");
+					$(".sub_o_2").removeClass("selected");
+					$(this).parent().parent().parent().parent().addClass("selected");
+				}
+			}
+			if($(this).hasClass("sub_o_2")){
+				if($(this).hasClass("selected")){
+					$(this).removeClass("selected");
+				}
+				else{
+					$(this).addClass("selected");
+					$(".sub_o_1").removeClass("selected");}
+					$(this).parent().parent().parent().parent().addClass("selected");
+			}
+			if(!$(".sub_o_1").hasClass("selected") && !$(".sub_o_2").hasClass("selected")){
 				$(this).parent().parent().parent().parent().removeClass("selected");
 			}
+			// $(this).addClass("selected");
+			// $(this).closest('.option').removeClass("selected");
+			// if($(this).hasClass("selected")){
+			// 	$(this).parent().parent().parent().parent().addClass("selected");
+				
+			// }else{
+			// 	$(this).parent().parent().parent().parent().removeClass("selected");
+			// }
 		});
 	}
 });
