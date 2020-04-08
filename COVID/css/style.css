@@ -47,7 +47,13 @@ body{
 	animation: textReveal;
 	animation-duration: 0.5s;
 }
-
+.conv-grp{
+	border-bottom: 1px solid #5F6FED;
+	padding-top: 20px;
+}
+.sp_block_2.conv-grp, ._u18, .sp_block_1{
+	border:0;
+}
 .conv-grp .avatar{ position: absolute; }
 .conv{margin-bottom: 5px}
 .conv .text{
@@ -75,7 +81,9 @@ body{
 		transform: translateY(0%)
 	}
 }
-
+hr{
+	border: 2px solid #bbb;
+}
 .drawer{
 	text-align: center;
 	color: #5F6FED;
@@ -84,6 +92,7 @@ body{
 	right: 0;
 	border-radius: 10px;
     padding: 15px;
+    padding-top: 0;
     animation: drawerReveal;
     animation-duration: 1s;
 }
@@ -148,5 +157,7 @@ body{
 .second_slide{
 	text-decoration: underline;
 }
-.sp_block_2{
+.sp_drawer_1{
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
