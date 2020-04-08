@@ -5,13 +5,13 @@ $('.obes_sub .obes').on('click', function(event) {
 $('.heartf_sub .heartf').on('click', function(event) {        
 	$('.heartf_sub .sub_option').slideToggle();
 });
-$('.close_c').on('click', function(event) {        
-	$('.close_c .sub_option').slideToggle();
+$('.close_c_sub .close_c').on('click', function(event) {        
+	$('.close_c_sub .sub_option').slideToggle();
 });
-$('.minimal_c').on('click', function(event) {        
-	$('.minimal_c .sub_option').slideToggle();
+$('.minimal_c_sub .minimal_c').on('click', function(event) {        
+	$('.minimal_c_sub .sub_option').slideToggle();
 });
-$('.kidney').on('click', function(event) {        
+$('.kidney_sub .kidney').on('click', function(event) {        
 	$('.kidney_sub .sub_option').slideToggle();
 });
 $(".option").click(function(){
