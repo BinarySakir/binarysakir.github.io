@@ -102,16 +102,15 @@ $(".option").click(function(){
 	}else{
 		// selected sub options
 		$(".sub_option .option").click(function(){
-			// console.log("ads");
+			console.log("ads");
 			if($(this).hasClass("sub_o_1")){
 				if($(this).hasClass("selected")){
 					$(this).removeClass("selected");
-
 				}
 				else{
 					$(this).addClass("selected");
 					$($(this).parent().find(".sub_o_2")).removeClass("selected");
-					$(this).parent().parent().parent().parent().addClass("selected");
+					$(this).parent().parent().parent().parent().addClass("selected"); // .o_sp selected
 				}
 			}
 			if($(this).hasClass("sub_o_2")){
