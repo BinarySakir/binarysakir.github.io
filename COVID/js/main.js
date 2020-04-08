@@ -16,6 +16,7 @@ $('.kidney').on('click', function(event) {
 });
 $(".option").click(function(){
 	$(".block_2 .option").removeClass("selected");
+	$(".block_5 .option").removeClass("selected");
 	if(!$(this).hasClass("o_sp")){
 		$(this).toggleClass("selected");
 	}else{
@@ -38,21 +39,20 @@ $(".option").click(function(){
 
 $(".block_1 .proceed").click(function(){
 	$(".block_1 .drawer .proceed").fadeOut(500);
-	if($(".block_1 .drawer .option").hasClass("selected")){
+	if($(".block_1 .drawer .option").hasClass("selected") && $(".block_1 .drawer .option.none").hasClass("selected") === false){
 		setTimeout(function(){$(".sp_block_1").fadeIn(500);}, 500)
 		setTimeout(function(){
 			$(".sp_drawer_1").fadeIn(500);
 		}, 500)
 		$(".sp_drawer_1 .option").click(function(){
 			if($(".sp_drawer_1 .option").hasClass("selected")){
-				// $(".sp_drawer_1").fadeOut(500);
 				setTimeout(function(){
 					$(".block_2").fadeIn(500);
 				}, 500)
 			}
 		});
 	}else{
-			setTimeout(function(){$(".block_2").fadeIn(500);}, 500)
+		setTimeout(function(){$(".block_2").fadeIn(500);}, 500)
 	}
 });
 $(".block_2 .proceed").click(function(){
