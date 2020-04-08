@@ -105,11 +105,9 @@ $(".option").click(function(){
 		// selected sub options
 		$(".sub_option .option").click(function(){
 			if($(this).hasClass("selected")){
-				$(this).addClass("selected");
 				$(this).parent().parent().parent().parent().addClass("selected");
 				
 			}else{
-				$(this).removeClass("selected");
 				$(this).parent().parent().parent().parent().removeClass("selected");
 			}
 		});
