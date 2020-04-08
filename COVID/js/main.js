@@ -1,5 +1,5 @@
 function scrollTo(element){
-	$("html, body").animate({ scrollTop: $(element).offset().top })
+	$("html, body").animate({ scrollTop: $(element).offset().top }, "slow")
 }
 
 $('.sub_option').hide();
@@ -44,7 +44,7 @@ $(".option").click(function(){
 $(".block_1 .proceed").click(function(){
 	$(".block_1 .drawer .proceed").fadeOut(500);
 	if($(".block_1 .drawer .option").hasClass("selected") && $(".block_1 .drawer .option.none").hasClass("selected") === false){
-		setTimeout(function(){$(".sp_block_1").fadeIn(500); scrollTo(".sp_block_1");}, 500)
+		setTimeout(function(){$(".sp_block_1").fadeIn(500); scrollTo(".something");}, 500)
 
 		setTimeout(function(){
 			$(".sp_drawer_1").fadeIn(500);
