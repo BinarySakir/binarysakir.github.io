@@ -54,6 +54,9 @@ body{
 .sp_block_2.conv-grp, ._u18, .sp_block_1{
 	border:0;
 }
+._u18{
+	border-top: 1px solid #5F6FED;
+}
 .conv-grp .avatar{ position: absolute; }
 .conv{margin-bottom: 5px}
 .conv .text{

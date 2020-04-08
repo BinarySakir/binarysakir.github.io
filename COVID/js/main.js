@@ -1,3 +1,7 @@
+function scrollTo(element){
+	$("html, body").animate({ scrollTop: $(element).offset().top })
+}
+
 $('.sub_option').hide();
 $('.obes_sub .obes').on('click', function(event) {        
 	$('.obes_sub .sub_option').slideToggle();
@@ -40,7 +44,8 @@ $(".option").click(function(){
 $(".block_1 .proceed").click(function(){
 	$(".block_1 .drawer .proceed").fadeOut(500);
 	if($(".block_1 .drawer .option").hasClass("selected") && $(".block_1 .drawer .option.none").hasClass("selected") === false){
-		setTimeout(function(){$(".sp_block_1").fadeIn(500);}, 500)
+		setTimeout(function(){$(".sp_block_1").fadeIn(500);scrollTo(".sp_block_1");}, 500)
+
 		setTimeout(function(){
 			$(".sp_drawer_1").fadeIn(500);
 		}, 500)
