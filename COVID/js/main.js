@@ -215,11 +215,11 @@ $(".block_7 .proceed").click(function(){
 	if($(".block_7 .selected").length >= 1){
 		if($(".block_7 .selected").hasClass("close_c_sub")){
 			$(".block_7 .drawer .proceed").fadeOut(500);
-			$(".sp_block_4").show();
+			$(".sp_block_5").show();
 		}
 		else if ($(".block_7 .selected").hasClass("minimal_c_sub")){
 			$(".block_7 .drawer .proceed").fadeOut(500);
-			$(".sp_block_5").show();
+			$(".sp_block_4").show();
 		}
 	}
 })
