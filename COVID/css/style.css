@@ -23,9 +23,9 @@ body{
 	padding: 30px;
 	background: rgb(95,111,237);
 	background: linear-gradient(180deg, rgba(95,111,237,0.6) 0%, rgba(140,149,195,0) 100%);
-	padding-bottom: 0;
 }
 .header h1{
+	padding-top: 30px;
 	font-size: 25px;
 }
 .header h2{
