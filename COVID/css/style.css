@@ -132,3 +132,15 @@ body{
 .block_2, .block_3, .block_4,  .block_5, .block_6, .block_7, .block_8, .sp_drawer_1, .sp_block_2, .sp_block_1{
 	display: none;
 }
+.sp_block_1{
+	animation: textReveal;
+	animation-duration: 0.5s;
+}
+
+.sp_block_1 .col-6 p{
+	font-size: 14px;
+	margin-top: 5px;
+}
+.second_slide{
+	text-decoration: underline;
+}
