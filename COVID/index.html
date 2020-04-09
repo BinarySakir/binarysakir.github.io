@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chat bot</title>
 	<link href="https://fonts.googleapis.com/css?family=Magra:400,700&display=swap" rel="stylesheet">
+	<meta name="theme-color" content="#5F6FED" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	
@@ -229,6 +230,11 @@
 				</div>
 			</div>
 		</div>
+
+
+		<!-- Where have you travelled to in the last 14 days? -->
+
+
 		<div class="block_6 conv-grp">
 			<img src="lafz_avatar.png" class="avatar" height="50" width="50">
 			<div class="conv">
@@ -236,30 +242,37 @@
 			</div>
 			<div class="container drawer">
 				<div class="row">
+					<!-- This is an option which has two options inside it -->
+					<!-- 2 and 3 are not mutually selectable, but 1,4,5 are -->
+					<!-- we're trying to remove the class "selected" from (1),(2),(3),(4) if (5) is selected and so on.  -->
 					<div class="option o_sp wide_area_sub exp col">
-						<div class="wide_area">An area with widespread COVID 19 case</div>
+						<div class="wide_area">An area with widespread COVID 19 case</div><!-- (1) -->
 						<div class="sub_option">
 							<div class="container">
 							<div class="row">
-								<div class="option col-6 sub_o_1">I live there</div>
-								<div class="option col-6 sub_o_2">I travelled there</div>
+								<div class="option col-6 sub_o_1">I live there</div><!-- (2) -->
+								<div class="option col-6 sub_o_2">I travelled there</div><!-- (3) -->
 							</div>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="option col">I don’t know</div>
-					<div class="option col none">None of the above</div>
+					<div class="option col">I don’t know</div><!-- (4) -->
+					<div class="option col none">None of the above</div><!-- (5) -->
 				</div>
+				<div class="row">
 				<div class="sp_block_3 conv-grp" >
+				<div>
+					<p><img src="lafz_avatar.png"  height="50" width="50">&nbsp;&nbsp;<span>Your next steps</span></p>
+				</div>
 				<div class="container">
 					<div class="row">
 						<div class="col-2">
 							<img src="ico/social/doctor.png" style="height: 50px; width: 45px;">
 						</div>
 						<div class="col-10">
-							<p>Call you doctor or care team</p>
+							<p>Call your doctor or care team</p>
 						</div>
 					</div>
 					<div class="row">
@@ -288,6 +301,7 @@
 					</div>
 				</div>
 				</div>
+				</div>
 				<div class="row">
 					<div class='col proceed'>Proceed</div>
 				</div>
@@ -300,10 +314,10 @@
 			</div>
 			<div class="container drawer">
 				<div class="row">
-					<div class="option col exp">I live with COVID-19 patient</div>
+					<div class="option col exp mutual">I live with COVID-19 patient</div>
 				</div>
 				<div class="row">
-					<div class="option o_sp close_c_sub col">
+					<div class="option o_sp close_c_sub col mutual">
 						<div class="close_c">Close Contact</div>
 						<div class="sub_option">
 							<div class="container">
@@ -314,7 +328,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="option o_sp minimal_c_sub col">
+					<div class="option o_sp minimal_c_sub col mutual">
 						<div class="minimal_c">Minimal Contact</div>
 						<div class="sub_option">
 							<div class="container">
@@ -373,7 +387,7 @@
 						<img src="ico/social/doctor.png" style="height: 50px; width: 45px;">
 					</div>
 					<div class="col-10">
-						<p>Call you doctor or care team</p>
+						<p>Call your doctor or care team</p>
 					</div>
 				</div>
 				<div class="row">

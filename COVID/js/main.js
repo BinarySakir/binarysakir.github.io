@@ -83,10 +83,11 @@ $(".option").click(function(){
 			$(".block_5 .drawer .proceed").fadeOut(500);
 			setTimeout(function(){$(".block_6").fadeIn(500);}, 500)
 		}
-		if($(".block_6 .option.none").hasClass("selected")){
-			$(".block_6 .option").removeClass("selected")
-			$(".block_6 .option.none").addClass("selected")
-		}
+		// if($(".block_6 .option.none").hasClass("selected")){
+		// 	$(".block_6 .option").removeClass("selected")
+		// 	$(".block_6 .option.none").addClass("selected")
+		// }
+
 		if($(".block_2 .selected").text() === "Under 18"){
 			if($(".sp_block_2").hasClass("shown") === false){
 				$(".sp_block_2").fadeIn(500);
@@ -102,31 +103,33 @@ $(".option").click(function(){
 	}
 });
 
+
+// this deals with selecting and deselecting sub options
 $(".sub_option .option").click(function(){
-			console.log("ads");
-			if($(this).hasClass("sub_o_1")){
-				if($(this).hasClass("selected")){
-					$(this).removeClass("selected");
-				}
-				else{
-					$(this).addClass("selected");
-					$($(this).parent().find(".sub_o_2")).removeClass("selected");
-					$(this).parent().parent().parent().parent().addClass("selected"); // .o_sp selected
-				}
-			}
-			if($(this).hasClass("sub_o_2")){
-				if($(this).hasClass("selected")){
-					$(this).removeClass("selected");
-				}
-				else{
-					$(this).addClass("selected");
-					$($(this).parent().find(".sub_o_1")).removeClass("selected");}
-					$(this).parent().parent().parent().parent().addClass("selected");
-			}
-			if(!$(this).parent().find(".sub_o_1").hasClass("selected") && !$(this).parent().find(".sub_o_2").hasClass("selected")){
-				$(this).parent().parent().parent().parent().removeClass("selected");
-			}
-		});
+	if($(this).hasClass("sub_o_1")){
+		if($(this).hasClass("selected")){
+			$(this).removeClass("selected");
+		}
+		else{
+			$(this).addClass("selected");
+			$($(this).parent().find(".sub_o_2")).removeClass("selected");
+			$(this).parent().parent().parent().parent().addClass("selected"); // .o_sp selected
+		}
+	}
+	if($(this).hasClass("sub_o_2")){
+		if($(this).hasClass("selected")){
+			$(this).removeClass("selected");
+		}
+		else{
+			$(this).addClass("selected");
+			$($(this).parent().find(".sub_o_1")).removeClass("selected");}
+			$(this).parent().parent().parent().parent().addClass("selected");
+	}
+	if(!$(this).parent().find(".sub_o_1").hasClass("selected") && !$(this).parent().find(".sub_o_2").hasClass("selected")){
+		$(this).parent().parent().parent().parent().removeClass("selected");
+	}
+});
+
 
 $(".block_1 .proceed").click(function(){
 	if($(".block_1 .selected").length >= 1){
@@ -198,6 +201,7 @@ $(".block_6 .proceed").click(function(){
 		if($(".block_6 .selected").hasClass("exp") && !$(".block_6 .proceed").hasClass("to7")){
 			$(".block_6 .proceed").addClass("to7")
 			$(".sp_block_3").fadeIn(500);
+			// $(".sp_block_3").css("display", "all")
 		}
 		else if($(".block_6 .proceed").hasClass("to7")){
 			$(".block_6 .drawer .proceed").fadeOut(500);
@@ -213,7 +217,7 @@ $(".block_6 .proceed").click(function(){
 
 $(".block_7 .proceed").click(function(){
 	if($(".block_7 .selected").length >= 1){
-		if($(".block_7 .selected").hasClass("close_c_sub")){
+		if($(".block_7 .selected").hasClass("close_c_sub") || $(".block_7 .selected").hasClass("exp")){
 			$(".block_7 .drawer .proceed").fadeOut(500);
 			$(".sp_block_5").show();
 		}
@@ -222,4 +226,25 @@ $(".block_7 .proceed").click(function(){
 			$(".sp_block_4").show();
 		}
 	}
+})
+
+$(".minimal_c_sub .option").click(function(){
+	if( $(".sp_block_5").is(":visible")){
+		$(".close_c_sub").removeClass("selected")
+		$(".close_c_sub .sub_o_1").removeClass("selected");
+		$(".close_c_sub .sub_o_2").removeClass("selected");
+		 $(".sp_block_5").hide();
+		 $(".block_7 .drawer .proceed").fadeIn(500);
+	}	
+})
+
+
+$(".close_c_sub .option").click(function(){
+	if( $(".sp_block_4").is(":visible")){
+		$(".minimal_c_sub").removeClass("selected")
+		$(".minimal_c_sub .sub_o_1").removeClass("selected");
+		$(".minimal_c_sub .sub_o_2").removeClass("selected");
+		 $(".sp_block_4").hide();
+		 $(".block_7 .drawer .proceed").fadeIn(500);
+	}	
 })
