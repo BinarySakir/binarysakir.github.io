@@ -226,13 +226,15 @@ $(".block_6 .proceed").click(function(){
 
 $(".block_7 .proceed").click(function(){
 	if($(".block_7 .selected").length >= 1){
-		if($(".block_7 .selected").hasClass("close_c_sub") || $(".block_7 .selected").hasClass("exp")){
+		if($(".block_7 .selected").hasClass("close_c_sub")){
 			$(".block_7 .drawer .proceed").fadeOut(500);
 			$(".sp_block_5").show();
 		}
 		else if ($(".block_7 .selected").hasClass("minimal_c_sub")){
 			$(".block_7 .drawer .proceed").fadeOut(500);
 			$(".sp_block_4").show();
+		}else{
+			$(".block_7 .drawer .o_sp").css("border-width", "3px")
 		}
 	}
 })
@@ -260,28 +262,14 @@ $(".close_c_sub .option").click(function(){
 
 
 $(".mutual.o_sp:first-child .option").click(function(){
-	// if($(".mutual.o_sp:first-child .option").hasClass("selected")){
-	// 	$(".exp.mutual").removeClass("selected");
-	// }
     if($(".mutual.o_sp:last-child .option").hasClass("selected")){
     	$(".mutual.o_sp:last-child .option").removeClass("selected");
         $(".mutual.o_sp:last-child").removeClass("selected");
     }
 })
 $(".mutual.o_sp:last-child .option").click(function(){
-	// if($(".mutual.o_sp:last-child .option").hasClass("selected")){
-	// 	$(".exp.mutual").removeClass("selected");
-	// }
     if($(".mutual.o_sp:first-child .option").hasClass("selected")){
     	$(".mutual.o_sp:first-child .option").removeClass("selected");
         $(".mutual.o_sp:first-child").removeClass("selected");
     }
 })
-// $(".exp.mutual").click(function(){
-//     if($(".exp.mutual").hasClass("selected")){
-// 		$(".mutual.o_sp:first-child .option").removeClass("selected");
-//         $(".mutual.o_sp:first-child").removeClass("selected");
-//         $(".mutual.o_sp:last-child .option").removeClass("selected");
-//         $(".mutual.o_sp:last-child").removeClass("selected");
-// 	}
-// })
