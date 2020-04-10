@@ -180,8 +180,8 @@ hr{
 	margin-bottom: 0;
 }
 
-..sp_block_3{
-	border-bottom: 0;
+.sp_block_3{
+	border: 0;
 }
 .sp_block_3, .sp_block_6{
 	color: #1c1c1e;
