@@ -76,7 +76,7 @@ body{
 	animation-duration: 0.5s;
 
 }
-.sp_block_3 span{
+.sp_block_3 span, .sp_block_6 span{
 	border: 1px solid #9FB7C9;
 	padding: 10px;
 	margin-bottom: 6px;
@@ -155,7 +155,7 @@ hr{
 
 .block_2, .block_3, .block_4,  .block_5, /*.block_6,*/ .block_7, .block_8,
 .sp_drawer_1,
-.sp_block_2, .sp_block_3, .sp_block_4, .sp_block_5, .sp_block_1,
+.sp_block_2, .sp_block_3, .sp_block_4, .sp_block_5, .sp_block_6, .sp_block_1,
 ._u18{
 	display: none;
 }
@@ -180,10 +180,13 @@ hr{
 	margin-bottom: 0;
 }
 
-
-.sp_block_3{
+..sp_block_3{
+	border-bottom: 0;
+}
+.sp_block_3, .sp_block_6{
 	color: #1c1c1e;
 }
+.sp_block_6 .conv,
 .sp_block_3 .conv,
 .sp_block_4 .conv,
 .sp_block_5 .conv{
@@ -191,10 +194,10 @@ hr{
 	font-size: 18px;
 	margin-bottom: 15px;
 }
-.sp_block_3 .row, .sp_block_4 .row, .sp_block_5 .row{
+.sp_block_3 .row, .sp_block_4 .row, .sp_block_5 .row, .sp_block_5 .row{
 	margin-bottom: 10px;
 }
-.sp_block_3 p, .sp_block_4 p, .sp_block_5 p{
+.sp_block_3 p, .sp_block_4 p, .sp_block_5 p, .sp_block_6 p{
 	font-size: 18px;
 	font-weight: 700;
 }
@@ -202,9 +205,10 @@ hr{
 .sp_block_5 .container{
 	margin: 20px;
 }
-.sp_block_4 .grad p{text-align: center;}
+.sp_block_4 .grad p,
+.sp_block_6 .grad p{text-align: center;}
 
-.sp_block_4 .grad{
+.sp_block_4 .grad, .sp_block_6 .grad{
 	padding: 50px;
 	background: rgb(14,92,176);
 	background: linear-gradient(35deg, rgba(14,92,176,0.5) 0%, rgba(140,149,195,0) 100%);

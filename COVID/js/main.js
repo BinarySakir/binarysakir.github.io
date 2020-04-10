@@ -112,7 +112,9 @@ $(".sub_option .option").click(function(){
 		}
 		else{
 			$(this).addClass("selected");
-			$($(this).parent().find(".sub_o_2")).removeClass("selected");
+			if(!$(this).parent().parent().parent().hasClass("both")){
+				$($(this).parent().find(".sub_o_2")).removeClass("selected");
+			}
 			$(this).parent().parent().parent().parent().addClass("selected"); // .o_sp selected
 		}
 	}
@@ -122,7 +124,10 @@ $(".sub_option .option").click(function(){
 		}
 		else{
 			$(this).addClass("selected");
-			$($(this).parent().find(".sub_o_1")).removeClass("selected");}
+			if(!$(this).parent().parent().parent().hasClass("both")){
+				$($(this).parent().find(".sub_o_1")).removeClass("selected");}
+			}
+			
 			$(this).parent().parent().parent().parent().addClass("selected");
 	}
 	if(!$(this).parent().find(".sub_o_1").hasClass("selected") && !$(this).parent().find(".sub_o_2").hasClass("selected")){
@@ -207,6 +212,10 @@ $(".block_6 .proceed").click(function(){
 			$(".block_6 .drawer .proceed").fadeOut(500);
 			setTimeout(function(){$(".block_7").fadeIn(500); scrollTo(".block_7");}, 500)
 		}
+		else if($(".block_6 .selected").hasClass("none")){
+			$(".block_6 .drawer .proceed").fadeOut(500);
+			setTimeout(function(){$(".sp_block_6").fadeIn(500); scrollTo(".sp_block_6");}, 500)
+		}
 		else{
 			$(".block_6 .drawer .proceed").fadeOut(500);
 			// setTimeout(function(){$(".block_8").fadeIn(500); scrollTo(".block_8");}, 500)
@@ -248,3 +257,31 @@ $(".close_c_sub .option").click(function(){
 		 $(".block_7 .drawer .proceed").fadeIn(500);
 	}	
 })
+
+
+$(".mutual.o_sp:first-child .option").click(function(){
+	// if($(".mutual.o_sp:first-child .option").hasClass("selected")){
+	// 	$(".exp.mutual").removeClass("selected");
+	// }
+    if($(".mutual.o_sp:last-child .option").hasClass("selected")){
+    	$(".mutual.o_sp:last-child .option").removeClass("selected");
+        $(".mutual.o_sp:last-child").removeClass("selected");
+    }
+})
+$(".mutual.o_sp:last-child .option").click(function(){
+	// if($(".mutual.o_sp:last-child .option").hasClass("selected")){
+	// 	$(".exp.mutual").removeClass("selected");
+	// }
+    if($(".mutual.o_sp:first-child .option").hasClass("selected")){
+    	$(".mutual.o_sp:first-child .option").removeClass("selected");
+        $(".mutual.o_sp:first-child").removeClass("selected");
+    }
+})
+// $(".exp.mutual").click(function(){
+//     if($(".exp.mutual").hasClass("selected")){
+// 		$(".mutual.o_sp:first-child .option").removeClass("selected");
+//         $(".mutual.o_sp:first-child").removeClass("selected");
+//         $(".mutual.o_sp:last-child .option").removeClass("selected");
+//         $(".mutual.o_sp:last-child").removeClass("selected");
+// 	}
+// })
