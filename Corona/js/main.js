@@ -2,7 +2,7 @@ $( document ).ready(function(){
 	$(".move_down").click(function() {
 	    $('html, body').animate({
 	        scrollTop: $(".screen_2").offset().top
-	    }, 1000);
+	    }, 500);
 	});
 	$(".screen_2 .container .col-6").click(function(){
 		var allTrigger = $(".screen_2 .container .col-6");
