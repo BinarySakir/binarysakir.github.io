@@ -229,10 +229,12 @@ $(".block_7 .proceed").click(function(){
 		if($(".block_7 .selected").hasClass("close_c_sub")){
 			$(".block_7 .drawer .proceed").fadeOut(500);
 			$(".sp_block_5").show();
+			$(".info").show();
 		}
 		else if ($(".block_7 .selected").hasClass("minimal_c_sub")){
 			$(".block_7 .drawer .proceed").fadeOut(500);
 			$(".sp_block_4").show();
+			$(".info").show();
 		}else{
 			$(".block_7 .drawer .o_sp").css("border-width", "3px")
 		}

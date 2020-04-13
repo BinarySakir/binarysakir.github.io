@@ -3,8 +3,32 @@ body{
 	font-family: 'Magra', sans-serif;
 	margin-top: 0;
 }
-.chat{
+.chat, .info{
 	margin: 30px 20px;
+}
+.info h1{
+	font-size: 22px;
+	margin-bottom: 10px;
+	font-weight: 700;
+	color: #5F6FED;
+}
+.info input{
+	margin-bottom: 10px;
+	font-size: 18px;
+	width: 100%;
+	border-radius: 10px;
+	border: 1px solid #9FB7C9;
+	box-shadow: none;
+	padding: 10px;
+}
+.info input:focus{
+	border-color: #5F6FED;
+	outline: 0;
+}
+.info .form_submit{
+	background-color: #5F6FED;
+	color: #FFF;
+	font-weight: 700;
 }
 .row {
   display: -webkit-box;
@@ -156,10 +180,9 @@ hr{
 .block_2, .block_3, .block_4,  .block_5, .block_6, .block_7, .block_8,
 .sp_drawer_1,
 .sp_block_2, .sp_block_3, .sp_block_4, .sp_block_5, .sp_block_6, .sp_block_1,
-._u18{
+._u18 /*.info*/{
 	display: none;
 }
-
 .sp_drawer_1{
 	margin-top: 0;
 }
@@ -218,3 +241,4 @@ hr{
 .sub_option .selected{
 	font-weight: bold;
 }
+
