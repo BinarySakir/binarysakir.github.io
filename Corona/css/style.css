@@ -166,7 +166,7 @@ html, body {
 	transition: all 300ms;
 }
 .screen_2 .container{
-	overflow-y: scroll;
+	overflow-y: auto;
 	color: #fff;
 	margin-top: 40px;
 	text-align: center;
@@ -204,7 +204,7 @@ html, body {
 	padding: 20px;
 	font-size: 18px;
 	max-height: 250px;
-	overflow-y: scroll;
+	overflow-y: auto;
 }
 .info_drawer svg{
 	height: 40px;
