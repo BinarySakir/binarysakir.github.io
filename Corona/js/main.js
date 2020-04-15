@@ -12,6 +12,7 @@ $( document ).ready(function(){
 		$("." + triggerClass + " svg path").css("fill", "#D7DF23");
 		$("." + triggerClass + " p").css("color", "#D7DF23");
 		allTrigger.not(this).addClass("disabled");
+		$("." + triggerClass).css("pointer-events", "none");
 		$(document).mouseup(function (e){
 			var container = $(drawerClass);
 			if (!container.is(e.target) && container.has(e.target).length === 0){
@@ -19,7 +20,10 @@ $( document ).ready(function(){
 				allTrigger.not(this).removeClass("disabled");
 				$("." + triggerClass + " svg path").css("fill", "");
 				$("." + triggerClass + " p").css("color", "");
+				$("." + triggerClass).css("pointer-events", "initial");
 			}
 		});
 	});
+	var containerHeight = $(".screen_2 .learn_more").offset().top - $(".screen_2 .container").offset().top;
+	$(".screen_2 .container").css("max-height", String(containerHeight) + "px");
 });
