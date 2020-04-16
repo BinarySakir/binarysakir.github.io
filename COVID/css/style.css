@@ -48,7 +48,6 @@ body{
 	padding-bottom: 0;
 }
 .header h1{
-	padding-top: 30px;
 	font-size: 25px;
 	font-weight: 700;
 }
@@ -58,6 +57,10 @@ body{
 .header h2 span{
 	font-weight: 700;
 	font-size: 25px;
+}
+.header h2 img{
+	height: 20px;
+	width: 200px;
 }
 
 @keyframes textReveal{
