@@ -56,15 +56,26 @@ $(".block_5 .option").click(function(){
 
 
 $(".option").click(function(){
-	$(".block_2 .option").removeClass("selected"); // select only one option at a time
-	$(".block_5 .option").removeClass("selected");  // select only one option at a time
+	if($(this).parent().parent().parent().hasClass("block_2")){$(".block_2 .option").removeClass("selected");}
+	if($(this).parent().parent().parent().hasClass("block_5")){$(".block_5 .option").removeClass("selected");}
+	if($(this).parent().parent().parent().hasClass("block_gender")){$(".block_gender .option").removeClass("selected");}
+	if($(this).parent().parent().parent().hasClass("block_6")){
+		if(!$(this).hasClass("o_sp")){
+			$(".block_6 .option").removeClass("selected");
+		}else{
+			$(".block_6 .option").not($(".block_6 .option .sub_option .option")).removeClass("selected");
+			if($(".block_6 .sub_option .option").hasClass("selected")){
+				$(".block_6 .o_sp").addClass("selected");
+			}
+		}
+	}
 	if(!$(this).hasClass("o_sp") && !$(this).parent().parent().parent().parent().hasClass("o_sp")){	
 		$(this).toggleClass("selected");
 		if($(".block_1 .option.none").hasClass("selected")){
 			$(".block_1 .option").removeClass("selected")
 			$(".block_1 .option.none").addClass("selected")
 			$(".block_1 .drawer .proceed").fadeOut(500);
-			setTimeout(function(){$(".block_2").fadeIn(500);}, 500)
+			setTimeout(function(){$(".block_3").fadeIn(500);}, 500)
 
 		}
 		if($(".block_3 .option.none").hasClass("selected")){
@@ -83,10 +94,6 @@ $(".option").click(function(){
 			$(".block_5 .drawer .proceed").fadeOut(500);
 			setTimeout(function(){$(".block_6").fadeIn(500);}, 500)
 		}
-		// if($(".block_6 .option.none").hasClass("selected")){
-		// 	$(".block_6 .option").removeClass("selected")
-		// 	$(".block_6 .option.none").addClass("selected")
-		// }
 
 		if($(".block_2 .selected").text() === "Under 18"){
 			if($(".sp_block_2").hasClass("shown") === false){
@@ -103,7 +110,9 @@ $(".option").click(function(){
 	}
 });
 
-
+	$(".show_close_mini").click(function(){
+	  $(".close_mini").toggle();
+	});
 // this deals with selecting and deselecting sub options
 $(".sub_option .option").click(function(){
 	if($(this).hasClass("sub_o_1")){
@@ -135,6 +144,22 @@ $(".sub_option .option").click(function(){
 	}
 });
 
+$(".block_gender .proceed").click(function(){
+	if($(".block_gender .selected").length === 1){
+		$(".block_gender .drawer .proceed").fadeOut(500);
+		setTimeout(function(){$(".block_2").fadeIn(500);}, 500)
+
+	}
+});
+
+// **** DO NOT CONFUSE ******
+// block_1, the symptoms block
+// was supposed to be shown at
+// first,  but  as  an  abrupt
+// change of decision was made
+// the .block_2, the age block
+// is   now  shown  at  first.
+
 
 $(".block_1 .proceed").click(function(){
 	if($(".block_1 .selected").length >= 1){
@@ -147,12 +172,12 @@ $(".block_1 .proceed").click(function(){
 			$(".sp_drawer_1 .option").click(function(){
 				if($(".sp_drawer_1 .option").hasClass("selected")){
 					setTimeout(function(){
-						$(".block_2").fadeIn(500); scrollTo(".block_2");
+						$(".block_3").fadeIn(500); scrollTo(".block_3");
 					}, 500)
 				}
 			});
 		}else{
-			setTimeout(function(){$(".block_2").fadeIn(500); scrollTo(".block_2");}, 500)
+			setTimeout(function(){$(".block_3").fadeIn(500); scrollTo(".block_3");}, 500)
 		}
 	}
 });
@@ -175,7 +200,7 @@ $(".block_2 .proceed").click(function(){
 		}
 		else{
 			$(".block_2 .drawer .proceed").fadeOut(500);
-			setTimeout(function(){$(".block_3").fadeIn(500); scrollTo(".block_3");}, 500)
+			setTimeout(function(){$(".block_1").fadeIn(500); scrollTo(".block_1");}, 500)
 		}
 	}
 });
