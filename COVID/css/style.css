@@ -10,7 +10,7 @@ body{
 	font-size: 22px;
 	margin-bottom: 10px;
 	font-weight: 700;
-	color: #5F6FED;
+	color: #2937E8;
 }
 .info input{
 	margin-bottom: 10px;
@@ -22,11 +22,11 @@ body{
 	padding: 10px;
 }
 .info input:focus{
-	border-color: #5F6FED;
+	border-color: #2937E8;
 	outline: 0;
 }
 .info .form_submit{
-	background-color: #5F6FED;
+	background-color: #2937E8;
 	color: #FFF;
 	font-weight: 700;
 }
@@ -43,18 +43,21 @@ body{
 }
 .header {
 	margin: 0;
-	color: #5F6FED;
 	text-align: center;
 	padding: 30px;
-	background: rgb(95,111,237);
-	background: linear-gradient(180deg, rgba(95,111,237,1) 0%, rgba(140,149,195,0) 100%);
+	padding-bottom: 0;
 }
 .header h1{
 	padding-top: 30px;
 	font-size: 25px;
+	font-weight: 700;
 }
 .header h2{
 	font-size: 20px;
+}
+.header h2 span{
+	font-weight: 700;
+	font-size: 25px;
 }
 
 @keyframes textReveal{
@@ -85,19 +88,16 @@ body{
 .conv-grp .avatar{ position: absolute; }
 .conv{margin-bottom: 5px}
 .conv .text{
-	border: 1px solid #9FB7C9;
+	background-color: #F5F4F6;
 	padding: 10px;
 	margin-bottom: 6px;
 	display: inline-block;
 	margin-left: 55px;
-	background-color: #fff;
 	border-radius: 10px;
 	border-bottom-left-radius: 0px;
-	-webkit-box-shadow: 0px 7px 15px -5px rgba(150,150,150,0.5);
-	-moz-box-shadow: 0px 7px 15px -5px rgba(150,150,150,0.5);
-	box-shadow: 0px 7px 15px -5px rgba(150,150,150,0.5);
 	animation: textReveal;
 	animation-duration: 0.5s;
+	font-size: 18px;
 
 }
 .sp_block_3 span, .sp_block_6 span{
@@ -137,23 +137,21 @@ hr{
 }
 .drawer .option{
 	padding: 10px 0;
-	background-color: #fff;
+	background-color: #F5F4F6;
 	width: 45%;
 	display: inline-block;
 	color: #1c1c1e;
-	border: 1px solid #9FB7C9;
-	/*padding: 15px 5px;*/
 	border-radius: 10px;
 	margin-bottom: 10px;
 	transition: all 200ms;
 	margin-right: 5px;
 	margin-top: 5px;
+	font-size: 18px;
 
 }
 .drawer .option.selected{
 	background-color: #ffffff;
-	color: #7585DC;
-	border: 2px solid #7585DC;
+	border: 2px solid #2937E8;
 }
 .proceed{
 	color: #7585DC;
@@ -162,7 +160,7 @@ hr{
 	text-align: center;
 	font-weight: 700;
 	padding: 20px 10px;
-	background-color: #5F6FED;
+	background-color: #2937E8;
 	text-align: center;
 	border-radius: 10px;
 }
