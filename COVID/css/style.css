@@ -136,6 +136,7 @@ hr{
     animation-duration: 1s;
 }
 .drawer .option{
+	border: 2px solid transparent;
 	padding: 10px 0;
 	background-color: #F5F4F6;
 	width: 45%;
