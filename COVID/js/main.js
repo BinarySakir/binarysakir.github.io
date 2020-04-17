@@ -137,21 +137,21 @@ $(".block_gender .proceed").click(function(){
 $(".block_1 .proceed").click(function(){
 	if($(".block_1 .selected").length >= 1){
 		$(".block_1 .drawer .proceed").fadeOut(500);
-		if($(".block_1 .drawer .option").hasClass("selected") && $(".block_1 .drawer .option.none").hasClass("selected") === false){
-			setTimeout(function(){$(".sp_block_1").fadeIn(500); scrollTo(".something");}, 500)
-			setTimeout(function(){
-				$(".sp_drawer_1").fadeIn(500);
-			}, 500)
-			$(".sp_drawer_1 .option").click(function(){
-				if($(".sp_drawer_1 .option").hasClass("selected")){
-					setTimeout(function(){
-						$(".block_3").fadeIn(500); scrollTo(".block_3");
-					}, 500)
-				}
-			});
-		}else{
+		// if($(".block_1 .drawer .option").hasClass("selected") && $(".block_1 .drawer .option.none").hasClass("selected") === false){
+		// 	setTimeout(function(){$(".sp_block_1").fadeIn(500); scrollTo(".something");}, 500)
+		// 	setTimeout(function(){
+		// 		$(".sp_drawer_1").fadeIn(500);
+		// 	}, 500)
+		// 	$(".sp_drawer_1 .option").click(function(){
+		// 		if($(".sp_drawer_1 .option").hasClass("selected")){
+		// 			setTimeout(function(){
+		// 				$(".block_3").fadeIn(500); scrollTo(".block_3");
+		// 			}, 500)
+		// 		}
+		// 	});
+		// }else{
 			setTimeout(function(){$(".block_3").fadeIn(500); scrollTo(".block_3");}, 500)
-		}
+		// }
 	}
 });
 
@@ -201,18 +201,18 @@ $(".block_5 .proceed").click(function(){
 
 $(".block_6 .proceed").click(function(){
 	if($(".block_6 .selected").length >= 1){
-		if($(".block_6 .selected").hasClass("exp") && !$(".block_6 .proceed").hasClass("to7")){
-			$(".block_6 .proceed").addClass("to7")
-			$(".sp_block_3").fadeIn(500);
-		}
-		else if($(".block_6 .proceed").hasClass("to7")){
+		// if($(".block_6 .selected").hasClass("exp") && !$(".block_6 .proceed").hasClass("to7")){
+		// 	$(".block_6 .proceed").addClass("to7")
+		// 	$(".sp_block_3").fadeIn(500);
+		// }
+		// else if($(".block_6 .proceed").hasClass("to7")){
+		// 	$(".block_6 .drawer .proceed").fadeOut(500);
+		// 	setTimeout(function(){$(".block_7").fadeIn(500); scrollTo(".block_7");}, 500)
+		// }
+		// else{
 			$(".block_6 .drawer .proceed").fadeOut(500);
 			setTimeout(function(){$(".block_7").fadeIn(500); scrollTo(".block_7");}, 500)
-		}
-		else{
-			$(".block_6 .drawer .proceed").fadeOut(500);
-			setTimeout(function(){$(".sp_block_6").fadeIn(500); scrollTo(".sp_block_6");}, 500)
-		}
+		// }
 	}
 })
 
