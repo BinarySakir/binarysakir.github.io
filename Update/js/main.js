@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var widthOfCol = $(".container .col")[0].offsetWidth - 30;
+	var widthOfCol = $(".container .col")[0].offsetWidth - 10;
 	var drawerHeight = $(window).height() - $(".container").offset().top;
 	var drawer = $(".drawer");
 	$(".district .circle").css("height", widthOfCol+"px");
