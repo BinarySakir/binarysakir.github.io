@@ -56,8 +56,8 @@ $(".option").click(function(){
 			}
 		}
 	}
+	$(".block_7 .option.none").removeClass("selected");
 	if(!$(this).hasClass("o_sp") && !$(this).parent().parent().parent().parent().hasClass("o_sp")){	
-
 		$(this).toggleClass("selected");
 		if($(".block_1 .option.none").hasClass("selected")){
 			$(".block_1 .option").removeClass("selected")
