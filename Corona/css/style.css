@@ -179,8 +179,8 @@ html, body {
 	font-size: 18px;
 }
 .screen_2 .container svg{
-	height: 80px;
-	width: 80px;
+	height: 60px;
+	width: 60px;
 }
 
 .info_drawer{
@@ -206,7 +206,7 @@ html, body {
 	max-height: 250px;
 	overflow-y: auto;
 }
-.info_drawer svg{
+.info_drawer img{
 	height: 40px;
 	width: 40px;
 }
