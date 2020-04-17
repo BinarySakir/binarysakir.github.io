@@ -82,7 +82,10 @@ $(".option").click(function(){
 			$(".block_5 .drawer .proceed").fadeOut(500);
 			setTimeout(function(){$(".block_6").fadeIn(500);}, 500)
 		}
-
+		if($(".block_7 .option.none").hasClass("selected")){
+			$(".close_mini").hide();
+			$(".block_7 .option").not(".block_7 .option.none").removeClass("selected")
+		}
 		if($(".block_2 .selected").text() === "Under 18"){
 			if($(".sp_block_2").hasClass("shown") === false){
 				$(".sp_block_2").fadeIn(500);
