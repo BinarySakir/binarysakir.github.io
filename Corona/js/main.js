@@ -12,15 +12,16 @@ $( document ).ready(function(){
 		$("." + triggerClass + " svg path").css("fill", "#D7DF23");
 		$("." + triggerClass + " p").css("color", "#D7DF23");
 		allTrigger.not(this).addClass("disabled");
-		$("." + triggerClass).css("pointer-events", "none");
+		$(".screen_2 .container .col-6").css("pointer-events", "none");
 		$(document).mouseup(function (e){
+			$(".screen_2 .container .col-6").css("pointer-events", "initial");
 			var container = $(drawerClass);
 			if (!container.is(e.target) && container.has(e.target).length === 0){
 				container.fadeOut();
 				allTrigger.not(this).removeClass("disabled");
 				$("." + triggerClass + " svg path").css("fill", "");
 				$("." + triggerClass + " p").css("color", "");
-				$("." + triggerClass).css("pointer-events", "initial");
+				
 			}
 		});
 	});
