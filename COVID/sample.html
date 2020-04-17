@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		p.selected{
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+	<div class="selection">
+		<p>Opt 1</p>
+		<p>Opt 2</p>
+		<p>Opt 3</p>
+	</div>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$("p").click(function(){
+			$(this).toggleClass("selected")
+			$("p").not(this).removeClass("selected");
+		});
+	</script>
+</body>
+</html>

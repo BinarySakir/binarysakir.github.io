@@ -5,23 +5,10 @@ function scrollTo(element){
 // Show and hide sub options for obesity, kidney etc.
 
 $('.sub_option').hide();
-$('.obes_sub .obes').on('click', function(event) {        
-	$('.obes_sub .sub_option').slideToggle();
-});
-$('.heartf_sub .heartf').on('click', function(event) {        
-	$('.heartf_sub .sub_option').slideToggle();
-});
-$('.close_c_sub .close_c').on('click', function(event) {        
-	$('.close_c_sub .sub_option').slideToggle();
-});
-$('.minimal_c_sub .minimal_c').on('click', function(event) {        
-	$('.minimal_c_sub .sub_option').slideToggle();
-});
-$('.kidney_sub .kidney').on('click', function(event) {        
-	$('.kidney_sub .sub_option').slideToggle();
-});
-$('.wide_area_sub .wide_area').on('click', function(event) {        
-	$('.wide_area_sub .sub_option').slideToggle();
+
+// slide in and off the multiple options drawer
+$('.o_sp div:first-child').on('click', function(event) {        
+	$(this).parent().find(".sub_option").slideToggle();
 });
 
 
@@ -58,7 +45,7 @@ $(".block_5 .option").click(function(){
 $(".option").click(function(){
 	if($(this).parent().parent().parent().hasClass("block_2")){$(".block_2 .option").removeClass("selected");}
 	if($(this).parent().parent().parent().hasClass("block_5")){$(".block_5 .option").removeClass("selected");}
-	if($(this).parent().parent().parent().hasClass("block_gender")){$(".block_gender .option").removeClass("selected");}
+	if($(this).parent().parent().parent().parent().hasClass("block_gender")){$(".block_gender .option").removeClass("selected");}
 	if($(this).parent().parent().parent().hasClass("block_6")){
 		if(!$(this).hasClass("o_sp")){
 			$(".block_6 .option").removeClass("selected");
@@ -70,6 +57,7 @@ $(".option").click(function(){
 		}
 	}
 	if(!$(this).hasClass("o_sp") && !$(this).parent().parent().parent().parent().hasClass("o_sp")){	
+		
 		$(this).toggleClass("selected");
 		if($(".block_1 .option.none").hasClass("selected")){
 			$(".block_1 .option").removeClass("selected")
@@ -110,36 +98,21 @@ $(".option").click(function(){
 	}
 });
 
-	$(".show_close_mini").click(function(){
-	  $(".close_mini").toggle();
-	});
+
+$(".show_close_mini").click(function(){
+  $(".close_mini").toggle();
+});
+
+
 // this deals with selecting and deselecting sub options
 $(".sub_option .option").click(function(){
-	if($(this).hasClass("sub_o_1")){
-		if($(this).hasClass("selected")){
-			$(this).removeClass("selected");
-		}
-		else{
-			$(this).addClass("selected");
-			if(!$(this).parent().parent().parent().hasClass("both")){
-				$($(this).parent().find(".sub_o_2")).removeClass("selected");
-			}
-			$(this).parent().parent().parent().parent().addClass("selected"); // .o_sp selected
-		}
+	$(this).toggleClass("selected");
+	if(!$(this).parent().parent().parent().hasClass("both")){
+		$(this).parent().find(".option").not(this).removeClass("selected");
 	}
-	if($(this).hasClass("sub_o_2")){
-		if($(this).hasClass("selected")){
-			$(this).removeClass("selected");
-		}
-		else{
-			$(this).addClass("selected");
-			if(!$(this).parent().parent().parent().hasClass("both")){
-				$($(this).parent().find(".sub_o_1")).removeClass("selected");}
-			}
-			
-			$(this).parent().parent().parent().parent().addClass("selected");
-	}
-	if(!$(this).parent().find(".sub_o_1").hasClass("selected") && !$(this).parent().find(".sub_o_2").hasClass("selected")){
+	if($(this).parent().find(".option").hasClass("selected")){
+		$(this).parent().parent().parent().parent().addClass("selected");
+	}else{
 		$(this).parent().parent().parent().parent().removeClass("selected");
 	}
 });
