@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title></title>
+	<link rel="stylesheet" type="text/css" href="js/rangeslider.css">
 	<style type="text/css">
 		p.selected{
 			font-weight: bold;
@@ -9,17 +10,17 @@
 	</style>
 </head>
 <body>
-	<div class="selection">
-		<p>Opt 1</p>
-		<p>Opt 2</p>
-		<p>Opt 3</p>
-	</div>
+	<input id="range-control" type="range" min="0" max="100" step="1" value="0">
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-	<script type="text/javascript">
-		$("p").click(function(){
-			$(this).toggleClass("selected")
-			$("p").not(this).removeClass("selected");
+	<script src="js/rangeslider.min.js"></script>
+	<script>
+		$("#range-control").rangeslider({
+		    polyfill: false,
+		    onSlideEnd: function(position, value){
+		        console.log('Position', position, 'Value', value);
+		    }
 		});
+
 	</script>
 </body>
 </html>

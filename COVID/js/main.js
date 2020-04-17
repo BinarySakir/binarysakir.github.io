@@ -57,7 +57,7 @@ $(".option").click(function(){
 		}
 	}
 	if(!$(this).hasClass("o_sp") && !$(this).parent().parent().parent().parent().hasClass("o_sp")){	
-		
+
 		$(this).toggleClass("selected");
 		if($(".block_1 .option.none").hasClass("selected")){
 			$(".block_1 .option").removeClass("selected")
@@ -101,6 +101,9 @@ $(".option").click(function(){
 
 $(".show_close_mini").click(function(){
   $(".close_mini").toggle();
+});
+$(".block_3 .temp-trigger").click(function(){
+  $(".temperature").toggle();
 });
 
 

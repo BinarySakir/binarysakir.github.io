@@ -7,9 +7,9 @@
 	<title>Chat bot</title>
 	<link href="https://fonts.googleapis.com/css?family=Magra:400,700&display=swap" rel="stylesheet">
 	<meta name="theme-color" content="#5F6FED" />
+	<link rel="stylesheet" type="text/css" href="js/rangeslider.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
-	
 </head>
 <body>
 	<div class="header">
@@ -200,9 +200,12 @@
 			</div>
 			<div class="container drawer">
 				<div class="row">
-					<div class="option col">Fever</div>
+					<div class="option col temp-trigger">Fever</div>
 					<div class="option col">Sweating</div>
-					
+				</div>
+				<div class="row temperature">
+					<div class="col-12"><input id="range-control" type="range" min="95" max="110" step="1" value="100"></div>
+					<p>98°F</p>
 				</div>
 				<div class="row">
 					<div class="option col">Difficulty breathing</div>
@@ -556,6 +559,17 @@
 		</div>	
 	</div>
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script src="js/rangeslider.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script>
+	    $("#range-control").rangeslider({
+		    polyfill: false,
+		    onSlide: function(position, value){
+		        // console.log('Position', position, 'Value', value);
+		        $(".temperature p").html(value + "°F");
+		    }
+		});
+	</script>
+
 </body>
 </html>
