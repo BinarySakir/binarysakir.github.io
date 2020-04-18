@@ -105,7 +105,7 @@ html, body {
 	box-shadow: none;
 }
 
-.corona_detail{
+.screen_1 .corona_detail{
 	left: 0;
 	right: 0;
 	padding: 10px;
@@ -121,27 +121,27 @@ html, body {
 	box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.1);
 
 }
-.corona_detail p{
+.screen_1 .corona_detail p{
 	font-size: 14px;
 	opacity: 0.7;
 }
 
-.corona_detail_icons{
+.screen_1 .corona_detail_icons{
 	margin-bottom: 10px;
 }
-.corona_detail_icons img{
+.screen_1 .corona_detail_icons img{
 	height: 40px;
 	width: 40px;
 }
-.corona_detail_icons .col-4:nth-child(2){
+.screen_1 .corona_detail_icons .col-4:nth-child(2){
 	border-left: 1px solid #ffffff;
 	border-right: 1px solid #ffffff;
 }
-.corona_detail span img{
+.screen_1 .corona_detail span img{
 	height: 30px;
 	width: 30px;
 }
-.move_down{
+.screen_1 .move_down{
 	font-size: 14px !important;
 	margin-bottom: 0;
 }
@@ -183,8 +183,7 @@ html, body {
 	height: 60px;
 	width: 60px;
 }
-
-.info_drawer{
+.screen_2 .info_drawer{
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
 	display: none;
@@ -201,22 +200,21 @@ html, body {
 	box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.17);
 
 }
-.info_drawer ul{
+.screen_2 .info_drawer ul{
 	padding: 20px;
 	font-size: 18px;
 	max-height: 250px;
 	overflow-y: auto;
 }
-.info_drawer img{
+.screen_2 .info_drawer img{
 	height: 40px;
 	width: 40px;
 }
-.disabled{
+.screen_2 .disabled{
 	pointer-events: none;
 	opacity: 0.5;
 }
-
-.learn_more{
+.screen_2 .learn_more{
 	position: absolute;
 	bottom: -100%;
 	left: 50%;
@@ -226,11 +224,174 @@ html, body {
 	font-size: 18px;
 	padding: 0 0 30px 0;
 }
-.learn_more p{
+.screen_2 .learn_more p{
 	padding: 0;
 	margin: 0;
 }
-.learn_more img{
+.screen_2 .learn_more img{
 	height: 30px;
 	width: 30px;
+}
+
+
+
+
+
+@keyframes slideFromRight{
+	from{
+		transform: translateX(100%)
+	}
+	to{
+		transform: translateX(0%)
+	}
+}
+
+@keyframes slideFromLeft{
+	from{
+		transform: translateX(-100%)
+	}
+	to{
+		transform: translateX(0%)
+	}
+}
+
+
+.screen_3 .col{
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.screen_3 .search_bar{padding: 20px; padding-bottom: 20px;}
+.screen_3 .search_bar input{
+	border: 0;
+	border-bottom: 2px solid #ffffff;
+	background-color: transparent;
+	font-size: 14px; 
+	padding: 5px 0;
+	width: 100%;
+	outline: 0;
+	color: #ffffff;
+	opacity: 0.5;
+	transition: all 300ms;
+}
+.screen_3::-webkit-input-placeholder { /* Edge */
+  color: #ffffff;
+}
+.screen_3:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #ffffff;
+}
+.screen_3::placeholder {
+  color: #ffffff;
+}
+.screen_3 .search_bar input:active,
+.screen_3 .search_bar input:focus{
+	opacity: 1;
+}
+
+.screen_3 .header{
+	padding-bottom: 15px;
+}
+.screen_3 .header h1{
+	color: #ffffff;
+	font-size: 22px;
+	text-align: center;
+	padding: 10px 0 5px 0;
+}
+
+.screen_3 .g_line{
+	height: 5px;
+	width: 70%;
+	background-color: #2e9647;
+	animation: slideFromLeft;
+	animation-duration: 2s;
+}
+.screen_3  .r_line{
+	height: 5px;
+	width: 70%;
+	background-color: #f0522d;
+	position: absolute;
+	right: 0;
+	animation: slideFromRight;
+	animation-duration: 2s;
+}
+
+.screen_3 marquee{
+	background-color: #1668b2;
+	color: #ffffff;
+}
+
+.screen_3 .update_header{
+	text-align: center;
+	color: #ffffff;
+	font-size: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.screen_3 .district .row:nth-child(2){
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.screen_3 .district .circle{
+	text-align: center;
+	background-color: #d7df21;
+	color: #125aa8;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+ 
+}
+
+@keyframes drawerReveal{
+	from{
+		transform: translateY(100%)
+	}
+	to{
+		transform: translateY(0%)
+	}
+}
+
+@keyframes drawerHide{
+	to{
+		transform: translateY(50%)
+	}
+}
+
+.screen_3 .drawer{
+	text-align: center;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	padding: 20px;
+	padding-top: 20px;
+	width: 100%;
+	background-color: #1668b2;
+	color: #ffffff;
+	position: absolute;
+	display: none;
+	bottom: -200%;
+	animation: drawerReveal 1s;
+	-webkit-box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.17);
+	-moz-box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.17);
+	box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.17);
+
+}
+.screen_3 .drawer.hide{
+	animation: drawerHide 0.5s;
+}
+.screen_3 .drawer h1{
+	color: #d7df21;
+}
+.screen_3 .drawer p{
+	margin: 0;
+	padding: 10px;
+	font-size: 18px;
+}
+.screen_3 .drawer img{
+	height: 22px;
+	width: 22px;
+	margin-right: 10px;
+}
+.screen_3 .drawer .info{
+	overflow-y: auto;
 }
