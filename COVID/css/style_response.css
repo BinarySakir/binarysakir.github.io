@@ -168,3 +168,6 @@ html, body{
 	padding: 10px 35px;
 	margin-top: 20px;
 }
+.fev_info{
+	display: none;
+}

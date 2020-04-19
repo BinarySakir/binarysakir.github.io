@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chat bot</title>
 	<link href="https://fonts.googleapis.com/css?family=Magra:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 	<meta name="theme-color" content="#5F6FED" />
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style_response.css">
@@ -57,17 +58,21 @@
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
 	<script src="js/circle-progress.min.js"></script>
 	<script type="text/javascript">
-		$('#circle').circleProgress({
-			size: 150,
-			startAngle: 180,
-			fill: {
-				gradient: ["#329D9C", "#7BE495"]
-			}
-		}).on('circle-animation-progress', function(event, progress, stepValue) {
-			$(this).find('strong').html(Math.round(parseFloat((stepValue * 100)+50)) + '°F');
+		$( document ).ready(function() {
+			$('#circle').circleProgress({
+				size: 150,
+				startAngle: 180,
+				fill: {
+					gradient: ["#329D9C", "#7BE495"]
+				}
+			}).on('circle-animation-progress', function(event, progress, stepValue) {
+				$(this).find('strong').html(Math.round(parseFloat((stepValue * 100)+50)) + '°F');
+			});
+			var topx = $(".fever").offset().top + 70;
+			$(".fev_info").css("top", topx+"px");
+			$(".fev_info").fadeIn(500);
 		});
-		var topx = $(".fever").offset().top + 70;
-		$(".fev_info").css("top", topx+"px");
+
 	</script>
 </body>
 </html>
