@@ -36,33 +36,42 @@ $( document ).ready(function(){
 
 
 
-	var data = [740, 92, 7, 37, 4, 42, 31, 8]
 	var data_dhaka = [["Adabor", 5], ["Agargaon", 2], ["Armanitola", 1], ["Ashkona", 1], ["Azimpur", 11], ["Babu Bazar", 11], ["Badda", 8], ["Baily Road", 3], ["Banani", 8], ["Bangshal", 15], ["Banianagar", 1]]
-	var widthOfCol = $(".screen_3 .container .col")[0].offsetWidth - 10;
-	$(".screen_3 .district .circle").css("height", widthOfCol+"px");
-	$(".screen_3 .district .circle").css("width", widthOfCol+"px");
-	var drawerHeight = $(".screen_3 .container").height();
-	var drawer = $(".screen_3 .drawer");
-	$(".screen_3 .drawer").css("height", drawerHeight+20+"px");
-	$(".screen_3 .container .col").click(function(){
-
-		// THIS IS FOR DEMO ONLY
-		$(".screen_3 .drawer .info").empty();
-		$(".screen_3 .info").css("max-height", drawerHeight-130+"px")
-		if($(this).find(".circle").text() === "Dhaka"){
-			for(var i = 0; i < data_dhaka.length; i++){
-				$(".screen_3 .drawer .info").append("<p>" + data_dhaka[i][0] + " - " + data_dhaka[i][1] + "</p>");
-			}
+	var data = [[630, ["Dhaka (District)", 28], ["Gazipur", 117], ["Kishoreganj", 33]], [92, ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15]]]
+	
+	$(".screen_3 td").click(function(){
+		var index = $(this).attr("data-n");
+		var totalCase = data[index][0];
+		var divisioName = $(this).text();
+		$(".drawer h1").html(divisioName);
+		$(".drawer h2 span").html(totalCase);
+		for(var j = 1; j < data[index].length; j++){
+			$(".drawer .info").append("<p>"+data[index][j][0]+" - "+data[index][j][1]+"</p>");
 		}
-		var num = $(this).attr("data-num");
-		$(".screen_3 .drawer h1").html($(this).text());
-		$(".screen_3 .drawer h2 span").html(data[num]);
-		
-		drawer.css("display", "initial");
+		$(".drawer").css("display", "initial");
 	});
-	$(document).mouseup(function (e){
-		if(!drawer.is(e.target) && drawer.has(e.target).length === 0){
-			drawer.fadeOut(500);		
-		}
+	$("._close").click(function(){
+		$(".drawer").css("display", "none");
+		$(".drawer .info").empty();	
+	});
+	var week_max;
+	var week_data = [];
+	$(".screen_3 .drawer .graph").css("width", $(window).width()-30 + "px");
+	$(".screen_3 .drawer .graph div").each(function() {
+		week_data.push($(this).attr( "data-d" ));
+	});
+	week_max = Math.max.apply(Math, week_data);
+	var k = 0;
+	$(".drawer .graph div").each(function() {
+		$(this).css("height", week_data[k]/week_max*100 + "px");
+		k++;
+	});
+	$(".receive_update_btn").click(function(){
+		$(".cases").fadeOut();
+		$(".weekly_update").fadeIn();
+	});
+	$(".go_back").click(function(){
+		$(".weekly_update").fadeOut();
+		$(".cases").fadeIn();
 	});
 });

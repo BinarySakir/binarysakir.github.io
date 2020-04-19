@@ -41,7 +41,7 @@ html, body {
 	height: 100%;
 	margin: 0;
 	padding: 0;
-	font-family: 'Abel', sans-serif;
+	font-family: 'Magra', sans-serif;
 	background-color: #035AA7;
 }
 
@@ -49,7 +49,7 @@ html, body {
 	height: 100%;
 	background-color: #035AA7;
 }
-.code_form{
+/*.code_form{
 	color: #ffffff;
 	margin: 0;
 	position: absolute;
@@ -80,15 +80,6 @@ html, body {
 	color: #ffffff;
 	text-align: center;
 }
-::-webkit-input-placeholder { /* Edge */
-  color: #ffffff;
-}
-:-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: #ffffff;
-}
-::placeholder {
-  color: #ffffff;
-}
 .code_form button,
 .code_form button:active,
 .code_form button:focus,
@@ -103,7 +94,7 @@ html, body {
 	padding: 10px 45px;
 	border-radius: 40px;
 	box-shadow: none;
-}
+}*/
 
 .screen_1 .corona_detail{
 	left: 0;
@@ -255,13 +246,20 @@ html, body {
 	}
 }
 
-
-.screen_3 .col{
-	padding-left: 2px;
-	padding-right: 2px;
+.screen_3{color: #fff;}
+.screen_3 .col {
+	background-color: #1668b2;
+	color: #ffffff;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 5px 20px;
+	text-align: center;
+}
+.screen_3 .col p{
+	margin: 0;
 }
 
-.screen_3 .search_bar{padding: 20px; padding-bottom: 20px;}
+.screen_3 .search_bar{padding: 40px; padding-bottom: 20px;}
 .screen_3 .search_bar input{
 	border: 0;
 	border-bottom: 2px solid #ffffff;
@@ -274,13 +272,13 @@ html, body {
 	opacity: 0.5;
 	transition: all 300ms;
 }
-.screen_3::-webkit-input-placeholder { /* Edge */
+.screen_3 .search_bar ::-webkit-input-placeholder { /* Edge */
   color: #ffffff;
 }
-.screen_3:-ms-input-placeholder { /* Internet Explorer 10-11 */
+.screen_3 .search_bar ::-ms-input-placeholder { /* Internet Explorer 10-11 */
   color: #ffffff;
 }
-.screen_3::placeholder {
+.screen_3 .search_bar ::placeholder {
   color: #ffffff;
 }
 .screen_3 .search_bar input:active,
@@ -289,98 +287,69 @@ html, body {
 }
 
 .screen_3 .header{
-	padding-bottom: 15px;
+	margin-bottom: 20px;
+	text-align: center;
 }
 .screen_3 .header h1{
 	color: #ffffff;
 	font-size: 22px;
-	text-align: center;
 	padding: 10px 0 5px 0;
+	font-weight: 700;
 }
-
-.screen_3 .g_line{
-	height: 5px;
-	width: 70%;
-	background-color: #2e9647;
-	animation: slideFromLeft;
-	animation-duration: 2s;
+.screen_3 .header p{font-size: 22px;}
+.screen_3 .city{text-align: center;}
+.screen_3 .city span{
+	padding: 10px;
+	font-size: 18px;
+	border-radius: 10px;
+	background-color: rgba(255,255,255,0.1);
 }
-.screen_3  .r_line{
-	height: 5px;
-	width: 70%;
-	background-color: #f0522d;
-	position: absolute;
-	right: 0;
-	animation: slideFromRight;
-	animation-duration: 2s;
-}
-
-.screen_3 marquee{
-	background-color: #1668b2;
-	color: #ffffff;
-}
-
-.screen_3 .update_header{
-	text-align: center;
-	color: #ffffff;
-	font-size: 20px;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-.screen_3 .district .row:nth-child(2){
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
-.screen_3 .district .circle{
-	text-align: center;
-	background-color: #d7df21;
-	color: #125aa8;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
- 
+.screen_3 .division{
+	padding: 0 40px;
 }
 
 @keyframes drawerReveal{
 	from{
-		transform: translateY(100%)
+		transform: translateY(100%);
 	}
 	to{
 		transform: translateY(0%)
 	}
 }
-
 @keyframes drawerHide{
+	from{
+		transform: translateY(0%);
+	}
 	to{
-		transform: translateY(50%)
+		
+		transform: translateY(100%);
 	}
 }
 
+
 .screen_3 .drawer{
+	font-family: "Lato";
 	text-align: center;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
-	padding: 20px;
-	padding-top: 20px;
+	padding-top: 10px;
 	width: 100%;
-	background-color: #1668b2;
+	background-color: #42b3ff;
 	color: #ffffff;
 	position: absolute;
 	display: none;
 	bottom: -200%;
-	animation: drawerReveal 1s;
+	height: 640px;
+	animation: drawerReveal 0.5s ease;
 	-webkit-box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.17);
 	-moz-box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.17);
 	box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.17);
 
 }
-.screen_3 .drawer.hide{
-	animation: drawerHide 0.5s;
-}
+.screen_3 .drawer ._close{text-align: right;}
+
 .screen_3 .drawer h1{
-	color: #d7df21;
+	font-weight: 700;
 }
 .screen_3 .drawer p{
 	margin: 0;
@@ -394,4 +363,92 @@ html, body {
 }
 .screen_3 .drawer .info{
 	overflow-y: auto;
+}
+
+.screen_3 table {
+    border-collapse: collapse;
+    text-align: center;
+    table-layout: fixed ;
+    width: 100%;
+    margin-top: 20px;
+}
+.screen_3  table td, table th {
+    border: 1px solid rgba(255,255,255,0.3);
+}
+.screen_3 table tr td{
+	padding: 20px;
+	font-size: 18px;
+}
+.screen_3 table tr:first-child td {
+    border-top: 0;
+}
+.screen_3 table tr:last-child td {
+    border-bottom: 0;
+}
+.screen_3 table tr td:first-child,
+.screen_3 table tr th:first-child {
+    border-left: 0;
+}
+.screen_3 table tr td:last-child,
+.screen_3 table tr th:last-child {
+    border-right: 0;
+}
+.screen_3 .drawer .graph{
+	height: 100px;
+	margin: 20px auto;
+	overflow-x: auto;
+	white-space: nowrap;
+	margin-bottom: 0;
+	font-family: "Magra";
+}
+.screen_3 .drawer .graph div{
+	background-color: #316495;
+	width: 50px;
+	min-height: 1px;
+	display: inline-block;
+}
+
+.screen_3 .drawer .info{
+	border-top: 1px solid #fff;
+	margin: 0 auto;
+	overflow-y: auto;
+	height: 200px;
+}
+.screen_3 .drawer .receive_update_btn,
+.screen_3 .drawer .weekly_update_form button{
+	background-color: #80d25b;
+	text-align: center;
+	color: #fff;
+	padding: 10px;
+	border: 0;
+	border-radius: 25px;
+	font-size: 15px;
+	padding: 15px 30px;
+	margin-top: 10px;
+}
+.screen_3 .weekly_update{
+	display:none;
+}
+
+.screen_3 .weekly_update_form{
+	background-color: #fff;
+	padding: 30px 20px;
+	border-radius: 10px;
+	margin: 40px 60px;
+	font-family: "Magra";
+}
+.screen_3 .weekly_update_form input[type="text"],
+.screen_3 .weekly_update_form input[type="tel"]{
+	border: 0;
+	border-bottom: 1px solid grey;
+	width: 100%;
+	padding: 5px 0;
+	font-size: 18px;
+}
+.screen_3 .weekly_update_form input:first-child{margin-bottom: 10px;}
+.screen_3 .drawer .weekly_update_form button{margin-top: 20px;}
+.screen_3 .weekly_update{
+	position: absolute;
+	top: 46px;
+
 }

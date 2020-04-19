@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Chat bot</title>
-	<link href="https://fonts.googleapis.com/css?family=Abel:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Magra:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
@@ -209,36 +210,60 @@
 			<input type="text" name="search" placeholder="Search...">
 		</div>
 		<div class="header">
-			<div class="g_line"></div>
 			<h1>Bangladesh COVID-19</h1>
-			<div class="r_line"></div>
+			<p>Select Your Division</p>
 		</div>
-		<marquee>COVID-19 positive cases in last 24 hours: 266&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; COVID-19 Total cases: 1838</marquee>
-		<h1 class="update_header">Updates</h1>
-		<div class="container district">
-			<div class="row">
-				<div class="col d-flex justify-content-center" data-num="0"><div class="circle">Dhaka</div></div>
-				<div class="col d-flex justify-content-center" data-num="1"><div class="circle">Chattogram</div></div>
-				<div class="col d-flex justify-content-center" data-num="2"><div class="circle">Sylhet</div></div>
-			</div>
-			<div class="row">
-				<div class="col d-flex justify-content-center" data-num="3"><div class="circle">Rangpur</div></div>
-				<div class="col d-flex justify-content-center" data-num="4"><div class="circle">Khulna</div></div>
-				<div class="col d-flex justify-content-center" data-num="5"><div class="circle">Mymensingh</div></div>
-			</div>
-			<div class="row">
-				<div class="col d-flex justify-content-center"></div>
-				<div class="col d-flex justify-content-center" data-num="6"><div class="circle">Barishal</div></div>
-				<div class="col d-flex justify-content-center" data-num="7"><div class="circle">Rajshahi</div></div>
-				<div class="col d-flex justify-content-center"></div>
-			</div>
+		<div class="container division">
+			<p class="city"><span>DHAKA CITY</span></p>
+			<table>
+				<tr>
+					<td data-n="0">Dhaka</td>
+					<td data-n="1">Chattogram</td>
+				</tr>
+				<tr>
+					<td data-n="2">Sylhet</td>
+					<td data-n="3">Khulna</td>
+				</tr>
+				<tr>
+					<td data-n="4">Barishal</td>
+					<td data-n="5">Rajshahi</td>
+				</tr>
+				<tr>
+					<td data-n="6">Rangpur</td>
+					<td data-n="7">Mymensingh</td>
+				</tr>
+			</table>
 		</div>
 		<!-- this is for demo only -->
 		<div class="drawer">
-			<h1></h1>
-			<h2><span></span> confirmed cases</h2>
-			<div class="info">
+			<div class="_close">
+				<img src="ico/close.svg" style="height: 30px; width: 30px;">
 			</div>
+			<div class="cases">
+				<div class="graph">
+					<div data-d="245"></div>
+					<div data-d="406"></div>
+					<div data-d="540"></div>
+					<div data-d="758"></div>
+				</div>
+				<p>Weekly Comparison</p>
+				<h1></h1>
+				<h2><span></span> confirmed cases</h2>
+				<div class="info">
+				</div>
+				<button class="receive_update_btn">Receive Weekly Update</button>
+			</div>
+			<div class="weekly_update">
+				<img src="ico/weekly.svg" style="height: 70px; width: 70px;">
+				<p>For weekly updates</p>
+				<div class="weekly_update_form">
+					<input type="tel" name="phone" placeholder="Phone No.">
+					<input type="text" name="Name" placeholder="Name">
+					<button>CONFIRM</button>
+				</div>
+				<button class="receive_update_btn go_back">Go back</button>
+			</div>
+
 		</div>
 	</div>
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
