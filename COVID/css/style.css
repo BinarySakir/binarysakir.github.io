@@ -261,3 +261,18 @@ hr{
 .temperature p{
 	margin: 0 !important;
 }
+
+.response{
+	font-family: "Montserrat";
+}
+.response .header{
+	background-color: #E0ECDE;
+}
+.response .header h1{
+	font-weight: 700;
+	color: #205072;
+}
+
+
+
+
