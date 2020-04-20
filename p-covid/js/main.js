@@ -29,6 +29,12 @@ $( document ).ready(function(){
 				
 			}
 		});
+		$(".screen_2 .info_drawer_close").click(function(){
+			$(drawerClass).fadeOut();
+			allTrigger.not(this).removeClass("disabled");
+			$("." + triggerClass + " svg path").css("fill", "");
+			$("." + triggerClass + " p").css("color", "");
+		});
 	});
 	var containerHeight = $(".screen_2 .learn_more").offset().top - $(".screen_2 .container").offset().top;
 	$(".screen_2 .container").css("max-height", String(containerHeight) + "px");
@@ -39,7 +45,7 @@ $( document ).ready(function(){
 	var data_dhaka = [["Adabor", 5], ["Agargaon", 2], ["Armanitola", 1], ["Ashkona", 1], ["Azimpur", 11], ["Babu Bazar", 11], ["Badda", 8], ["Baily Road", 3], ["Banani", 8], ["Bangshal", 15], ["Banianagar", 1]]
 	var data = [[630, ["Dhaka (District)", 28], ["Gazipur", 117], ["Kishoreganj", 33]], [92, ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15]]]
 	
-	$(".screen_3 td").click(function(){
+	$(".screen_3 td, .screen_3 .division span").click(function(){
 		var index = $(this).attr("data-n");
 		var totalCase = data[index][0];
 		var divisioName = $(this).text();
@@ -54,6 +60,7 @@ $( document ).ready(function(){
 		$(".drawer").css("display", "none");
 		$(".drawer .info").empty();	
 	});
+
 	var week_max;
 	var week_data = [];
 	$(".screen_3 .drawer .graph").css("width", $(window).width()-30 + "px");
@@ -74,4 +81,11 @@ $( document ).ready(function(){
 		$(".weekly_update").fadeOut();
 		$(".cases").fadeIn();
 	});
+	
+	// for showing demo only
+	$(".weekly_update_form button").click(function(){
+		$(".weekly_update_message").fadeIn();
+		$(".weekly_update_form").fadeOut();
+	});
+	
 });

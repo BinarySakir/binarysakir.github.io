@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#035AA7"/>
 	<title>Chat bot</title>
 	<link href="https://fonts.googleapis.com/css?family=Magra:400,700&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
@@ -20,10 +21,13 @@
 		<div class="collapse navbar-collapse" id="navbarText">
 			<ul class="navbar-nav mr-auto">
 			    <li class="nav-item active">
-			    	<a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+			    	<a class="nav-link" href="#">Home</span></a>
 			    </li>
 			    <li class="nav-item">
 			    	<a class="nav-link" href="#">Main website</a>
+			    	<a class="nav-link" href="#screen_2">Who Guideline</a>
+			    	<a class="nav-link" href="#screen_3">Bangladesh Update</a>
+			    	<a class="nav-link" href="#">Self Assessment</a>
 			    </li>
 			</ul>
 		</div>
@@ -55,7 +59,7 @@
 			<p class="move_down">আরো জানুন<span>&nbsp;&nbsp;<img src="ico/download.svg"></span></p>
 		</div>
 	</div>
-	<div class="full-height screen_2">
+	<div class="full-height screen_2" id="screen_2">
 		<div class="search_bar">
 			<input type="text" name="search" placeholder="অনুসন্ধান করুন...">
 		</div>
@@ -154,11 +158,11 @@
 			</div>
 		</div>
 		<div class="learn_more">
-			<p>বিস্তারিত জানুন</p>
-			<img src="ico/dot.svg">
+			<p>বিস্তারিত জানুন <span><img src="ico/download.svg"></span></p>
 		</div>
 		<div class="info_drawer drawer_1">
 			<img src="ico/shield.svg">
+			<img src="ico/close.svg" class="info_drawer_close">
 			<ul>
 				<li>করোনা গরম এবং আর্দ্র আবহাওয়াতে ছড়াতে পারে</li>
 				<li>এটি ঠান্ডা আবহাওয়াতেও ছড়ায়</li>
@@ -170,6 +174,7 @@
 		</div>
 		<div class="info_drawer drawer_2">
 			<img src="ico/exit.svg">
+			<img src="ico/close.svg" class="info_drawer_close">
 			<ul>
 				<li>মাস্ক পরুন</li>
 				<li>গ্লাভস পরুন</li>
@@ -179,6 +184,7 @@
 		</div>
 		<div class="info_drawer drawer_3">
 			<img src="ico/child.svg">
+			<img src="ico/close.svg" class="info_drawer_close">
 			<ul>
 				<li>সন্তানের সাথে সময় কাটান</li>
 				<li>চলমান পরিস্থিতি নিয়ে আলাপ করুন</li>
@@ -190,6 +196,7 @@
 		</div>
 		<div class="info_drawer drawer_4">
 			<img src="ico/plate.svg">
+			<img src="ico/close.svg" class="info_drawer_close">
 			<ul>
 				<li>ব্যবহৃত বাসন ধুয়ে রাখুন</li>
 				<li>সাবান/ডিটারজেন্ট পানি দিয়ে ধুয়ে রাখুন</li>
@@ -198,6 +205,7 @@
 		</div>
 		<div class="info_drawer drawer_5">
 			<img src="ico/care.svg">
+			<img src="ico/close.svg" class="info_drawer_close">
 			<ul>
 				<li>সার্জিকাল মাস্ক পরুন</li>
 				<li>আক্রান্ত রোগীর জন্য প্লেট, গ্লাস, তোয়ালে, বিছানার চাদর আলাদা করুন</li>
@@ -205,7 +213,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="full-height screen_3">
+	<div class="full-height screen_3" id="screen_3">
 		<div class="search_bar">
 			<input type="text" name="search" placeholder="Search...">
 		</div>
@@ -214,7 +222,7 @@
 			<p>Select Your Division</p>
 		</div>
 		<div class="container division">
-			<p class="city"><span>DHAKA CITY</span></p>
+			<p class="city"><span data-n="0">DHAKA CITY</span></p>
 			<table>
 				<tr>
 					<td data-n="0">Dhaka</td>
@@ -243,8 +251,6 @@
 				<div class="graph">
 					<div data-d="245"></div>
 					<div data-d="406"></div>
-					<div data-d="540"></div>
-					<div data-d="758"></div>
 				</div>
 				<p>Weekly Comparison</p>
 				<h1></h1>
@@ -261,6 +267,7 @@
 					<input type="text" name="Name" placeholder="Name">
 					<button>CONFIRM</button>
 				</div>
+				<p class="weekly_update_message">We will surely send you COVID-19 updates every week.</p>
 				<button class="receive_update_btn go_back">Go back</button>
 			</div>
 

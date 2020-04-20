@@ -25,7 +25,7 @@ hr{
 	font-size: 16px;
 	color: #ffffff;
 	padding: 10px 0;
-	text-align: center;
+	text-align: right;
 }
 .sr-only{
 	border: 0;
@@ -49,52 +49,13 @@ html, body {
 	height: 100%;
 	background-color: #035AA7;
 }
-/*.code_form{
-	color: #ffffff;
-	margin: 0;
-	position: absolute;
-	top: 40%;
-	-ms-transform: translateY(-50%);
-	transform: translateY(-50%);
-	color: #311054;
-	width: 100%;
-	padding: 40px;
-	text-align: center;
+.screen_1{
+    background-image: url(../bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
 }
-.code_form h1{
-	font-weight: 700;
-	color: #ffffff;
-	font-size: 24px;
-	margin: 0;
-	padding: 0;
-}
-.code_form input{
-	margin: 15px 0 20px;
-	border: 0;
-	border-bottom: 1px solid #ffffff;
-	background-color: transparent;
-	font-size: 28px; 
-	padding: 5px 0;
-	width: 100%;
-	outline: 0;
-	color: #ffffff;
-	text-align: center;
-}
-.code_form button,
-.code_form button:active,
-.code_form button:focus,
-.code_form button:hover{
-	background-color: #fff;
-	padding: 10px 30px;
-	color: #0e071b;
-	text-transform: uppercase;
-	font-weight: 700;
-	font-size: 18px;
-	box-shadow: none;
-	padding: 10px 45px;
-	border-radius: 40px;
-	box-shadow: none;
-}*/
 
 .screen_1 .corona_detail{
 	left: 0;
@@ -102,7 +63,7 @@ html, body {
 	padding: 10px;
 	position: absolute;
 	bottom: 0;
-	background-color: #006CBC;
+	background-color: rgba(0,108,188, 0.5);
 	color: #ffffff;
 	text-align: center;
 	border-top-right-radius: 10px;
@@ -201,6 +162,15 @@ html, body {
 	height: 40px;
 	width: 40px;
 }
+.screen_2 .info_drawer_close{
+	height: 30px !important;
+	width: 30px !important;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	margin-right: 20px;
+}
+
 .screen_2 .disabled{
 	pointer-events: none;
 	opacity: 0.5;
@@ -223,7 +193,6 @@ html, body {
 	height: 30px;
 	width: 30px;
 }
-
 
 
 
@@ -272,13 +241,16 @@ html, body {
 	opacity: 0.5;
 	transition: all 300ms;
 }
-.screen_3 .search_bar ::-webkit-input-placeholder { /* Edge */
+.screen_3 .search_bar ::-webkit-input-placeholder,
+.screen_2 ::-webkit-input-placeholder{ /* Edge */
   color: #ffffff;
 }
-.screen_3 .search_bar ::-ms-input-placeholder { /* Internet Explorer 10-11 */
+.screen_3 .search_bar ::-ms-input-placeholder,
+.screen_2 ::-ms-input-placeholder{ /* Internet Explorer 10-11 */
   color: #ffffff;
 }
-.screen_3 .search_bar ::placeholder {
+.screen_3 .search_bar ::placeholder,
+.screen_2 ::placeholder{
   color: #ffffff;
 }
 .screen_3 .search_bar input:active,
@@ -394,7 +366,6 @@ html, body {
     border-right: 0;
 }
 .screen_3 .drawer .graph{
-	height: 100px;
 	margin: 20px auto;
 	overflow-x: auto;
 	white-space: nowrap;
@@ -429,7 +400,9 @@ html, body {
 .screen_3 .weekly_update{
 	display:none;
 }
-
+.screen_3 .weekly_update_message{
+	display: none;
+}
 .screen_3 .weekly_update_form{
 	background-color: #fff;
 	padding: 30px 20px;
