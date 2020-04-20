@@ -22,6 +22,15 @@ html, body{
 .response{
 	font-family: "Montserrat";
 }
+.response .container .detail{
+	margin: 0 40px;
+	margin-top: 10px;
+	background-color: #E0ECDE;
+	color: #205072;
+	padding: 20px; 
+	display: none;
+}
+.response .container .detail p{margin-bottom: 0;}
 .response .res_header{
 	background-color: #E0ECDE;
 	padding: 50px 30px;
@@ -170,4 +179,32 @@ html, body{
 }
 .fev_info{
 	display: none;
+}
+
+.summary{
+	margin: 20px 30px;
+	font-family: "Magra";
+}
+.summary .sum_header h1{
+	font-weight: 700;
+	color: #2937E8;
+	margin-bottom: 20px;
+	border-bottom: 2px solid #2937E8;
+}
+.summary .container h3{
+	font-weight: 700;
+	color: #2937E8;
+	font-size: 22px;
+	margin-top: 20px;
+}
+.info_block{
+	border-radius: 10px;
+	padding: 10px;
+	background-color: #F5F4F6;
+}
+.summary .container p{
+	margin: 0;
+	background-color: #F5F4F6;
+	font-size: 18px;
+	border-radius: 10px;
 }

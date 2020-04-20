@@ -22,24 +22,44 @@
 				<div class="col-2"><img src="ico/res/ico_1.svg"></div>
 				<div class="col-6">Pre-existing conditions</div>
 				<div class="col-3"><button>VIEW</button></div>
+				<div class="detail">
+					<p>Whatever information there is</p>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-2"><img src="ico/res/ico_2.svg"></div>
 				<div class="col-6">Exposure to COVID - 19</div>
 				<div class="col-3"><button>VIEW</button></div>
+				<div class="detail">
+					<p>Whatever information there is</p>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-2"><img src="ico/res/ico_3.svg"></div>
 				<div class="col-6">Travel History</div>
 				<div class="col-3"><button>VIEW</button></div>
+				<div class="detail">
+					<p>Whatever information there is</p>
+				</div>
 			</div>
 			<div class="row">
 				<div class="col-2"><img src="ico/res/ico_4.svg"></div>
 				<div class="col-6">New Syptomps</div>
 				<div class="col-3"><button>VIEW</button></div>
+				<div class="detail">
+					<p>Whatever information there is</p>
+				</div>
 			</div>
 		</div>
-		<center><button class="sum_btn">VIEW SUMMARY</button></center>
+		<center><a href="#"><button class="sum_btn">VIEW SUMMARY</button></a></center>
 	</div>
+	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+	<script type="text/javascript">
+		$(".response .container button").click(function () {
+			if($(this).text() === "VIEW"){$(this).html("CLOSE");}
+			else{$(this).html("VIEW")}
+			$(this).parent().parent().find(".detail").slideToggle();
+		});
+	</script>
 </body>
 </html>

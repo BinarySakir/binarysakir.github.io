@@ -3,7 +3,6 @@ function scrollTo(element){
 }
 
 // Show and hide sub options for obesity, kidney etc.
-
 $('.sub_option').hide();
 
 // slide in and off the multiple options drawer
@@ -36,7 +35,6 @@ $(".block_4 .option").click(function(){
 });
 $(".block_5 .option").click(function(){
 	if($(".block_6 .proceed").is(":visible")){
-		// $(".block_5 .drawer .proceed").fadeIn(500);
 		$(".block_6").fadeOut(500);
 	}
 });
@@ -143,21 +141,7 @@ $(".block_gender .proceed").click(function(){
 $(".block_1 .proceed").click(function(){
 	if($(".block_1 .selected").length >= 1){
 		$(".block_1 .drawer .proceed").fadeOut(500);
-		// if($(".block_1 .drawer .option").hasClass("selected") && $(".block_1 .drawer .option.none").hasClass("selected") === false){
-		// 	setTimeout(function(){$(".sp_block_1").fadeIn(500); scrollTo(".something");}, 500)
-		// 	setTimeout(function(){
-		// 		$(".sp_drawer_1").fadeIn(500);
-		// 	}, 500)
-		// 	$(".sp_drawer_1 .option").click(function(){
-		// 		if($(".sp_drawer_1 .option").hasClass("selected")){
-		// 			setTimeout(function(){
-		// 				$(".block_3").fadeIn(500); scrollTo(".block_3");
-		// 			}, 500)
-		// 		}
-		// 	});
-		// }else{
-			setTimeout(function(){$(".block_3").fadeIn(500); scrollTo(".block_3");}, 500)
-		// }
+		setTimeout(function(){$(".block_3").fadeIn(500); scrollTo(".block_3");}, 500)
 	}
 });
 
@@ -207,58 +191,19 @@ $(".block_5 .proceed").click(function(){
 
 $(".block_6 .proceed").click(function(){
 	if($(".block_6 .selected").length >= 1){
-		// if($(".block_6 .selected").hasClass("exp") && !$(".block_6 .proceed").hasClass("to7")){
-		// 	$(".block_6 .proceed").addClass("to7")
-		// 	$(".sp_block_3").fadeIn(500);
-		// }
-		// else if($(".block_6 .proceed").hasClass("to7")){
-		// 	$(".block_6 .drawer .proceed").fadeOut(500);
-		// 	setTimeout(function(){$(".block_7").fadeIn(500); scrollTo(".block_7");}, 500)
-		// }
-		// else{
-			$(".block_6 .drawer .proceed").fadeOut(500);
-			setTimeout(function(){$(".block_7").fadeIn(500); scrollTo(".block_7");}, 500)
-		// }
+		$(".block_6 .drawer .proceed").fadeOut(500);
+		setTimeout(function(){$(".block_7").fadeIn(500); scrollTo(".block_7");}, 500)
+
 	}
 })
 
 
 $(".block_7 .proceed").click(function(){
 	if($(".block_7 .selected").length >= 1){
-		if($(".block_7 .selected").hasClass("close_c_sub")){
-			$(".block_7 .drawer .proceed").fadeOut(500);
-			$(".sp_block_5").show();
-			$(".info").show();
-		}
-		else if ($(".block_7 .selected").hasClass("minimal_c_sub")){
-			$(".block_7 .drawer .proceed").fadeOut(500);
-			$(".sp_block_4").show();
-			$(".info").show();
-		}else{
-			$(".block_7 .drawer .o_sp").css("border-width", "3px")
-		}
+		$(".block_7 .drawer .proceed").fadeOut(500);
+		setTimeout(function(){$(".info").fadeIn(500); scrollTo(".info");}, 500);
+		// then move to response
 	}
-})
-
-$(".minimal_c_sub .option").click(function(){
-	if( $(".sp_block_5").is(":visible")){
-		$(".close_c_sub").removeClass("selected")
-		$(".close_c_sub .sub_o_1").removeClass("selected");
-		$(".close_c_sub .sub_o_2").removeClass("selected");
-		 $(".sp_block_5").hide();
-		 $(".block_7 .drawer .proceed").fadeIn(500);
-	}	
-})
-
-
-$(".close_c_sub .option").click(function(){
-	if( $(".sp_block_4").is(":visible")){
-		$(".minimal_c_sub").removeClass("selected")
-		$(".minimal_c_sub .sub_o_1").removeClass("selected");
-		$(".minimal_c_sub .sub_o_2").removeClass("selected");
-		 $(".sp_block_4").hide();
-		 $(".block_7 .drawer .proceed").fadeIn(500);
-	}	
 })
 
 

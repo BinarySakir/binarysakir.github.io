@@ -4,23 +4,21 @@
 	<title></title>
 	<link rel="stylesheet" type="text/css" href="js/rangeslider.css">
 	<style type="text/css">
-		p.selected{
-			font-weight: bold;
-		}
+
 	</style>
 </head>
 <body>
-	<input id="range-control" type="range" min="0" max="100" step="1" value="0">
+	<p>Hello</p>
+	<p>1</p>
+	<p>2</p>
+	<p>3</p>
+	<p>4</p>
 	<script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
-	<script src="js/rangeslider.min.js"></script>
 	<script>
-		$("#range-control").rangeslider({
-		    polyfill: false,
-		    onSlideEnd: function(position, value){
-		        console.log('Position', position, 'Value', value);
-		    }
+		$("p").click(function () {
+			$(this).addClass("title");
+			// $("p").not(this).fadeOut(500);
 		});
-
 	</script>
 </body>
 </html>
