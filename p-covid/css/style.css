@@ -63,7 +63,7 @@ html, body {
 	padding: 10px;
 	position: absolute;
 	bottom: 0;
-	background-color: rgba(0,108,188, 0.5);
+	background-color: rgba(0,108,188, 0.8);
 	color: #ffffff;
 	text-align: center;
 	border-top-right-radius: 10px;
@@ -184,10 +184,12 @@ html, body {
 	color: #ffffff;
 	font-size: 18px;
 	padding: 0 0 30px 0;
+	opacity: 0.5;
 }
 .screen_2 .learn_more p{
 	padding: 0;
 	margin: 0;
+	font-size: 14px !important;
 }
 .screen_2 .learn_more img{
 	height: 30px;
