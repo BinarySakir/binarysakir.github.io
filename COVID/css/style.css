@@ -46,7 +46,7 @@ body{
 	text-align: center;
 	padding: 30px;
 	background: rgb(14,92,176);
-	background: linear-gradient(0deg, rgba(14,92,176,0) 0%, rgba(41,55,224,0.5) 100%);
+	background: linear-gradient(0deg, rgba(14,92,176,0) 0%, rgba(41,55,224,1) 100%);
 
 }
 .header h1{
