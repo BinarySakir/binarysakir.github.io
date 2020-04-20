@@ -57,6 +57,7 @@ $( document ).ready(function(){
 		$(".drawer").css("display", "initial");
 	});
 	$("._close").click(function(){
+		$(".go_back").click();
 		$(".drawer").css("display", "none");
 		$(".drawer .info").empty();	
 	});
@@ -81,7 +82,7 @@ $( document ).ready(function(){
 		$(".weekly_update").fadeOut();
 		$(".cases").fadeIn();
 	});
-	
+
 	// for showing demo only
 	$(".weekly_update_form button").click(function(){
 		$(".weekly_update_message").fadeIn();
