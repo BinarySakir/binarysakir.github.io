@@ -29,6 +29,7 @@ html, body{
 	color: #205072;
 	padding: 20px; 
 	display: none;
+	border-radius: 10px;
 }
 .response .container .detail p{margin-bottom: 0;}
 .response .res_header{
@@ -183,28 +184,27 @@ html, body{
 
 .summary{
 	margin: 20px 30px;
-	font-family: "Magra";
+	font-family: "Montserrat";
+	color: #1c1c1e;
 }
 .summary .sum_header h1{
-	font-weight: 700;
+	font-size: 28px;
+	font-weight: 400;
 	color: #2937E8;
 	margin-bottom: 20px;
 	border-bottom: 2px solid #2937E8;
 }
-.summary .container h3{
-	font-weight: 700;
-	color: #2937E8;
-	font-size: 22px;
-	margin-top: 20px;
-}
-.info_block{
+.summary .info_block{
 	border-radius: 10px;
-	padding: 10px;
-	background-color: #F5F4F6;
+	padding: 15px;
+	padding-bottom: 10px;
+	background-color: #e6e6e6; /*#F5F4F6*/
 }
-.summary .container p{
-	margin: 0;
-	background-color: #F5F4F6;
+.summary .segment_title{
 	font-size: 18px;
-	border-radius: 10px;
+	margin-top: 15px;
+}
+.summary .info_block p{
+	margin-bottom: 5px;
+	font-size: 14px;
 }

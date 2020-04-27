@@ -81,91 +81,9 @@
 			</div>
 			<div class="container drawer">
 				<div class="row">
-					<div class="option col">0-18</div>
-					<div class="option col">18-35</div>
-					<div class="option col">36-50</div>
-					<div class="option col">50+</div>
-				</div>
-				<div class="row">
-					<div class='col proceed'>Proceed</div>
-				</div>
-			</div>
-		</div>
-		<div class="block_chest_pain conv-grp">
-			<img src="panacea_shield.svg" class="avatar" height="50" width="50">
-			<div class="conv">
-				<div class="text">Are you experiencing any chest pain?</div><br>
-			</div>
-			<div class="container drawer">
-				<div class="row">
-					<div class="option col">New</div>
-					<div class="option col">New and worsening</div>	
-				</div>
-				<div class="row">
-					<div class="option col">Severe</div>
-					<div class="option col">Feeling better</div>
-				</div>
-				<div class="row">
-					<div class="option col">None of the above</div>
-				</div>
-				<div class="row">
-					<div class='col proceed'>Proceed</div>
-				</div>
-			</div>
-		</div>
-		<div class="block_chest_pain_2 conv-grp">
-			<img src="panacea_shield.svg" class="avatar" height="50" width="50">
-			<div class="conv">
-				<div class="text">Do you have a</div><br>
-			</div>
-			<div class="container drawer">
-				<div class="row">
-					<div class="option col">History of acidity?</div>
-					<div class="option col">History of Cardiac diseases</div>	
-				</div>
-				<div class="row">
-					<div class="option col">Associated breathing difficulties</div>
-					<div class="option col">History of recent Chest trauma?</div>
-				</div>
-				<div class="row">
-					<div class="option col none">Don’t know</div>
-				</div>
-				<div class="row">
-					<div class='col proceed'>Proceed</div>
-				</div>
-			</div>
-		</div>
-		<div class="block_cardiac_hosp conv-grp">
-			<img src="panacea_shield.svg" class="avatar" height="50" width="50">
-			<div class="conv">
-				<div class="text">Have you been hospitalized with cardiac problems before?</div><br>
-			</div>
-			<div class="container drawer">
-				<div class="row">
-					<div class="option col">Yes</div>
-					<div class="option col">No</div>	
-				</div>
-				<div class="row">
-					<div class='col proceed'>Proceed</div>
-				</div>
-			</div>
-		</div>
-		<div class="block_exp_chest_pain conv-grp">
-			<img src="panacea_shield.svg" class="avatar" height="50" width="50">
-			<div class="conv">
-				<div class="text">Are you experiencing chest pain?</div><br>
-			</div>
-			<div class="container drawer">
-				<div class="row">
-					<div class="option col">New</div>
-					<div class="option col">New and worsening</div>	
-				</div>
-				<div class="row">
-					<div class="option col">Same</div>
-					<div class="option col">Severe</div>
-				</div>
-				<div class="row">
-					<div class="option col none">None</div>
+					<div class="option col">Under 18</div>
+					<div class="option col">18-64</div>
+					<div class="option col">Above 65</div>
 				</div>
 				<div class="row">
 					<div class='col proceed'>Proceed</div>
@@ -180,7 +98,7 @@
 
 			<div class="container drawer">
 				<div class="row">
-					<!-- <div class="option o_sp col">
+					<div class="option o_sp col">
 						<div><img src="https://image.flaticon.com/icons/svg/2167/2167095.svg" style="height: 30px; width: 30px;">&nbsp;&nbsp;Chest pain <span><img src="ico/down.svg" style="height: 12px; width: 12px;"></span></div>
 						<div class="sub_option">
 							<div class="container">
@@ -191,7 +109,7 @@
 							</div>
 							</div>
 						</div>
-					</div> -->
+					</div>
 					<div class="option o_sp col">
 						<div><img src="https://image.flaticon.com/icons/svg/2727/2727746.svg" style="height: 30px; width: 30px;">&nbsp;&nbsp;Severe Disorientation <span><img src="ico/down.svg" style="height: 12px; width: 12px;"></span></div>
 						<div class="sub_option">
@@ -252,13 +170,13 @@
 				</div>
 				<div class="row temperature">
 					<div class="col-12"><input id="range-control" type="range" min="95" max="110" step="1" value="100"></div>
-					<div class="col-12">
-						<p class="text-center">98°F</p>
-					</div>
+					<p>98°F</p>
 				</div>
 				<div class="row">
 					<div class="option col">Sweating</div>
 					<div class="option col">Difficulty breathing</div>
+					
+					
 				</div>
 				<div class="row">
 					<div class="option col">Sore throat</div>
@@ -267,9 +185,9 @@
 						<div class="sub_option">
 							<div class="container">
 							<div class="row">
-								<div class="option col-12 _follow_up">New</div>
-								<div class="option col-12 _follow_up">New and Worsening</div>
-								<div class="option col-12">Improving</div>
+								<div class="option col-12">New</div>
+								<div class="option col-12">New and Worsening</div>
+								<div class="option col-12 sub_o_3">Severe</div>
 							</div>
 							</div>
 						</div>
@@ -282,43 +200,6 @@
 				<div class="row">
 					<div class="option col">Vomiting</div>
 					<div class="option col none">None of the above</div>
-				</div>
-				<div class="row">
-					<div class='col proceed'>Proceed</div>
-				</div>
-			</div>
-		</div>
-		<div class="cough_follow_up conv-grp">
-			<img src="panacea_shield.svg" class="avatar" height="50" width="50">
-			<div class="conv">
-				<div class="text">Are you experiencing</div><br>
-			</div>
-			<div class="container drawer">
-				<div class="row">
-					<div class="option o_sp mutual col">
-						<div>Dry cough <span><img src="ico/down.svg" style="height: 12px; width: 12px;"></span></div>
-						<div class="sub_option">
-							<div class="container">
-							<div class="row">
-								<div class="option col-12">New</div>
-								<div class="option col-12">New and worsening</div>
-								<div class="option col-12">Improving</div>
-							</div>
-							</div>
-						</div>
-					</div>
-					<div class="option o_sp mutual col">
-						<div>Regular cough <span><img src="ico/down.svg" style="height: 12px; width: 12px;"></span></div>
-						<div class="sub_option">
-							<div class="container">
-							<div class="row">
-								<div class="option col-12">New</div>
-								<div class="option col-12">New and worsening</div>
-								<div class="option col-12">Improving</div>
-							</div>
-							</div>
-						</div>
-					</div>	
 				</div>
 				<div class="row">
 					<div class='col proceed'>Proceed</div>
@@ -502,7 +383,7 @@
 			</div>
 		</div>
 		<div class="info">
-			<p>Your synopsis is ready. Please provide the following information.</p>
+			<h1>Your info</h1>
 			<form>
 				<input type="tel" name="phone" placeholder="Phone No (Required)"><br>
 				<input type="email" name="email" placeholder="Email"><br>

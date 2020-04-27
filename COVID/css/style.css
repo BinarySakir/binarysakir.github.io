@@ -6,8 +6,8 @@ body{
 .chat, .info{
 	margin: 30px 20px;
 }
-.info h1{
-	font-size: 22px;
+.info p{
+	font-size: 16px;
 	margin-bottom: 10px;
 	font-weight: 700;
 	color: #2937E8;
@@ -80,7 +80,7 @@ body{
 	animation: textReveal;
 	animation-duration: 0.5s;
 }
-.conv-grp{
+.conv-grp, .conv-grp_sp{
 	border-bottom: 1px solid #5F6FED;
 	padding-top: 20px;
 }
@@ -182,7 +182,9 @@ hr{
 .block_1, .block_2, .block_3, .block_4,  .block_5, .block_6, .block_7, .block_8,
 .sp_drawer_1,
 .sp_block_2, .sp_block_3, .sp_block_4, .sp_block_5, .sp_block_6, .sp_block_1,
-._u18, .info, .close_mini, .temperature{
+._u18, .info, .close_mini,
+.block_chest_pain, .block_chest_pain_2, .block_cardiac_hosp, .block_exp_chest_pain,
+.cough_follow_up{
 	display: none;
 }
 .sp_drawer_1{

@@ -43,12 +43,7 @@ $(".block_5 .option").click(function(){
 $(".option").click(function(){
 	if($(this).parent().parent().parent().hasClass("block_2")){$(".block_2 .option").removeClass("selected");}
 	if($(this).parent().parent().parent().hasClass("block_5")){$(".block_5 .option").removeClass("selected");}
-	if($(this).parent().parent().parent().hasClass("block_chest_pain")){$(".block_chest_pain .option").removeClass("selected");}
 	if($(this).parent().parent().parent().parent().hasClass("block_gender")){$(".block_gender .option").removeClass("selected");}
-	if($(this).parent().parent().parent().hasClass("block_chest_pain")){$(".block_chest_pain .option").removeClass("selected");}
-	if($(this).parent().parent().parent().hasClass("block_cardiac_hosp")){$(".block_cardiac_hosp .option").removeClass("selected");}
-	if($(this).parent().parent().parent().hasClass("block_exp_chest_pain")){$(".block_exp_chest_pain .option").removeClass("selected");}
-	// multi select for block_6
 	if($(this).parent().parent().parent().hasClass("block_6")){
 		if(!$(this).hasClass("o_sp")){
 			$(".block_6 .option").removeClass("selected");
@@ -59,9 +54,7 @@ $(".option").click(function(){
 			}
 		}
 	}
-
 	$(".block_7 .option.none").removeClass("selected");
-
 	if(!$(this).hasClass("o_sp") && !$(this).parent().parent().parent().parent().hasClass("o_sp")){	
 		$(this).toggleClass("selected");
 		if($(".block_1 .option.none").hasClass("selected")){
@@ -69,6 +62,7 @@ $(".option").click(function(){
 			$(".block_1 .option.none").addClass("selected")
 			$(".block_1 .drawer .proceed").fadeOut(500);
 			setTimeout(function(){$(".block_3").fadeIn(500);}, 500)
+
 		}
 		if($(".block_3 .option.none").hasClass("selected")){
 			$(".block_3 .option").removeClass("selected")
@@ -90,11 +84,7 @@ $(".option").click(function(){
 			$(".close_mini").hide();
 			$(".block_7 .option").not(".block_7 .option.none").removeClass("selected")
 		}
-		if($(this).parent().parent().parent().hasClass("block_chest_pain_2") && $(this).hasClass("none") && $(this).hasClass("selected")){
-			$(".block_chest_pain_2 .option").not(this).removeClass("selected");
-		}
-
-		if($(".block_2 .selected").text() === $(".block_2 .option:first-child").text() ){
+		if($(".block_2 .selected").text() === "Under 18"){
 			if($(".sp_block_2").hasClass("shown") === false){
 				$(".sp_block_2").fadeIn(500);
 				$(".sp_block_2").addClass("shown")
@@ -109,8 +99,12 @@ $(".option").click(function(){
 	}
 });
 
+
 $(".show_close_mini").click(function(){
   $(".close_mini").toggle();
+});
+$(".block_3 .temp-trigger").click(function(){
+  $(".temperature").toggle();
 });
 
 
@@ -154,7 +148,7 @@ $(".block_1 .proceed").click(function(){
 
 $(".block_2 .proceed").click(function(){
 	if($(".block_2 .selected").length === 1){
-		if($(".block_2 .selected").text() === $(".block_2 .option:first-child").text()){
+		if($(".block_2 .selected").text() === "Under 18"){
 			if($(".sp_block_2").hasClass("shown") === false){
 				$(".sp_block_2").fadeIn(500);
 				scrollTo(".sp_block_2");
@@ -169,87 +163,31 @@ $(".block_2 .proceed").click(function(){
 		}
 		else{
 			$(".block_2 .drawer .proceed").fadeOut(500);
-			setTimeout(function(){$(".block_chest_pain").fadeIn(500); scrollTo(".block_chest_pain");}, 500)
-		}
-	}
-});
-
-$(".block_chest_pain .proceed").click(function(){
-	if($(".block_chest_pain .selected").length === 1 && $(".block_chest_pain .selected").text() !==  $(".block_chest_pain .option").last().text()){
-		$(".block_chest_pain .drawer .proceed").fadeOut(500);
-		setTimeout(function(){$(".block_chest_pain_2").fadeIn(500); scrollTo(".block_chest_pain_2");}, 500)
-	}else{
-		$(".block_chest_pain .drawer .proceed").fadeOut(500);
-		setTimeout(function(){$(".block_1").fadeIn(500); scrollTo(".block_1");}, 500)
-	}
-});
-
-$(".block_chest_pain_2 .proceed").click(function(){
-	if($(".block_chest_pain_2 .selected").length >= 1){
-		$(".block_chest_pain_2 .drawer .proceed").fadeOut(500);
-		setTimeout(function(){$(".block_cardiac_hosp").fadeIn(500); scrollTo(".block_cardiac_hosp");}, 500)
-	}
-});
-
-$(".block_cardiac_hosp .proceed").click(function(){
-	if($(".block_cardiac_hosp .selected").length === 1){
-		if($(".block_cardiac_hosp .option").first().hasClass("selected")){
-			$(".block_cardiac_hosp .drawer .proceed").fadeOut(500);
-			setTimeout(function(){$(".block_exp_chest_pain").fadeIn(500); scrollTo(".block_exp_chest_pain");}, 500)
-		}else{
-			$(".block_cardiac_hosp .drawer .proceed").fadeOut(500);
 			setTimeout(function(){$(".block_1").fadeIn(500); scrollTo(".block_1");}, 500)
 		}
 	}
 });
 
-$(".block_exp_chest_pain .proceed").click(function(){
-	if($(".block_exp_chest_pain .selected").length === 1){
-		$(".block_exp_chest_pain .drawer .proceed").fadeOut(500);
-		setTimeout(function(){$(".block_1").fadeIn(500); scrollTo(".block_1");}, 500)
-	}
-});
-
 $(".block_3 .proceed").click(function(){
 	if($(".block_3 .selected").length >= 1){
-		if($(".temp-trigger").hasClass("selected")){
-			$(".temp-trigger").css("font-weight", "400");
-			if($(".block_3 ._follow_up").hasClass("selected")){
-				$(".block_3 .drawer .proceed").fadeOut(500);
-				setTimeout(function(){$(".cough_follow_up").fadeIn(500); scrollTo(".cough_follow_up");}, 500);
-			}else{
-				$(".block_3 .drawer .proceed").fadeOut(500);
-				setTimeout(function(){$(".block_4").fadeIn(500); scrollTo(".block_4");}, 500);
-			}
-		}
-		else{
-			$(".temp-trigger").css("font-weight", "700");
-		}
-		
-	}
-});
-
-$(".cough_follow_up .proceed").click(function(){
-	if($(".cough_follow_up .selected").length >= 1){
-		$(".cough_follow_up .drawer .proceed").fadeOut(500);
+		$(".block_3 .drawer .proceed").fadeOut(500);
 		setTimeout(function(){$(".block_4").fadeIn(500); scrollTo(".block_4");}, 500)
 	}
-});
-
+})
 
 $(".block_4 .proceed").click(function(){
 	if($(".block_4 .selected").length >= 1){
 		$(".block_4 .drawer .proceed").fadeOut(500);
 		setTimeout(function(){$(".block_5").fadeIn(500); scrollTo(".block_5");}, 500)
 	}
-});
+})
 
 $(".block_5 .proceed").click(function(){
 	if($(".block_5 .selected").length >= 1){
 		$(".block_5 .drawer .proceed").fadeOut(500);
 		setTimeout(function(){$(".block_6").fadeIn(500); scrollTo(".block_6");}, 500)
 	}
-});
+})
 
 $(".block_6 .proceed").click(function(){
 	if($(".block_6 .selected").length >= 1){
@@ -257,7 +195,7 @@ $(".block_6 .proceed").click(function(){
 		setTimeout(function(){$(".block_7").fadeIn(500); scrollTo(".block_7");}, 500)
 
 	}
-});
+})
 
 
 $(".block_7 .proceed").click(function(){
@@ -266,35 +204,21 @@ $(".block_7 .proceed").click(function(){
 		setTimeout(function(){$(".info").fadeIn(500); scrollTo(".info");}, 500);
 		// then move to response
 	}
-});
+})
 
 
-$(".block_7 .mutual.o_sp:first-child .option").click(function(){
-    if($(".block_7 .mutual.o_sp:last-child .option").hasClass("selected")){
-    	$(".block_7 .mutual.o_sp:last-child .option").removeClass("selected");
-        $(".block_7 .mutual.o_sp:last-child").removeClass("selected");
+$(".mutual.o_sp:first-child .option").click(function(){
+    if($(".mutual.o_sp:last-child .option").hasClass("selected")){
+    	$(".mutual.o_sp:last-child .option").removeClass("selected");
+        $(".mutual.o_sp:last-child").removeClass("selected");
     }
-});
-$(".block_7 .mutual.o_sp:last-child .option").click(function(){
-    if($(".block_7 .mutual.o_sp:first-child .option").hasClass("selected")){
-    	$(".block_7 .mutual.o_sp:first-child .option").removeClass("selected");
-        $(".block_7 .mutual.o_sp:first-child").removeClass("selected");
+})
+$(".mutual.o_sp:last-child .option").click(function(){
+    if($(".mutual.o_sp:first-child .option").hasClass("selected")){
+    	$(".mutual.o_sp:first-child .option").removeClass("selected");
+        $(".mutual.o_sp:first-child").removeClass("selected");
     }
-});
-
-$(".cough_follow_up .mutual.o_sp:first-child .option").click(function(){
-    if($(".cough_follow_up .mutual.o_sp:last-child .option").hasClass("selected")){
-    	$(".cough_follow_up .mutual.o_sp:last-child .option").removeClass("selected");
-        $(".cough_follow_up .mutual.o_sp:last-child").removeClass("selected");
-    }
-});
-$(".cough_follow_up .mutual.o_sp:last-child .option").click(function(){
-    if($(".cough_follow_up .mutual.o_sp:first-child .option").hasClass("selected")){
-    	$(".cough_follow_up .mutual.o_sp:first-child .option").removeClass("selected");
-        $(".cough_follow_up .mutual.o_sp:first-child").removeClass("selected");
-    }
-});
-
+})
 
 
 var data = [];   // this will container all the selected data, format given at the end
@@ -306,13 +230,7 @@ $("form").submit(function(e){
 		var eachBlockAnswers = [];
 		eachBlock.push($(this).find(".text").text());
 		$(this).find(".selected").not(".o_sp").not(".sub_option .option").each(function(){
-			// the if-else condition below is new
-			if($(this).hasClass("temp-trigger")){
-				var tempFever = ["Fever", $(this).parent().parent().find("#range-control").val()];
-				eachBlockAnswers.push(tempFever);
-			}else{
-				eachBlockAnswers.push($(this).text().trim());
-			}
+			eachBlockAnswers.push($(this).text().trim());
 		});
 		$(this).find(".selected.o_sp").each(function(){
 			var eachBlockMultiAnswers = [];
@@ -321,7 +239,7 @@ $("form").submit(function(e){
 				eachBlockMultiAnswers.push($(this).text().trim());
 			})
 			eachBlockAnswers.push(eachBlockMultiAnswers);
-		});
+		})
 		eachBlock.push(eachBlockAnswers);
 		data.push(eachBlock);
 	});
