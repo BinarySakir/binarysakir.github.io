@@ -183,8 +183,8 @@ hr{
 .sp_drawer_1,
 .sp_block_2, .sp_block_3, .sp_block_4, .sp_block_5, .sp_block_6, .sp_block_1,
 ._u18, .info, .close_mini,
-.block_chest_pain, .block_chest_pain_2, .block_cardiac_hosp, .block_exp_chest_pain/*,
-.cough_follow_up*/{
+.block_chest_pain, .block_chest_pain_2, .block_cardiac_hosp, .block_exp_chest_pain,
+.cough_follow_up{
 	display: none;
 }
 .sp_drawer_1{
