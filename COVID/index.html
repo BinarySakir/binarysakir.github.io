@@ -180,18 +180,6 @@
 
 			<div class="container drawer">
 				<div class="row">
-					<!-- <div class="option o_sp col">
-						<div><img src="https://image.flaticon.com/icons/svg/2167/2167095.svg" style="height: 30px; width: 30px;">&nbsp;&nbsp;Chest pain <span><img src="ico/down.svg" style="height: 12px; width: 12px;"></span></div>
-						<div class="sub_option">
-							<div class="container">
-							<div class="row">
-								<div class="option col-12">New</div>
-								<div class="option col-12">New and Worsening</div>
-								<div class="option col-12 sub_o_3">Severe</div>
-							</div>
-							</div>
-						</div>
-					</div> -->
 					<div class="option o_sp col">
 						<div><img src="https://image.flaticon.com/icons/svg/2727/2727746.svg" style="height: 30px; width: 30px;">&nbsp;&nbsp;Severe Disorientation <span><img src="ico/down.svg" style="height: 12px; width: 12px;"></span></div>
 						<div class="sub_option">
@@ -524,6 +512,11 @@
 		    onSlide: function(position, value){
 		        $(".temperature p").html(value + "°F");
 		        $(".temp-trigger").addClass("selected");
+		        if(value <= 98){ $(".rangeslider__fill").css("background", "#2937E8"); }
+		        if(value > 98 && value <= 100){ $(".rangeslider__fill").css("background", "#ff0073"); }
+		        if(value > 100 && value <= 102){ $(".rangeslider__fill").css("background", "#ff0040"); }
+		        if(value > 102 && value <= 104){ $(".rangeslider__fill").css("background", "#ff001e"); }
+		        if(value > 104 && value <= 106){ $(".rangeslider__fill").css("background", "#ff0000"); }
 		    },
 		});
 	</script>

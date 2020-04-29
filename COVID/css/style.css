@@ -247,6 +247,7 @@ hr{
 }
 
 .rangeslider__fill{
+	transition: all 300ms;
 	background: #2937E8;
 }
 .rangeslider--horizontal{
