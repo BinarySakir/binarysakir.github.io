@@ -289,15 +289,19 @@ $(".block_7 .mutual.o_sp:last-child .option").click(function(){
 });
 
 $(".cough_follow_up .mutual.o_sp:first-child .option").click(function(){
+	if($(".cough_follow_up .mutual.o_sp:first-child .option").hasClass("selected")){
+		$(".cough_follow_up .option").last().removeClass("selected");
+	}
     if($(".cough_follow_up .mutual.o_sp:last-child .option").hasClass("selected")){
-    	$(".cough_follow_up .option").last().removeClass("selected");
     	$(".cough_follow_up .mutual.o_sp:last-child .option").removeClass("selected");
         $(".cough_follow_up .mutual.o_sp:last-child").removeClass("selected");
     }
 });
 $(".cough_follow_up .mutual.o_sp:last-child .option").click(function(){
+	if($(".cough_follow_up .mutual.o_sp:last-child .option").hasClass("selected")){
+		$(".cough_follow_up .option").last().removeClass("selected");
+	}
     if($(".cough_follow_up .mutual.o_sp:first-child .option").hasClass("selected")){
-    	$(".cough_follow_up .option").last().removeClass("selected");
     	$(".cough_follow_up .mutual.o_sp:first-child .option").removeClass("selected");
         $(".cough_follow_up .mutual.o_sp:first-child").removeClass("selected");
     }
