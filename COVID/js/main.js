@@ -223,7 +223,7 @@ $(".block_3 .proceed").click(function(){
 			}
 		}
 		else{
-			$(".temp-trigger").css("font-weight", "700");
+			$(".temp-trigger").addClass("selected");
 		}
 		
 	}

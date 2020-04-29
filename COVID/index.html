@@ -248,7 +248,7 @@
 			</div>
 			<div class="container drawer">
 				<div class="row">
-					<div class="option col temp-trigger">Fever</div>	
+					<div class="option col temp-trigger">Body Temperature</div>	
 				</div>
 				<div class="row temperature">
 					<div class="col-12"><input id="range-control" type="range" min="95" max="110" step="1" value="100"></div>
@@ -262,18 +262,7 @@
 				</div>
 				<div class="row">
 					<div class="option col">Sore throat</div>
-					<div class="option o_sp col">
-						<div>Cough<span><img src="ico/down.svg" style="height: 12px; width: 12px;"></span></div>
-						<div class="sub_option">
-							<div class="container">
-							<div class="row">
-								<div class="option col-12 _follow_up">New</div>
-								<div class="option col-12 _follow_up">New and Worsening</div>
-								<div class="option col-12">Improving</div>
-							</div>
-							</div>
-						</div>
-					</div>
+					<div class="option col _follow_up">Cough</div>
 				</div>
 				<div class="row">
 					<div class="option col">Diarrhea</div>
@@ -534,7 +523,8 @@
 		    polyfill: false,
 		    onSlide: function(position, value){
 		        $(".temperature p").html(value + "°F");
-		    }
+		        $(".temp-trigger").addClass("selected");
+		    },
 		});
 	</script>
 
