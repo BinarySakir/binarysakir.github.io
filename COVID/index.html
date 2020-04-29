@@ -16,9 +16,11 @@
 		<h1>Welcome,</h1>
 		<h2>To the <img src="logo_full.svg" style="margin-bottom: 5px;"> assessment assistant for<br><span>COVID-19</span></h2>
 	</div>
-
 	<div class="chat">
 		<p style="font-size: 12px; text-align: center;">The assistant will ask you some basic & detailed questions about your current physical state. We’ll use software to formulate a diagnosis and next steps accordingly. The software is only an assistant and is not a replacement for a doctor or lab tests.</p>
+		<div class="start_chat">
+			Start
+		</div>
 		<div class="block_gender conv-grp">
 			<img src="panacea_shield.svg" class="avatar" height="50" width="50">
 			<div class="conv">
@@ -116,14 +118,14 @@
 			<div class="container drawer">
 				<div class="row">
 					<div class="option col">History of acidity?</div>
-					<div class="option col">History of Cardiac diseases</div>	
+					<div class="option col">History of Cardiac diseases?</div>	
 				</div>
 				<div class="row">
 					<div class="option col">Associated breathing difficulties</div>
-					<div class="option col">History of recent Chest trauma?</div>
+					<div class="option col none">Don’t know</div>
 				</div>
 				<div class="row">
-					<div class="option col none">Don’t know</div>
+					<div class="option col none">None of the above</div>
 				</div>
 				<div class="row">
 					<div class='col proceed'>Proceed</div>
@@ -308,7 +310,7 @@
 					</div>	
 				</div>
 				<div class="row">
-					<div class="option col">I don't know</div>
+					<div class="option col">None of the above</div>
 				</div>
 				<div class="row">
 					<div class='col proceed'>Proceed</div>
@@ -407,7 +409,7 @@
 						<div class="sub_option both">
 							<div class="container">
 							<div class="row">
-								<div class="option col-6">I live here</div>
+								<div class="option col-6">I live there</div>
 								<div class="option col-6">I travelled there</div>
 							</div>
 							</div>
@@ -492,7 +494,7 @@
 			</div>
 		</div>
 		<div class="info">
-			<p>Your synopsis is ready. Please provide the following information so we may save your info and ask you to retake the test in the following days.</p>
+			<p>Your synopsis is ready. Please provide the following information so we may save your info and ask you to retake the test in the following days to compare results.</p>
 			<form>
 				<input type="tel" name="phone" placeholder="Phone No (Required)"><br>
 				<input type="email" name="email" placeholder="Email"><br>

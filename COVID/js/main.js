@@ -10,6 +10,10 @@ $('.o_sp div:first-child').on('click', function(event) {
 	$(this).parent().find(".sub_option").slideToggle();
 });
 
+$(".start_chat").click(function(){
+	$(".start_chat").fadeOut();
+	setTimeout(function(){$(".block_gender").fadeIn(500);}, 500);
+});
 
 // go back from block_2 to block_1
 $(".block_1 .option").click(function(){

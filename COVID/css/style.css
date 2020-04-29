@@ -41,7 +41,7 @@ body{
   display: flex;
   flex-direction: column;
 }
-.header {
+.header{
 	margin: 0;
 	text-align: center;
 	padding: 30px;
@@ -180,7 +180,7 @@ hr{
 	margin: 0;
 	padding: 5px 0;
 }
-.block_1, .block_2, .block_3, .block_4,  .block_5, .block_6, .block_7, .block_8,
+.block_gender, .block_1, .block_2, .block_3, .block_4,  .block_5, .block_6, .block_7, .block_8,
 .sp_drawer_1,
 .sp_block_2, .sp_block_3, .sp_block_4, .sp_block_5, .sp_block_6, .sp_block_1,
 ._u18, .info, .close_mini,
@@ -266,17 +266,17 @@ hr{
 	margin: 0 !important;
 }
 
-.response{
-	font-family: "Montserrat";
+.chat .start_chat{
+	text-align: center;
+	height: 50px;
+	width: 50px;
+	background-color: #2937E8;
+	border-radius: 50%;
+	margin: auto;
+	color: #ffffff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 60px;
+	font-size: 18px;
 }
-.response .header{
-	background-color: #E0ECDE;
-}
-.response .header h1{
-	font-weight: 700;
-	color: #205072;
-}
-
-
-
-
