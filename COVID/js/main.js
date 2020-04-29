@@ -17,10 +17,10 @@ $(".start_chat").click(function(){
 
 // go back from block_2 to block_1
 $(".block_1 .option").click(function(){
-	if($(".block_1 .option.none").hasClass("selected") && $(".block_2 .proceed").is(":visible")){
+	if($(".block_1 .option.none").hasClass("selected") && $(".block_temp .proceed").is(":visible")){
 		$(".block_1 .option.none").removeClass("selected");
 		$(".block_1 .drawer .proceed").fadeIn(500);
-		$(".block_2").fadeOut(500);
+		$(".block_temp").fadeOut(500);
 	}
 });
 $(".block_3 .option").click(function(){
@@ -75,7 +75,7 @@ $(".option").click(function(){
 			$(".block_1 .option").removeClass("selected")
 			$(".block_1 .option.none").addClass("selected")
 			$(".block_1 .drawer .proceed").fadeOut(500);
-			setTimeout(function(){$(".block_3").fadeIn(500);}, 500)
+			setTimeout(function(){$(".block_temp").fadeIn(500);}, 500)
 		}
 		if($(".block_3 .option.none").hasClass("selected")){
 			$(".block_3 .option").removeClass("selected")
@@ -157,10 +157,14 @@ $(".block_gender .proceed").click(function(){
 $(".block_1 .proceed").click(function(){
 	if($(".block_1 .selected").length >= 1){
 		$(".block_1 .drawer .proceed").fadeOut(500);
-		setTimeout(function(){$(".block_3").fadeIn(500); scrollTo(".block_3");}, 500)
+		setTimeout(function(){$(".block_temp").fadeIn(500); scrollTo(".block_temp");}, 500)
 	}
 });
 
+$(".block_temp .proceed").click(function(){
+	$(".block_temp .drawer .proceed").fadeOut(500);
+	setTimeout(function(){$(".block_3").fadeIn(500); scrollTo(".block_3");}, 500)
+});
 
 $(".block_2 .proceed").click(function(){
 	if($(".block_2 .selected").length === 1){
@@ -222,20 +226,13 @@ $(".block_exp_chest_pain .proceed").click(function(){
 
 $(".block_3 .proceed").click(function(){
 	if($(".block_3 .selected").length >= 1){
-		if($(".temp-trigger").hasClass("selected")){
-			$(".temp-trigger").css("font-weight", "400");
-			if($(".block_3 ._follow_up").hasClass("selected")){
-				$(".block_3 .drawer .proceed").fadeOut(500);
-				setTimeout(function(){$(".cough_follow_up").fadeIn(500); scrollTo(".cough_follow_up");}, 500);
-			}else{
-				$(".block_3 .drawer .proceed").fadeOut(500);
-				setTimeout(function(){$(".block_4").fadeIn(500); scrollTo(".block_4");}, 500);
-			}
+		if($(".block_3 ._follow_up").hasClass("selected")){
+			$(".block_3 .drawer .proceed").fadeOut(500);
+			setTimeout(function(){$(".cough_follow_up").fadeIn(500); scrollTo(".cough_follow_up");}, 500);
+		}else{
+			$(".block_3 .drawer .proceed").fadeOut(500);
+			setTimeout(function(){$(".block_4").fadeIn(500); scrollTo(".block_4");}, 500);
 		}
-		else{
-			$(".temp-trigger").addClass("selected");
-		}
-		
 	}
 });
 
@@ -330,14 +327,11 @@ $("form").submit(function(e){
 		var eachBlock = [];
 		var eachBlockAnswers = [];
 		eachBlock.push($(this).find(".text").text());
+		if($(this).hasClass("block_temp")){
+			eachBlockAnswers.push($("#range-control").val());
+		}
 		$(this).find(".selected").not(".o_sp").not(".sub_option .option").each(function(){
-			// the if-else condition below is new
-			if($(this).hasClass("temp-trigger")){
-				var tempFever = ["Fever", $(this).parent().parent().find("#range-control").val()];
-				eachBlockAnswers.push(tempFever);
-			}else{
-				eachBlockAnswers.push($(this).text().trim());
-			}
+			eachBlockAnswers.push($(this).text().trim());
 		});
 		$(this).find(".selected.o_sp").each(function(){
 			var eachBlockMultiAnswers = [];
