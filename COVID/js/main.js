@@ -48,6 +48,9 @@ $(".option").click(function(){
 	if($(this).parent().parent().parent().hasClass("block_chest_pain")){$(".block_chest_pain .option").removeClass("selected");}
 	if($(this).parent().parent().parent().hasClass("block_cardiac_hosp")){$(".block_cardiac_hosp .option").removeClass("selected");}
 	if($(this).parent().parent().parent().hasClass("block_exp_chest_pain")){$(".block_exp_chest_pain .option").removeClass("selected");}
+	if($(this).parent().parent().parent().hasClass("cough_follow_up")){
+		$(".cough_follow_up .option").hasClass("selected");
+	}
 	// multi select for block_6
 	if($(this).parent().parent().parent().hasClass("block_6")){
 		if(!$(this).hasClass("o_sp")){
@@ -92,6 +95,9 @@ $(".option").click(function(){
 		}
 		if($(this).parent().parent().parent().hasClass("block_chest_pain_2") && $(this).hasClass("none") && $(this).hasClass("selected")){
 			$(".block_chest_pain_2 .option").not(this).removeClass("selected");
+		}
+		if($(this).parent().parent().parent().hasClass("block_chest_pain_2") && !$(this).hasClass("none") && $(this).hasClass("selected")){
+			$(".block_chest_pain_2 .option.none").removeClass("selected");
 		}
 
 		if($(".block_2 .selected").text() === $(".block_2 .option:first-child").text() ){
@@ -284,14 +290,25 @@ $(".block_7 .mutual.o_sp:last-child .option").click(function(){
 
 $(".cough_follow_up .mutual.o_sp:first-child .option").click(function(){
     if($(".cough_follow_up .mutual.o_sp:last-child .option").hasClass("selected")){
+    	$(".cough_follow_up .option").last().removeClass("selected");
     	$(".cough_follow_up .mutual.o_sp:last-child .option").removeClass("selected");
         $(".cough_follow_up .mutual.o_sp:last-child").removeClass("selected");
     }
 });
 $(".cough_follow_up .mutual.o_sp:last-child .option").click(function(){
     if($(".cough_follow_up .mutual.o_sp:first-child .option").hasClass("selected")){
+    	$(".cough_follow_up .option").last().removeClass("selected");
     	$(".cough_follow_up .mutual.o_sp:first-child .option").removeClass("selected");
         $(".cough_follow_up .mutual.o_sp:first-child").removeClass("selected");
+    }
+});
+
+$(".cough_follow_up .option").last().click(function(){
+    if($(".cough_follow_up .option").last().hasClass("selected")){
+    	$(".cough_follow_up .mutual.o_sp:first-child .option").removeClass("selected");
+        $(".cough_follow_up .mutual.o_sp:first-child").removeClass("selected");
+        $(".cough_follow_up .mutual.o_sp:last-child .option").removeClass("selected");
+        $(".cough_follow_up .mutual.o_sp:last-child").removeClass("selected");
     }
 });
 
