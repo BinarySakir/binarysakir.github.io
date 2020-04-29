@@ -45,6 +45,7 @@ body{
 	margin: 0;
 	text-align: center;
 	padding: 30px;
+	padding-bottom: 0;
 	background: rgb(14,92,176);
 	background: linear-gradient(0deg, rgba(14,92,176,0) 0%, rgba(41,55,224,1) 100%);
 
