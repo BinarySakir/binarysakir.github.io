@@ -12,6 +12,7 @@ $('.o_sp div:first-child').on('click', function(event) {
 
 $(".start_chat").click(function(){
 	$(".start_chat").fadeOut();
+	$(".landing .row").fadeOut();
 	setTimeout(function(){$(".block_gender").fadeIn(500);}, 500);
 });
 
