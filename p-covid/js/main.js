@@ -42,7 +42,7 @@ $( document ).ready(function(){
 
 
 
-	var data_dhaka = [["Adabor", 5], ["Agargaon", 2], ["Armanitola", 1], ["Ashkona", 1], ["Azimpur", 11], ["Babu Bazar", 11], ["Badda", 8], ["Baily Road", 3], ["Banani", 8], ["Bangshal", 15], ["Banianagar", 1]]
+	// var data_dhaka = [["Adabor", 5], ["Agargaon", 2], ["Armanitola", 1], ["Ashkona", 1], ["Azimpur", 11], ["Babu Bazar", 11], ["Badda", 8], ["Baily Road", 3], ["Banani", 8], ["Bangshal", 15], ["Banianagar", 1]]
 	var data = [[630, ["Dhaka (District)", 28], ["Gazipur", 117], ["Kishoreganj", 33]], [92, ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15]]]
 	
 	$(".screen_3 td, .screen_3 .division span").click(function(){
