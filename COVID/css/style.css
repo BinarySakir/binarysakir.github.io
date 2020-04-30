@@ -3,6 +3,7 @@ body{
 	font-family: 'Magra', sans-serif;
 	margin-top: 0;
 }
+
 .chat, .info{
 	margin: 30px 20px;
 }
@@ -266,17 +267,19 @@ hr{
 	margin: 0 !important;
 }
 
-.chat .start_chat{
+.landing .start_chat{
 	text-align: center;
-	height: 50px;
-	width: 50px;
+	width: 100%;
 	background-color: #2937E8;
-	border-radius: 50%;
-	margin: auto;
 	color: #ffffff;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	padding: 60px;
+	padding: 20px;
 	font-size: 18px;
+	/*margin-top: 20px;*/
+}
+.landing .col-4:first-child img{
+	/*height: 80px;*/
+	text-align: right;
+}
+.landing .col-4:nth-child(2) img{
+	/*padding: 0 5px;*/
 }
