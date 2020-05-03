@@ -208,3 +208,39 @@ html, body{
 	margin-bottom: 5px;
 	font-size: 14px;
 }
+
+.response_steps{
+	font-family: "Montserrat", sans-serif;
+}
+.response_steps h1{
+	font-size: 16px;
+	text-align: center;
+	margin-bottom: 10px;
+	background-color: rgba(41, 71, 232, 0.5);
+	padding: 10px;
+	border-radius: 10px;
+	color: #fff;
+}
+.response_steps .header_steps{
+	background-color: #2937E8;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	margin-bottom: 20px;
+}
+.response_steps .header_steps img{ height: 60px; width: 220px; }
+.response_steps .step{margin-bottom: 10px;}
+.response_steps .row{
+	border: 1px solid rgba(41, 71, 232, 0.4);
+	border-radius: 10px;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+.response_steps .col-3 img{
+	height: 50px;
+	width: 50px;
+}
+.response_steps .col-9{
+	font-weight: 400;
+	font-size: 15px;
+	margin: auto 0;
+}
