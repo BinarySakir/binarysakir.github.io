@@ -81,7 +81,7 @@ html, body {
 	padding: 10px;
 	position: absolute;
 	bottom: 0;
-	background-color: rgba(0,108,188, 0.8);
+	background-color: rgba(0,108,188, 0.9);
 	color: #ffffff;
 	text-align: center;
 	border-top-right-radius: 10px;
@@ -93,7 +93,7 @@ html, body {
 }
 .screen_1 .corona_detail p{
 	font-size: 14px;
-	opacity: 0.7;
+	opacity: 0.9;
 }
 
 .screen_1 .corona_detail_icons{
@@ -115,6 +115,14 @@ html, body {
 	font-size: 14px !important;
 	margin-bottom: 0;
 }
+@media (min-width: 768px) {
+	.screen_1 .col-4 img{
+		height: 60px;
+		width: 60px;
+	}
+}
+
+
 
 .screen_2 .search_bar{padding: 40px; padding-bottom: 0;}
 .screen_2 .search_bar input{
