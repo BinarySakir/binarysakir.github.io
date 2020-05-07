@@ -61,10 +61,14 @@ html, body {
 	text-decoration: none;
 	color: #ffffff;
 }
+.screen_1 p{
+	margin-bottom: 0;
+}
 .screen_1 .col-4{
 	border-radius: 10px;
 	transition: all 300ms;
 	padding: 10px; 
+	font-size: 14px;
 }
 .screen_1 .col-4 img{
 	height: 50%;
