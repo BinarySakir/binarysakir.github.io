@@ -11,11 +11,13 @@
 	<link rel="stylesheet" type="text/css" href="css/panacea_landing.css">
 </head>
 <body>
+
+
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
-	  <a class="navbar-brand" href="#"><img src="logo_full.svg" class="img-fluid" style="width: 200px; height: auto;"></a>
-	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-		<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#FFF;"><g fill="#FFF" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#FFF"><g id="surface1"><path d="M0,30.96v6.88h172v-6.88zM0,82.56v6.88h172v-6.88zM0,134.16v6.88h172v-6.88z"></path></g></g></g></svg>
-	  </button>
+	<a class="navbar-brand" href="#"><img src="logo_full.svg" class="img-fluid" style="width: 200px; height: auto;"></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	<span class="navbar-toggler-icon"></span>
+	</button>
 
 	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		<ul class="navbar-nav ml-auto">
@@ -68,30 +70,29 @@
 					</div>
 					<div class="home--icons">
 						<div class="row no-gutters text-center">
-							<div class="col-md-2"><img src="ico-p_landing/handwash.svg"></div>
-							<div class="col-md-2"><img src="ico-p_landing/stayhome.svg"></div>
-							<div class="col-md-2"><img src="ico-p_landing/mask.svg"></div>
-							<div class="col-md-2"><img src="ico-p_landing/distance.svg"></div>
-							<div class="col-md-2"><img src="ico-p_landing/crowd.svg"></div>
-							<div class="col-md-2"><img src="ico-p_landing/handshake.svg"></div>
+							<div class="col-md-2 col-4"><img src="ico-p_landing/handwash.svg"></div>
+							<div class="col-md-2 col-4"><img src="ico-p_landing/stayhome.svg"></div>
+							<div class="col-md-2 col-4"><img src="ico-p_landing/mask.svg"></div>
+							<div class="col-md-2 col-4"><img src="ico-p_landing/distance.svg"></div>
+							<div class="col-md-2 col-4"><img src="ico-p_landing/crowd.svg"></div>
+							<div class="col-md-2 col-4"><img src="ico-p_landing/handshake.svg"></div>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="row">
-				<!-- <p> Everything that you need to know to be safe and use our sound at home</p> -->
 			</div>
 		</div>
 	</section>
 
-	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script src="https://unpkg.com/scrollreveal"></script>
 	<script type="text/javascript">
 	$( document ).ready(function(){
-		ScrollReveal().reveal('.intro--graphics', { distance: '100%', origin: 'right', duration: 2000 });
+		ScrollReveal().reveal('.intro--graphics', { distance: '100%', origin: 'left', duration: 2000 });
 		ScrollReveal().reveal('.home--icons img', { interval: 100, distance: '100%', origin: 'left', duration: 2000 });
-		ScrollReveal().reveal('.home--intro p', {distance: '150%', origin: 'bottom', duration: 2000}).delay(500);
+		ScrollReveal().reveal('.home--intro p', {distance: '150%', origin: 'bottom', duration: 2000});
 	});
 	</script>
 	<!-- <script type="text/javascript" src="js/main.js"></script> -->

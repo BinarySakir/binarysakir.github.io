@@ -1,6 +1,7 @@
 body{
 	font-family: "Montserrat", sans-serif;
 }
+
 .navbar{
 	padding: 15px 60px;
 	background-color: #ffffff !important;
@@ -47,4 +48,37 @@ body{
 .home--icons img{
 	height: 60px;
 	width: auto;
+}
+
+
+@media (max-width: 576px) {
+	.navbar{
+		padding: 15px 20px !important;
+		background-color: #ffffff !important;
+	}
+	.navbar-brand img{
+		width: 180px !important;
+		height: auto !important;
+	}
+	.navbar-toggler{
+		border: 0;
+		padding: 0;
+	}
+	.navbar-collapse{
+		margin-top: 10px;
+	}
+	.section-homepage .col-md-6:first-child{
+		margin-bottom: 20px;
+	}
+	.section-homepage .col-md-6:first-child img{
+		height: 250px !important;
+		width: auto !important;
+	}
+	.home--icons .col-4{
+		margin-bottom: 20px;
+	}
+	.section-homepage .home--intro{
+		padding: 20px;
+		font-size: 12px;
+	}
 }
