@@ -6,118 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#035AA7"/>
 	<title>Chat bot</title>
-	<link href="https://fonts.googleapis.com/css?family=Magra:400,700&display=swap" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<!-- <link rel="stylesheet" type="text/css" href="css/style.css"> -->
-	<style type="text/css">
-		body{
-			margin-top: 20px;
-			background-color: #0E59A9;
-			color: #ffffff;
-			font-family: "Magra";
-		}
-		a, a:active, a:focus, a:hover{
-			text-decoration: none;
-			color: #ffffff;
-		}
-		.logo{
-			height: 80px;
-			width: 250px;
-		}
-		.cont_1{
-			margin-top: 20px;
-		}
-		.col-4{
-			border-radius: 10px;
-			transition: all 300ms;
-			padding: 10px; 
-		}
-		.col-4 img{
-			height: 50%;
-			width: 50%;
-		}
-		.col-4:hover{
-			background-color: rgba(255,255,255,0.2);
-		}
-		.cont_2{
-			border-top-right-radius: 10px;
-			border-top-left-radius: 10px;
-			position: absolute;
-			bottom: 0;
-    		left: 0;
-    		right: 0;
-			background-color: rgba(255,255,255,0.2);
-		}
-		.cont_2 p{
-			margin: 10px 0;
-			font-size: 14px;
-		}
-		@media (min-width: 768px) {
-			.col-4 img{
-				height: 60px;
-				width: 60px;
-			}
-		}
-	</style>
+	<link rel="stylesheet" type="text/css" href="css/panacea_landing.css">
 </head>
 <body>
-	<!-- <div class="header"> -->
-		<!-- <center><img src="maxpro.png" class="img-fluid logo"></center> -->
-	<!-- </div> -->
-	<div class="container cont_1 text-center">
-		<p>করোনার দুর্যোগে <span><img src="maxpro.png" style="height: 24px; width: auto; position: relative; bottom: 5px;"></span> নিয়ে এলো</p>
-		<div class="row">
-			<div class="col-4">
-				<a href="#">
-					<img src="virus.svg">
-					<p>করোনায় করণীয়</p>
-				</a>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#"><img src="logo_full.svg" class="img-fluid" style="width: 200px; height: auto;"></a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+		<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 172 172" style=" fill:#FFF;"><g fill="#FFF" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172v-172h172v172z" fill="none"></path><g fill="#FFF"><g id="surface1"><path d="M0,30.96v6.88h172v-6.88zM0,82.56v6.88h172v-6.88zM0,134.16v6.88h172v-6.88z"></path></g></g></g></svg>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav ml-auto">
+	      <li class="nav-item">
+	        <a class="nav-link nav-link--sp" href="#">Covid-19 Update</a>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          About us
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	        	<a class="dropdown-item" href="#">About Panacea</a>
+	        	<a class="dropdown-item" href="#">Press Release</a>
+	        </div>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Services
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	        	<a class="dropdown-item" href="#">Live Check</a>
+	        	<a class="dropdown-item" href="#">Live Warranty</a>
+	        </div>
+	      </li>
+	      <li class="nav-item dropdown">
+	        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+	          Socials
+	        </a>
+	        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+	        	<a class="dropdown-item" href="#">Facebook</a>
+	        	<a class="dropdown-item" href="#">Twitter</a>
+	        </div>
+	      </li>
+	      <li class="nav-item">
+	        <a class="nav-link" href="#">Contact</a>
+	      </li>
+	    </ul>
+	  </div>
+	</nav>
+
+	<section class="section-homepage">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6 text-center">
+					<img src="graphics.png" class="img-fluid intro--graphics" style="height: 400px; width: auto;">
+				</div>
+				<div class="col-md-6">
+					<div class="home--intro">
+						<p>We as a technology company initiated Live check & Live warranty setvice for the first time in Bangladesh. Now for recent COVID-19 situation we've bought Live Bot and Live update for reducing your anxiety. Our services lets people easily know about the latest Covid-19 situation - what to do, what not to do and assess their health condition.</p>
+					</div>
+					<div class="home--icons">
+						<div class="row no-gutters text-center">
+							<div class="col-md-2"><img src="ico-p_landing/handwash.svg"></div>
+							<div class="col-md-2"><img src="ico-p_landing/stayhome.svg"></div>
+							<div class="col-md-2"><img src="ico-p_landing/mask.svg"></div>
+							<div class="col-md-2"><img src="ico-p_landing/distance.svg"></div>
+							<div class="col-md-2"><img src="ico-p_landing/crowd.svg"></div>
+							<div class="col-md-2"><img src="ico-p_landing/handshake.svg"></div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<div class="col-4">
-				<a href="#">
-					<img src="tv.svg">
-					<p>Live Corona Case Update</p>
-				</a>
-			</div>
-			<div class="col-4">
-				<a href="#">
-					<img src="bot.svg">
-					<p>Assessment Assistants</p>
-				</a>
+			<div class="row">
+				<!-- <p> Everything that you need to know to be safe and use our sound at home</p> -->
 			</div>
 		</div>
-	</div>
-	<div class="container cont_2 text-center">
-		<p>আরো আছে <span><img src="maxpro.png" style="height: 20px; width: auto; position: relative; bottom: 4px;"></span> থেকে</p>
-		<div class="row">
-			<div class="col-4">
-				<a href="#">
-					<img src="livecheck.svg">
-					<p>Maxpro Verification</p>
-				</a>
-			</div>
-			<div class="col-4">
-				<a href="#">
-					<img src="ramadan.svg">
-					<p>Ramadan App</p>
-				</a>
-			</div>
-			<div class="col-4">
-				<a href="#">
-					<img src="web.svg">
-					<p>Maxpro Webpage</p>
-				</a>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-12">
-				<p style="font-size: 18px;"><a href="#"><span><img src="fb.svg" style="height: 20px; width: 20px;"></span>&nbsp;maxpropage</a></p>
-			</div>
-		</div>
-	</div>
+	</section>
+
 	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script src="https://unpkg.com/scrollreveal"></script>
+	<script type="text/javascript">
+		ScrollReveal().reveal('.intro--graphics', { distance: '100%', origin: 'right', duration: 2000 });
+		ScrollReveal().reveal('.home--icons img', { interval: 100, distance: '100%', origin: 'left', duration: 2000 });
+		ScrollReveal().reveal('.home--intro p', {distance: '150%', origin: 'bottom', duration: 2000}).delay(500);
+	</script>
 	<!-- <script type="text/javascript" src="js/main.js"></script> -->
 </body>
 </html>
