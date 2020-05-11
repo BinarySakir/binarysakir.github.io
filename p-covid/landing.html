@@ -9,10 +9,15 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="css/panacea_landing.css">
+	<style type="text/css">
+	
+	</style>
 </head>
 <body>
 
-
+	<div class="overlay">
+		<div class="lds-ripple"><div></div><div></div></div>
+	</div>
 	<nav class="navbar navbar-expand-lg navbar-light bg-light">
 	<a class="navbar-brand" href="#"><img src="logo_full.svg" class="img-fluid" style="width: 200px; height: auto;"></a>
 	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -89,11 +94,14 @@
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script src="js/scroll.js"></script>
 	<script type="text/javascript">
-	$( document ).ready(function(){
-		ScrollReveal().reveal('.intro--graphics', { distance: '100%', origin: 'left', duration: 2000 });
-		ScrollReveal().reveal('.home--icons img', { interval: 100, distance: '100%', origin: 'left', duration: 2000 });
-		ScrollReveal().reveal('.home--intro p', {distance: '150%', origin: 'bottom', duration: 2000});
+	$(window).load(function() {
+		// Animate loader off screen
+		$(".overlay").fadeOut();
+		ScrollReveal().reveal('.intro--graphics', { distance: '100%', origin: 'left', duration: 3000 });
+		ScrollReveal().reveal('.home--icons img', { interval: 100, distance: '100%', origin: 'left', duration: 3000 });
+		ScrollReveal().reveal('.home--intro p', {distance: '150%', origin: 'bottom', duration: 3000});
 	});
+	
 	</script>
 	<!-- <script type="text/javascript" src="js/main.js"></script> -->
 </body>
