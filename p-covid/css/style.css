@@ -12,7 +12,7 @@ hr{
 
 .navbar{
 	background-color: #035AA7;
-	padding: 20px;
+	padding: 10px;
 }
 .navbar-brand img{
 	height: 25px;
@@ -46,6 +46,7 @@ html, body {
 }
 
 .full-height{
+	padding-top: 60px;
 	height: 100%;
 	background-color: #035AA7;
 }
@@ -112,12 +113,12 @@ html, body {
 
 
 
-.screen_2 .search_bar{padding: 40px; padding-bottom: 0;}
+.screen_2 .search_bar{padding: 0 40px;}
 .screen_2 .search_bar input{
 	border: 0;
 	border-bottom: 2px solid #ffffff;
 	background-color: transparent;
-	font-size: 18px; 
+	font-size: 14px; 
 	padding: 5px 0;
 	width: 100%;
 	outline: 0;
@@ -244,13 +245,12 @@ html, body {
 	margin: 0;
 }
 
-.screen_3 .search_bar{padding: 40px; padding-bottom: 20px;}
+.screen_3 .search_bar{padding: 0 40px; padding-bottom: 20px;}
 .screen_3 .search_bar input{
 	border: 0;
 	border-bottom: 2px solid #ffffff;
 	background-color: transparent;
 	font-size: 14px; 
-	padding: 5px 0;
 	width: 100%;
 	outline: 0;
 	color: #ffffff;
@@ -316,7 +316,7 @@ html, body {
 
 
 .screen_3 .drawer{
-	font-family: "Lato";
+		font-family: "Lato";
 	text-align: center;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;
@@ -327,11 +327,12 @@ html, body {
 	position: absolute;
 	display: none;
 	bottom: -200%;
-	height: 640px;
+	height: 100%;
 	animation: drawerReveal 0.5s ease;
 	-webkit-box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.17);
 	-moz-box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.17);
 	box-shadow: 0px -13px 18px 0px rgba(0,0,0,0.17);
+	padding-top: 60px;
 
 }
 .screen_3 .drawer ._close{text-align: right;}
