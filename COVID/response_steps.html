@@ -14,13 +14,17 @@
 <body>
 	<div class="response_steps">
 		<div class="header_steps">
-			<center><img src="logo_full_w.svg"></center>
+			<center><a href="#"><img src="logo_full_w.svg"></a></center>
 		</div>
 		<div class="container">
-			<h1>Steps you should take</h1>
+			<h1>According to the information you've provided, you do not have any conclusive symptoms of COVID-19. We recommend the following:</h1>
 			<div class="row no-gutters">
 				<div class="col-3"><center><img src="ico/steps/doctor.svg"></center></div>
 				<div class="col-9">Talk to a healthcare professional.</div>
+				<!-- this part is not necessary for now -->
+				<!-- <div class="more">
+					Sample text sample text
+				</div> -->
 			</div>
 			<div class="row no-gutters">
 				<div class="col-3"><center><img src="ico/steps/stayhome.svg"></center></div>
@@ -43,7 +47,16 @@
 				<div class="col-9">You seem to be doing well.</div>
 			</div>
 		</div>
+				<center>
+				<a href="#"><button>VIEW SUMMARY</button></a>
+			</center>
 	</div>
+	
 	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+	<script type="text/javascript">
+		$(".row").click(function () {
+			$(this).find(".more").slideToggle();
+		})
+	</script>
 </body>
 </html>
