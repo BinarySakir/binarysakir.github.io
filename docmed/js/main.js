@@ -43,19 +43,19 @@ autoplaySpeed: 500,
   responsive:{
       0:{
           items:1,
-          nav:false,
+          nav:true,
       },
       767:{
           items:1,
-          nav:false,
+          nav:true,
       },
       992:{
           items:1,
-          nav:false
+          nav:true
       },
       1200:{
           items:1,
-          nav:false
+          nav:true
       },
       1600:{
           items:1,
