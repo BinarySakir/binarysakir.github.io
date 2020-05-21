@@ -247,6 +247,7 @@
     </div>
     <!-- welcome_docmed_area_end -->
 
+
     <!-- offers_area_start -->
     <div class="our_department_area">
         <div class="container">
@@ -259,16 +260,23 @@
                     </div>
                 </div>
             </div>
+<div class="modal_recom modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <h3>Violence during COVID-19</h3>
+          <p>Try to reach out to supportive family, friends or neighbors. You call a hotline or access information online if possible. Also seek out local services for survivors.Try to reach out to supportive family, friends or neighbors. You call a hotline or access information online if possible. Also seek out local services for survivors.</p>
+      </div>
+    </div>
+</div>
             <div class="row">
                 <div class="col-xl-3 col-md-6 col-lg-4">
-                    <div class="single_department">
+                    <div class="single_department" data-toggle="modal" data-target="#exampleModal">
                         <div class="department_thumb">
                             <img src="img/department/1.png" alt="">
                         </div>
                         <div class="department_content">
-                            <h3><a href="#">Eye Care</a></h3>
-                            <!-- <p>Esteem spirit temper too say adieus who direct esteem.</p> -->
-                            <a href="#" class="learn_more">Learn More</a>
+                            <h3><a>Violence during COVID-19</a></h3>
+                            <p>Try to reach out to supportive family, friends or neighbors. You call a hotline or access information online if possible. Also seek out local services for survivors.</p>
                         </div>
                     </div>
                 </div>
@@ -357,10 +365,12 @@
                     </div>
                 </div>
             </div>
+
             <center><a href="#" class="boxed-btn3-white-2">Read More</a></center>
         </div>
     </div>
     <!-- offers_area_end -->
+
 
         <!-- Emergency_contact start -->
     <div class="Emergency_contact">
@@ -672,7 +682,7 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
-    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
@@ -698,6 +708,12 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
     <script src="js/main.js"></script>
     <script>
+        $('.modal').on('show.bs.modal', function (e) {
+            $("#sticky-header").hide();
+        })
+        $('.modal').on('hidden.bs.modal', function (e) {
+            $("#sticky-header").show();
+        })
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',
             icons: {
@@ -711,9 +727,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
             }
 
         });
-    $(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
-});
+        $(document).ready(function() {
+            $('.js-example-basic-multiple').select2();
+        });
     </script>
 </body>
 
