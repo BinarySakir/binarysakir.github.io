@@ -752,7 +752,7 @@ h3 {
   border: 1px solid #ddd;
   top: 3px;
   right: 5px;
-  top: -36px;
+  top: -45px;
 }
 
 /* line 55, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slick-nav.scss */
@@ -809,7 +809,7 @@ h3 {
   padding: 5px;
   right: 0;
   margin-top: -5px;
-  top: -36px;
+  top: -45px;
 }
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
@@ -1292,6 +1292,15 @@ h3 {
   .slider_area .single_slider {
     height: 420px;
   }
+  .slider_area .single_slider .slider-logo{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 50px;
+    width: auto;
+    margin: 20px;
+  }
+
 }
 
 /* line 17, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
@@ -1348,12 +1357,31 @@ h3 {
   }
 }
 
+.slider_bg_4 .slider_text p{
+  color: #f26522 !important; margin-bottom: 40px !important; font-size: 25px !important; line-height: 40px;
+}
+.slider_bg_4 .slider_text a{
+  background-color: #3b5998; padding: 20px; color: #fff; border-radius: 10px;
+}
+
 @media (max-width: 767px) {
   /* line 39, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
   .slider_area .single_slider .slider_text p {
     font-size: 16px;
   }
+  .slider_bg_4 .slider_text p{
+  color: #f26522 !important; margin-bottom: 10px !important; font-size: 15px !important; line-height: 25px !important;
 }
+.slider_bg_4 .slider_text a{
+  background-color: #3b5998; padding: 10px; color: #fff; border-radius: 10px;
+}
+#sticky-header .logo img{
+  height: 70px !important; width: auto;
+}
+}
+
+
+
 
 /* line 1, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_about.scss */
 .welcome_docmed_area {
