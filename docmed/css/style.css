@@ -2512,11 +2512,11 @@ h3 {
 
 /* line 10, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_bradcam.scss */
 .bradcam_area {
-  padding: 170px;
   background-size: cover;
   background-position: center center;
-  padding: 148px 0px;
+  padding:  60px 0px;
   background-repeat: no-repeat;
+  background-color: #f36523;
 }
 
 @media (max-width: 767px) {
@@ -2528,10 +2528,10 @@ h3 {
 
 /* line 20, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_bradcam.scss */
 .bradcam_area h3 {
-  font-size: 50px;
+  font-size: 40px;
   color: #fff;
   font-weight: 600;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   text-transform: capitalize;
 }
 
@@ -2943,7 +2943,7 @@ h3 {
 }
 
 /* line 40, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_service.scss */
-.service_area .col-xl-4:nth-child(2) .single_service {
+.service_area .col-xl-4:nth-child(2) {
   background: #ec5b16;
 }
 
@@ -3358,7 +3358,6 @@ h3 {
 /* line 85, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_elements.scss */
 b,
 sup,
-sub,
 u,
 del {
   color: #ff5e13;
