@@ -1171,7 +1171,7 @@ h3 {
 /* line 248, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_header.scss */
 .header-area .header-top_area {
   padding: 12px 0;
-  background: #F5FBFF;
+  background: #FFDC7D;
 }
 
 @media (max-width: 767px) {
@@ -2943,10 +2943,7 @@ h3 {
 }
 
 /* line 40, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_service.scss */
-.service_area .col-xl-3:nth-child(2) .single_service {
-  background: #ec5b16;
-}
-.service_area .col-xl-3:nth-child(4) .single_service {
+.service_area .col-xl-4:nth-child(2) .single_service {
   background: #ec5b16;
 }
 
@@ -3109,8 +3106,10 @@ h3 {
   background-repeat: no-repeat;
 }
 .Emergency_contact .row{
-  background-color: red;
-  opacity: 0.8;
+  background-color: #B72626;
+}
+.Emergency_contact .boxed-btn3-white:hover{
+  color: #B72626 !important;
 }
 .Emergency_contact .single_emergency a{
   color: #fff;
