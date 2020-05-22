@@ -144,6 +144,7 @@
             width: 50px;
             min-height: 1px;
             display: inline-block;
+            transition: all 300ms;
         }
         .graph p{
             font-size: 12px;
@@ -179,15 +180,34 @@
             font-weight: 700;
             text-decoration: underline;
         }
+        .weekly_update{margin-bottom: 40px; display: none;}
+        .weekly_update input{
+            width: 100%;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid rgb(243, 101, 35);
+            outline: 0;
+        }
+        .rec_updates{cursor: pointer;}
+        .weekly_update p{
+            font-weight: 700;
+        }
+        .weekly_update p.error{
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+            color: red;
+        }
     </style>
     <div class="live-update">
         <div class="container">
             <div class="row">
-            <!-- <p class="city"><span data-n="0">DHAKA CITY</span></p> -->
                 <div class="col-xl-6 col-md-12 col-sm-12 col-xs-12">
                     <table class="table table-bordered">
                         <tr>
-                            <td class="selected" data-n="0" colspan="2">Dhaka City</td>
+                            <td data-n="0" colspan="2">Dhaka City</td>
                         </tr>
                         <tr>
                             <td data-n="1">Dhaka</td>
@@ -209,29 +229,33 @@
                 </div>
                 <div class="col-xl-6 col-md-12 col-sm-12 col-xs-12">
                     <div class="case_detail text-center">
-                        <h3>Dhaka City</h3>
-                        <h4>630 confirmed cases</h4>
+                        <h3></h3>
+                        <h4><span></span> confirmed cases</h4>
                         <div class="graph">
-                            <div data-d="245" style="height: 80px;"></div>
-                            <div data-d="406" style="height: 60px;"></div>
+                            <div data-d=""></div>
+                            <div data-d=""></div>
                             <p>Weekly Comparison</p>
                         </div>
                         <div class="local_detail">
-                            <p>Dhaka (District) - 28</p>
-                            <p>Gazipur - 117</p>
-                            <p>Kishoreganj - 33</p>
-                            <p>Dhaka (District) - 28</p>
-                            <p>Gazipur - 117</p>
-                            <p>Kishoreganj - 33</p>
-                            <p>Dhaka (District) - 28</p>
-                            <p>Gazipur - 117</p>
-                            <p>Kishoreganj - 33</p>
-                            <p>Dhaka (District) - 28</p>
-                            <p>Gazipur - 117</p>
-                            <p>Kishoreganj - 33</p>
+                            
                         </div>
                     </div>
                     <center><p class="rec_updates">Receive Weekly Updates</p></center>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-4 offset-xl-4">
+                    <div class="weekly_update">
+                        <center><p>Receive Weekly Updates</p></center>
+                        <form>
+                            <input type="text" name="name" placeholder="Name"><br>
+                            <input type="tel" name="phone" placeholder="Phone No.">
+                            <p class="error">Error or Other Messages</p>
+                            <center>
+                                <button type="submit" class="boxed-btn3-white-2">Submit</button>
+                            </center>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
@@ -311,53 +335,6 @@
 <!-- footer end  -->
     <!-- link that opens popup -->
 
-    <!-- form itself end-->
-    <form id="test-form" class="white-popup-block mfp-hide">
-        <div class="popup_box ">
-            <div class="popup_inner">
-                <h3>Make an Appointment</h3>
-                <form action="#">
-                    <div class="row">
-                        <div class="col-xl-6">
-                            <input id="datepicker" placeholder="Pick date">
-                        </div>
-                        <div class="col-xl-6">
-                            <input id="datepicker2" placeholder="Suitable time">
-                        </div>
-                        <div class="col-xl-6">
-                            <select class="form-select wide" id="default-select" class="">
-                                <option data-display="Select Department">Department</option>
-                                <option value="1">2</option>
-                                <option value="2">3</option>
-                                <option value="3">4</option>
-                            </select>
-                        </div>
-                        <div class="col-xl-6">
-                            <select class="form-select wide" id="default-select" class="">
-                                <option data-display="Doctors">Doctors</option>
-                                <option value="1">2</option>
-                                <option value="2">3</option>
-                                <option value="3">4</option>
-                            </select>
-                        </div>
-                        <div class="col-xl-6">
-                            <input type="text"  placeholder="Name">
-                        </div>
-                        <div class="col-xl-6">
-                            <input type="text"  placeholder="Phone no.">
-                        </div>
-                        <div class="col-xl-12">
-                            <input type="email"  placeholder="Email">
-                        </div>
-                        <div class="col-xl-12">
-                            <button type="submit" class="boxed-btn3">Confirm</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </form>
-    <!-- form itself end -->
 
     <!-- JS here -->
     <script src="js/vendor/modernizr-3.5.0.min.js"></script>
@@ -387,6 +364,44 @@
 
     <script src="js/main.js"></script>
     <script>
+    $(".rec_updates").click(function(){
+        $(".weekly_update").fadeIn();
+    })
+    var data = [[890, ["Adabor", 5], ["Agargaon", 2], ["Armanitola", 1], ["Ashkona", 1], ["Azimpur", 11], ["Babu Bazar", 11], ["Badda", 8], ["Baily Road", 3], ["Banani", 8], ["Bangshal", 15], ["Banianagar", 1]], [630, ["Dhaka (District)", 28], ["Gazipur", 117], ["Kishoreganj", 33]], [92, ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15], ["Chattogram", 37], ["Cox’s bazar", 1], ["Cumilla", 15]]]
+    
+    $("td").click(function(){
+        if(!$(this).hasClass("selected")){
+            $(this).addClass("selected");
+            $("td").not(this).removeClass("selected");
+            $(".case_detail .local_detail").empty();
+            var index = $(this).attr("data-n");
+            var totalCase = data[index][0];
+            var divisioName = $(this).text();
+            $(".case_detail h3").html(divisioName);
+            $(".case_detail h4 span").html(totalCase);
+            for(var j = 1; j < data[index].length; j++){
+                $(".case_detail .local_detail").append("<p>"+data[index][j][0]+" - "+data[index][j][1]+"</p>");
+            }
+
+            // change the value of data-d before continuing
+            // this puts in random values
+            $(".case_detail .graph div").first().attr("data-d", Math.floor(Math.random()*10000))
+            $(".case_detail .graph div").last().attr("data-d", Math.floor(Math.random()*10000))
+
+            var week_max;
+            var week_data = [];
+            $(".case_detail .graph div").each(function() {
+                week_data.push($(this).attr( "data-d" ));
+            });
+            week_max = Math.max.apply(Math, week_data);
+            var k = 0;
+            $(".case_detail .graph div").each(function() {
+                $(this).css("height", week_data[k]/week_max*100 + "px");
+                k++;
+            });
+        }
+    });
+
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',
             icons: {
@@ -401,8 +416,10 @@
 
         });
     $(document).ready(function() {
-    $('.js-example-basic-multiple').select2();
-});
+        $('.js-example-basic-multiple').select2();
+
+    });
+    $("td").first().trigger("click");
     </script>
 </body>
 
