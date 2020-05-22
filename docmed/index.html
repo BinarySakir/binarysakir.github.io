@@ -473,6 +473,8 @@
         </div>
     </div>
     <!-- offers_area_end -->
+</div>
+
 
 <!-- live corona update starts -->
     <div class="welcome_docmed_area" style="padding-bottom: 0;">
@@ -480,19 +482,14 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6 text-center">
                     <div class="welcome_thumb">
-                        <!-- <div class="thumb_1"> -->
-                            <!-- <img src="img/about/1.png" alt=""> -->
-                        <!-- </div> -->
-                        <!-- <div class="thumb_2"> -->
-                            <img src="img/about/2.png" alt="">
-                        <!-- </div> -->
+                        <img src="img/about/liveupdate.png" class="img-fluid" alt="" style="height: 500px; width: auto;">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6">
                     <div class="welcome_docmed_info">
                         <!-- <h2>Welcome to Docmed</h2> -->
                         <h3>Live COVID-19 Update</h3>
-                        <p>Esteem spirit temper too say adieus who direct esteem. It esteems luckily or picture placing drawing. Apartments frequently or motionless on reasonable projecting expression.</p>
+                        <p>বাংলাদেশে কোরোনা কেসের সর্বশেষ নম্বর জানতে ভিসিট করুন। দেশের সকল বিভাগ ও জেলার প্রাত্যহিক আপডেট করোনার এই বৈশ্বিক মহামারীতে জেনে নিন বাংলাদেশে করোনা কেসের আপডেট। দেশে করোনা রোগে আক্রান্ত, সুস্থ এবং মৃত্যুর সংখ্যা জানতে ভিজিট করুন।</p>
                         <a href="#" class="boxed-btn3-white-2">Visit Page <i class="fa fa-arrow-right"></i> </a>
                     </div>
                 </div>
@@ -508,19 +505,14 @@
             <div class="row">
                 <div class="col-xl-6 col-lg-6">
                     <div class="welcome_docmed_info">
-                        <h3>Assessment Assistant</h3>
-                        <p>Esteem spirit temper too say adieus who direct esteem. It esteems luckily or picture placing drawing. Apartments frequently or motionless on reasonable projecting expression.</p>
+                        <h3>Corona Check</h3>
+                        <p>রোনার এই বৈশ্বিক মহামারীতে VITAD<sub>3</sub> নিয়ে এলো “করোনা চেক“। প্রশ্নের উত্তর দিয়ে সফটওয়্যার সাহায্যে জেনে নিন আপনার করোনা ভাইরাস এর কোনো লক্ষণ আছে কিনা। সফটওয়্যার এর সাহায্যে আপনার লক্ষণগুলো চিন্নিত করে পরামর্শ দেয়া হবে পরবর্তী পদক্ষেপের ।</p>
                         <a href="#" class="boxed-btn3-white-2">Visit Page <i class="fa fa-arrow-right"></i> </a>
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-6 text-center">
                     <div class="welcome_thumb">
-                        <!-- <div class="thumb_1"> -->
-                            <!-- <img src="img/about/1.png" alt=""> -->
-                        <!-- </div> -->
-                        <!-- <div class="thumb_2"> -->
-                            <img src="img/about/2.png" alt="">
-                        <!-- </div> -->
+                        <img src="img/banner/banner3.png" class="img-fluid" alt="">
                     </div>
                 </div>
             </div>
@@ -707,6 +699,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     <script>
         $('.modal').on('show.bs.modal', function (e) {
             $("#sticky-header").hide();
+        })
+        $(".modal-exit").on('click', function(){
+            $(this).parent().parent().parent().modal("hide");
         })
         $('.modal').on('hidden.bs.modal', function (e) {
             $("#sticky-header").show();
