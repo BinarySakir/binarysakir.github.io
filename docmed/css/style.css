@@ -1284,7 +1284,7 @@ h3 {
   right: 0;
   height: 50px;
   width: auto;
-  margin: 20px;
+  margin: 150px 20px;
 }
 
 @media (max-width: 767px) {
@@ -2317,7 +2317,7 @@ h3 {
   font-weight: 400;
   color: #fff;
   text-transform: capitalize;
-  margin-bottom: 40px;
+  margin-bottom: 0;
 }
 
 @media (max-width: 767px) {
@@ -2459,7 +2459,7 @@ h3 {
 
 /* line 141, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_footer.scss */
 .footer .socail_links {
-  margin-top: 47px;
+  margin-top: 10px;
 }
 
 @media (max-width: 767px) {
@@ -3100,7 +3100,7 @@ h3 {
 
 /* line 3, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_emergency_contact.scss */
 .Emergency_contact .single_emergency {
-  padding: 91px 0;
+  padding: 140px 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
