@@ -1300,7 +1300,9 @@ h3 {
     width: auto;
     margin: 20px;
   }
-
+  .slider_bg_1 .slider_text, .slider_bg_3 .slider_text{
+    text-align: center;
+  }
 }
 
 /* line 17, C:/Users/SPN Graphics/Desktop/CL September/210 Medical/HTML/scss/_slider.scss */
