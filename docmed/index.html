@@ -667,13 +667,13 @@
         });
         $('.modal').on('show.bs.modal', function (e) {
             $("#sticky-header").hide();
-        })
+        });
         $(".modal-exit").on('click', function(){
             $(this).parent().parent().parent().modal("hide");
         })
         $('.modal').on('hidden.bs.modal', function (e) {
             $("#sticky-header").show();
-        })
+        });
         $('#datepicker').datepicker({
             iconsLibrary: 'fontawesome',
             icons: {

@@ -116,15 +116,21 @@
         .latest-recom .search input{
             border-color: rgb(243, 101, 35);
         }
-        .form-control:focus{
+        .latest-recom .form-control:focus{
             box-shadow: none;
         }
-        .btn-outline-secondary, .btn-outline-secondary:hover, .btn-outline-secondary:active, .btn-outline-secondary:focus{
+        .latest-recom .btn-outline-secondary,
+        .latest-recom .btn-outline-secondary:hover,
+        .latest-recom .btn-outline-secondary:active,
+        .latest-recom .btn-outline-secondary:focus{
             background-color: rgb(243, 101, 35);
             color: #ffffff;
             border: 1px solid rgb(243, 101, 35);
         }
-        .btn-outline-secondary:not(:disabled):not(.disabled).active:focus, .btn-outline-secondary:not(:disabled):not(.disabled):active:focus, .show>.btn-outline-secondary.dropdown-toggle:focus, .btn-outline-secondary.focus, .btn-outline-secondary:focus{
+        .latest-recom .btn-outline-secondary:not(:disabled):not(.disabled).active:focus,
+        .latest-recom .btn-outline-secondary:not(:disabled):not(.disabled):active:focus,
+        .latest-recom .show>.btn-outline-secondary.dropdown-toggle:focus,
+        .latest-recom .btn-outline-secondary.focus, .btn-outline-secondary:focus{
             box-shadow: none;
             background-color: rgb(243, 101, 35);
         }
@@ -351,28 +357,19 @@
     <script src="js/jquery.form.js"></script>
     <script src="js/jquery.validate.min.js"></script>
     <script src="js/mail-script.js"></script>
-
+    
     <script src="js/main.js"></script>
+
     <script>
-
-        $('#datepicker').datepicker({
-            iconsLibrary: 'fontawesome',
-            icons: {
-                rightIcon: '<span class="fa fa-caret-down"></span>'
-            }
+        $('.modal').on('show.bs.modal', function (e) {
+            $("#sticky-header").hide();
         });
-        $('#datepicker2').datepicker({
-            iconsLibrary: 'fontawesome',
-            icons: {
-                rightIcon: '<span class="fa fa-caret-down"></span>'
-            }
-
+        $(".modal-exit").on('click', function(){
+            $(this).parent().parent().parent().modal("hide");
+        })
+        $('.modal').on('hidden.bs.modal', function (e) {
+            $("#sticky-header").show();
         });
-    $(document).ready(function() {
-        $('.js-example-basic-multiple').select2();
-
-    });
-    $("td").first().trigger("click");
     </script>
 </body>
 
