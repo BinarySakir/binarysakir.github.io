@@ -1,12 +1,12 @@
 /*=================================================================*/
 // Preloader
-window.addEventListener('DOMContentLoaded', function() {
-    $("body").queryLoader2({
-        backgroundColor: "#1c1c1e",
-        barColor: "#ffffff",
-        barHeight: 1
-    });
-});
+// window.addEventListener('DOMContentLoaded', function() {
+//     $("body").queryLoader2({
+//         backgroundColor: "#1c1c1e",
+//         barColor: "#ffffff",
+//         barHeight: 1
+//     });
+// });
 /*=================================================================*/
 
 /*=================================================================*/
