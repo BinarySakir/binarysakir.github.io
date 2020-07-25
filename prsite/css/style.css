@@ -4,6 +4,41 @@ body{
 	font-family: "Crimson Text", serif;
 	background-color: #ffeec8;
 }
+.vi0{visibility: hidden;}
+.menubar li{
+	list-style-type: none;
+	display: inline-block;
+	font-weight: 400;
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 18px;
+}
+.menubar li a{
+	position: relative;
+	color: #35375e;
+	text-decoration: none;
+	padding-bottom: 5px;
+}
+.menubar a::after {
+	content: "";
+	background: #35375e;
+	height: 2px;
+	position: absolute;
+	bottom: 0;
+	transition: .5s all 0.025s;
+}
+.menubar a::after {
+  left: 100%;
+  right: 0;
+}
+.menubar a:hover ~ a::after {
+  left: 0;
+  right: 100%;
+}
+.menubar a:hover::after {
+  left: 0;
+  right: 0;
+}
 .header{
 	margin-top: 40px;
 	color: #35375e;

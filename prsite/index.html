@@ -12,40 +12,58 @@
 </head>
 <body>
 	<style type="text/css">
-		.vi0{visibility: hidden;}
-		.menubar li{
+		.bio--info{
+			margin-top: 40px;
+		}
+		.bio--info .bio-toc li{
+			padding-left: 10px;
 			list-style-type: none;
-			display: inline-block;
-			font-weight: 400;
-			margin-left: 10px;
-			margin-right: 10px;
-			font-size: 18px;
+			cursor: pointer;
+			margin: 40px 0;
+			font-size: 16px;
+			font-weight: 700;
+			color: #676882;
+			text-transform: uppercase;
 		}
-		.menubar li a{
-			position: relative;
-			color: #35375e;
+		.bio--info .bio-toc li:first-child{
+			margin-top: 0;
+		}
+		.bio--info .bio-toc li a{
 			text-decoration: none;
-			padding-bottom: 5px;
+			color: #676882;
 		}
-		.menubar a::after {
-			content: "";
-			background: #35375e;
-			height: 2px;
+		.bio--info .bio-toc li.active{
+			border-left: 3px solid #35375e;
+		}
+		.bio--info .bio-toc li.active a{
+			color: #35375e;
+		}
+		.bio--info .section--list li{
+			list-style-type: decimal;
+			color: #1c1c1e;
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+		.bio--info .section--list{margin-top: 40px; margin-bottom: 40px;}
+		.next--section{
+			width: 15px;
+			height: 15px;
+			border-radius: 50%;
+			background-color: #bbb;
+			margin: 0 auto;
+		}
+		.sidebar-item {
 			position: absolute;
-			bottom: 0;
-			transition: .5s all 0.025s;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
 		}
-		.menubar a::after {
-		  left: 100%;
-		  right: 0;
-		}
-		.menubar a:hover ~ a::after {
-		  left: 0;
-		  right: 100%;
-		}
-		.menubar a:hover::after {
-		  left: 0;
-		  right: 0;
+		.make-me-sticky {
+			position: -webkit-sticky;
+			position: sticky;
+			top: 0;
+			padding-top: 80px;
 		}
 	</style>
 	<div class="menubar text-center">
@@ -67,10 +85,121 @@
 			</div>
 		</div>
 	</div>
+	<div class="bio--info">
+		<div class="row">
+			<div class="col-md-2 offset-md-2">
+				<div class="sidebar-item">
+					<div class="make-me-sticky">
+						<ul class="bio-toc">
+							<li class="active"><a href="#academic">Academic Background</a></li>
+							<li><a href="#experience">Experience</a></li>
+							<li><a href="#expertise">Expertise</a></li>
+							<li><a href="#service">Academic Service</a></li>
+							<li><a href="#awards">Awards</a></li>
+							<li><a href="#activities">Academic Activities</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<ul id="academic" class="section--list">
+					<li>PhD Candidate, Computer Science, University of Regina, Canada (Since May 2019)</li>
+					<li>MSc, Computer Science, University of Regina, Canada (November 30, 2018)</li>
+					<li>BSc, Computer Science and Engineering, Ahsanullah University of Science and Technology	Bangladesh (August 30, 2014)</li>
+				</ul>
+				<div class="next--section"></div>
+				<ul id="experience" class="section--list">
+					<li>Mitacs Accelerate Intern, Ericsson, Research and Development (Since 2020/04)</li>
+					<li>Research Assistant, University of Regina, Computer Science (Since 2017/09)</li>
+					<li>Lab Assistant, University of Regina, Computer Science (2019/05 to 2020/04)</li>
+					<li>Teaching Assistant, University of Regina, Computer Science (2018/01 to 2018/12) </li>
+					<li>Graduate Teaching Assistant, University of Windsor, Computer Science (2016/01 to 2016/12)</li>
+					<li>Lecturer, Primeasia University, Computer Science (2015/06 to 2015/12)</li>
+					<li>Lecturer, Royal University of Dhaka, Computer Science (2014/10 to 2015/05)</li>
+				</ul>
+				<div class="next--section"></div>
+				<ul id="expertise" class="section--list">
+					<li>Machine Learning</li>
+					<li>Data Science</li>
+					<li>Data Analytics</li>
+					<li>Fraud Detection</li>
+					<li>Incremental-Decremental Learning</li>
+				</ul>
+				<div class="next--section"></div>
+				<ul id="service" class="section--list">
+					<li>External Reviewer, 18th International Conference on Machine Learning and Applications (ICMLA), Florida, USA, 2019</li>
+					<li>External Reviewer, 31st International Conference on Tools with Artificial Intelligence (ICTAI), Oregon, USA, 2019</li>
+					<li>External Reviewer, 33rd International FLAIRS Conference, Florida, USA, , 2020</li>
+					<li>External Reviewer, 33rd Canadian Conferences on Artificial Intelligence, Ottawa, Canada, 2020</li>
+				</ul>
+				<div class="next--section"></div>
+				<ul id="awards" class="section--list">
+					<li>Mitacs Research Grant, 2020-2022.</li>
+					<li>UR Graduate Scholarship, January 2020.</li>
+					<li>UR Graduate Scholarship, September 2019.</li>
+					<li>UR Scholarship Award, May 2019.</li>
+					<li>Computer Science Travel Award, University of Regina December 2018.</li>
+					<li>NSERC Research Grant, 2018-2019.</li>
+					<li>Master's Award, University of Regina, May-December, 2018</li>
+					<li>Bursary Award, University of Regina, January 2018</li>
+				</ul>
+				<div class="next--section"></div>
+				<ul id="activities" class="section--list">
+					<li>Anowar Farzana, Ashraf Mohsena, Islam Ashraful, Ahmed Eshtiak, Chowdhury Atiqul Islam, “A Review on Diabetes Self-management Applications for Android Smartphones: Perspective of Developing Countries”, Proc. of 2nd International Congress on Human-Computer Interaction, Optimization and Robotic Applications, pp. 1-5, Turkey, IEEE, 2020.</li>
+					<li>Anowar Farzana, and Samira Sadaoui. "Chunk-Based Incremental Classification of Fraud Data." Proc. of 33rd International Flairs Conference, AAAI, pp. 176-180, AAAI, Miami, USA, 2020</li>
+					<li>Anowar Farzana and Sadaoui Samira. “Detection of Auction Fraud in Commercial Sites.” In Journal of Theoretical and Applied Electronic Commerce Research (JTAER), H Index=25, 15(1), pp. 81-98, Jan. 2020.</li>
+					<li>Anowar Farzana and Sadaoui Samira. "Multi-class Ensemble Learning of Imbalanced Bidding Fraud Data." Proc. of Canadian Conference on Artificial Intelligence, pp. 352- 358, Springer, 2019.</li>
+					<li>Anowar Farzana. “Supervised Classification of Imbalanced Bidding Fraud Data.” MSc Dissertation, Faculty of Graduate Studies and Research, University of Regina, Supervisor: Dr. Samira Sadaoui, Co-Supervisor: Dr. Malek Mouhoub, November 30, 2018</li>
+					<li>Anowar Farzana, Sadaoui Samira, and Mouhoub Malek. "Auction Fraud Classification Based on Clustering and Sampling Techniques." Proc. of 17th IEEE International Conference on Machine Learning and Applications (ICMLA), pp. 366-371, IEEE, 2018.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 	<script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
 	<script type="text/javascript" src="js/bootstrap.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
 	<script type="text/javascript">
+		$(window).bind('scroll', function() {
+		    var currentTop = $(window).scrollTop();
+		    var elems = $('.section--list');
+		    elems.each(function(index){
+		      var elemTop 	= $(this).offset().top - 120;
+		      var elemBottom 	= elemTop + $(this).height();
+		      if(currentTop >= elemTop && currentTop <= elemBottom){
+		        var id 		= $(this).attr('id');
+		        var navElem = $('a[href="#' + id+ '"]');
+		    navElem.parent().addClass('active').siblings().removeClass( 'active' );
+		      }
+		    })
+		});
+		$('a[href*="#"]')
+  .not('[href="#"]')
+  .not('[href="#0"]')
+  .click(function(event) {
+    if (
+      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+      && 
+      location.hostname == this.hostname
+    ) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+      if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+          scrollTop: target.offset().top
+        }, 1000, function() {
+          var $target = $(target);
+          $target.focus();
+          if ($target.is(":focus")) {
+            return false;
+          } else {
+            $target.attr('tabindex','-1');
+            $target.focus();
+          };
+        });
+      }
+    }
+  });
 		gsap.from(".header img", {opacity: 0, duration: 1, y:-30, ease: "power2.inOut"});
 		var tl = new TimelineMax();
 		tl.set(".vi0", {visibility: "visible"});
