@@ -21,7 +21,10 @@ html, body{
 
 /* Sidebar Menu */
 .topbar{
-	background-color: var(--emerald-1);
+background-color: #FF3CAC;
+background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
+	/*background-color: var(--emerald-1);*/
 	color: var(--white-1);
 	padding: 10px 0;
 	position: fixed;
@@ -72,6 +75,13 @@ html, body{
 }
 
 
+.research-profiles{
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+.research-profiles a img:first-child{
+	margin-right: 20px;
+}
 .research-container .research-item{
 	background-color: #ffffff;
 	color: var(--blue-1);
@@ -139,7 +149,14 @@ html, body{
 	padding: 15px 30px;
 	text-decoration: none;
 	color: var(--emerald-1);
-	transition: all 200ms;
+	-webkit-transition: all 500ms cubic-bezier(.6,.4,0,1);
+	-moz-transition: all 500ms cubic-bezier(.6,.4,0,1);
+     -o-transition: all 500ms cubic-bezier(.6,.4,0,1);
+	transition: all 500ms cubic-bezier(.6,.4,0,1);
+	-webkit-transition-timing-function: cubic-bezier(.6,.4,0,1);
+	-moz-transition-timing-function: cubic-bezier(.6,.4,0,1);
+	-o-transition-timing-function: cubic-bezier(.6,.4,0,1);
+	transition-timing-function: cubic-bezier(.6,.4,0,1);
 	border-radius: 10px;
 	background-color: var(--emerald-1);
 	color: var(--white-1);
