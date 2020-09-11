@@ -97,6 +97,8 @@ html, body{
 
 .pub-container h4{
 	margin-bottom: 20px;
+	font-weight: 300;
+	color: var(--blue-1);
 }
 .pub-container ol{
 	padding: 0;
