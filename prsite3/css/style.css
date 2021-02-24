@@ -6,7 +6,6 @@
 	--orange-3: #FA6B48;
 	--dark-1: #0F0417;
 	--maroon-1: #40142B;
-	/* --light-green: #707E82; */
 }
 
 html, body{
@@ -129,6 +128,7 @@ html, body{
 .research-profiles p a{
 	color: black;
 	text-decoration: none;
+	border-bottom: 1px solid black;
 }
 .research-items p{
 	font-size: 20px;
@@ -175,46 +175,22 @@ html, body{
 	font-size: 18px;
 }
 
-.cv-container{
-	padding: 60px 0;
-	padding-bottom: 80px;
-}
-.cv-button{
-	font-size: 26px;
-	font-weight: 300;
-	padding: 15px 30px;
-	text-decoration: none;
-	color: var(--emerald-1);
-	-webkit-transition: all 500ms cubic-bezier(.6,.4,0,1);
-	-moz-transition: all 500ms cubic-bezier(.6,.4,0,1);
-     -o-transition: all 500ms cubic-bezier(.6,.4,0,1);
-	transition: all 500ms cubic-bezier(.6,.4,0,1);
-	-webkit-transition-timing-function: cubic-bezier(.6,.4,0,1);
-	-moz-transition-timing-function: cubic-bezier(.6,.4,0,1);
-	-o-transition-timing-function: cubic-bezier(.6,.4,0,1);
-	transition-timing-function: cubic-bezier(.6,.4,0,1);
-	border-radius: 10px;
-	background-color: var(--emerald-1);
-	color: var(--white-1);
-}
-.cv-button:hover{
-	background-color: var(--emerald-1);
-	color: var(--white-1);
-	text-decoration: none;
-	padding: 20px 40px;
-}
-
 
 .contact-container{
-	color: white;
-	background-color: black;
+	margin-top: 60px;
+	color: var(--white-1);
+	background-color: var(--maroon-1);
 	padding: 60px 0;
 }
 .contact-container .section-title{
-	color: white;
+	color: var(--orange-3);
+}
+.contact-container svg{
+	height: 32px;
+	width: 32px;
 }
 .contact-container .section-title:after{
-	background: white;
+	background: var(--orange-3);;
 }
 .contact-container h4{
 	font-weight: 700;
