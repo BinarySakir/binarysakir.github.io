@@ -175,6 +175,10 @@ html, body{
 	font-size: 18px;
 }
 
+.edu-container .edu-item p{margin-bottom: 5px;}
+.edu-container .edu-item{
+	margin-bottom: 40px;
+}
 
 .contact-container{
 	margin-top: 60px;
