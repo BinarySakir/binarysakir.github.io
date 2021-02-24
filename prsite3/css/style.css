@@ -1,142 +1,178 @@
-:root {
-	--emerald-1: #52b788;
-	--white-1: #ede7e3;	
-	--blue-1: #14213d;
+:root{
+	--white-0: #ffffff;
+	--white-1: #FFF7E5;
+	--orange-1: #fbeadd;
+	--orange-2: rgb(255, 208, 168);
+	--orange-3: #FA6B48;
+	--dark-1: #0F0417;
+	--maroon-1: #40142B;
+	/* --light-green: #707E82; */
 }
+
 html, body{
 	margin: 0;
 	padding: 0;
-	background-color: var(--white-1);
+	background-color: var(--orange-1);
+	color: black;
 	font-family: 'Inter', 'Arial', sans-serif;
 }
-.vi0{visibility: hidden;}
-
 .sec-cnt{
-	padding-top: 60px;
-}
-.section-title{
-	margin-bottom: 40px;
-	font-weight: 700;
+	padding-top: 140px;
 }
 
-/* Sidebar Menu */
-.topbar{
-background-color: #FF3CAC;
-background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-
-	/*background-color: var(--emerald-1);*/
+/* Buttons */
+.btn-intro{
+	box-shadow: none;
+	background: transparent;
+	border: 1px solid var(--maroon-1);
+	border-radius: 25px;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	padding: 12px 30px;
+	font-size: 12px;
+	color: var(--maroon-1);
+	font-weight: 500;
+	transition: all 200ms ease-in-out;
+}
+.btn-intro:hover,
+.btn-intro:active{
+	box-shadow: none;
+	background-color: var(--maroon-1);
 	color: var(--white-1);
+}
+.btn-intro:focus{
+	box-shadow: none;
+}
+
+
+/* Navbar */
+.navbar{
 	padding: 10px 0;
-	position: fixed;
-	width: 100%;
-	z-index: 1;
+	background-color: rgba(255, 208, 168, 0.8);
+	backdrop-filter: blur(4px);
 }
-.topbar li{
-	list-style-type: none;
-	margin: 0 15px;
+.navbar-brand{
+	padding: 0;
+	margin: 0;
 }
-.topbar li a{
-	text-decoration: none;
-	color: var(--white-1);
+.navbar-nav li{
 	font-size: 14px;
+	margin: 0 12px;
 }
-.topbar li a:hover{
-	color: white;
+.navbar-nav li a{
+	text-decoration: none;
+	color: var(--maroon-1);
+	padding-bottom: 10px;
+}
+.navbar-nav li a:hover{
+	border-bottom: 4px solid var(--orange-2) 
+}
+.navbar-toggler{
+	padding: 0;
+	border: 0;
+}
+.navbar-toggler:focus{
+	box-shadow: none;
 }
 
-.intro-container{
-	padding: 0;
-	margin-top: 100px;
-	background-color: var(--emerald-1);
-	border-radius: 10px;
-	-webkit-box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.7);
-	-moz-box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.7);
-	box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.2);
-}
-.intro-container-l h1{
-	color: white;
+
+.section-title{
 	font-weight: 700;
-	margin-top: 15px;
-	font-size: 32px;
+	font-size: 46px;
+	letter-spacing: -3px;
+	color: var(--maroon-1);
+	position: relative;
+	margin-bottom: 40px;
 }
-.intro-container-l img{
-	border-radius: 50%;
+.section-title:after{
+	position: absolute;
+    content: '';
+    height: 10px;
+    bottom: -15px; 
+	left: 0;
+    right: 0;
+	width: 60px;;
+	background: var(--maroon-1);
+
 }
-.intro-container-r{
-	background-color: white;
-	color: var(--blue-1);
-	margin: 0;
-	border-top-right-radius: 10px;
-	border-bottom-right-radius: 10px;
-	border: 1px solid var(--emerald-1);
+
+.intro{
+	min-height: 100vh;
+	background: rgb(255,208,168);
+	background: linear-gradient(0deg, rgb(251, 235, 223) 0%,  rgba(255,208,168,1) 100%);
+	padding: 160px 0;
 }
-.intro-container-r p{
-	padding: 60px;
+.intro-title{
+	color: var(--maroon-1);
+	font-weight: 700;
+	font-size: 58px;
+	letter-spacing: -3px;
 }
+.intro p{
+	color: var(--maroon-1);
+	font-size: 15px;
+	margin-top: 25px;
+	line-height: 26px;
+	margin-bottom: 30px;
+}
+
 
 
 .research-profiles{
-	margin: 0 auto;
-	margin-bottom: 40px;
+	margin-top: 20px;
 }
-.research-profiles a img:first-child{
-	margin-right: 20px;
+.research-profiles p{
+	font-size: 18px;
+	font-weight: 700;
+	letter-spacing: -1px;
 }
-.research-container .research-item{
-	background-color: #ffffff;
-	color: var(--blue-1);
-	padding: 10px;
-	border-radius: 10px;
-	margin-bottom: 20px;
-	padding: 20px 25px;
-	transition: all 200ms ease-in-out;
-	cursor: pointer;
-	-webkit-box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.1);
-	-moz-box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.1);
-	box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.1);
+.research-profiles p a{
+	color: black;
+	text-decoration: none;
 }
-.research-container .research-item:hover{
-	background-color: var(--emerald-1);
-	color: #ffffff;
-}
-.research-container .research-item p{
-	padding: 0;
-	margin-bottom: 0;
+.research-items p{
+	font-size: 20px;
+	font-weight: 700;
+	letter-spacing: -1px;
 }
 
 
 .pub-container h4{
-	margin-bottom: 20px;
-	font-weight: 300;
-	color: var(--blue-1);
+	font-size: 20px;
+	font-weight: 700;
+	cursor: pointer;
+	letter-spacing: -1px;
+	margin-top: 40px;
 }
-.pub-container ol{
-	padding: 0;
+.pub-container h4:first-child{
+	margin-top: 0;
 }
 
-.teach-container .teach-item{
-	background-color: #ffffff;
-	color: var(--blue-1);
-	padding: 10px;
-	border-radius: 10px;
+.teach-container .col-md-6{
 	margin-bottom: 20px;
-	padding: 20px 25px;
-	-webkit-box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.1);
-	-moz-box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.1);
-	box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.1);
+}
+.teach-container .teach-item{
+	background: var(--orange-2);
+	padding: 10px;
+	margin-bottom: 20px;
+	padding: 25px 30px;
+	height: 100%;
+	border-radius: 15px;
+	/* transition: transform 150ms ease-in-out; */
+	cursor: pointer;
 }
 
 .teach-container .teach-item p{
 	font-weight: 400;
 	font-size: 20px;
 	margin-bottom: 0;
+	color: var(--dark-1);
 }
 
 .teach-container .teach-item .timespan{
 	margin-bottom: 5px;
 	font-weight: 700;
-	font-size: 16px;
-	color: var(--emerald-1);
+	font-size: 18px;
 }
 
 .cv-container{
@@ -170,17 +206,15 @@ background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
 
 
 .contact-container{
-	margin-bottom: 60px;
-	background-color: #ffffff;
+	color: white;
+	background-color: black;
 	padding: 60px 0;
-	border-radius: 10px;
-	-webkit-box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.1);
-	-moz-box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.1);
-	box-shadow: -2px 2px 17px 0px rgba(0,0,0,0.1);
 }
-.contact-container h1{
-	font-weight: 300;
-	font-size: 32px;
+.contact-container .section-title{
+	color: white;
+}
+.contact-container .section-title:after{
+	background: white;
 }
 .contact-container h4{
 	font-weight: 700;
@@ -193,3 +227,28 @@ background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%)
 	text-decoration: none;
 	color: var(--emerald-1);
 }
+
+
+
+
+@media (max-width: 576px) {
+	.sec-cnt{
+		padding: 0 50px;
+	}
+	.navbar{
+		padding: 20px 10px;
+	}
+	.intro{
+		margin-top: 0;
+	}
+	.intro .container{
+		padding: 0 50px;;
+	}
+	.navbar-nav li{
+		text-align: center;
+		margin: 5px 0;
+	}
+ }
+
+
+

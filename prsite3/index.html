@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Farzana Anowar</title>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;300;900&display=swap" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;400;700;300;900&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<style type="text/css">
 		
@@ -15,141 +17,76 @@
 </head>
 <body>
 	<!-- navigation bar -->
-	<div class="topbar">
-		<div class="topbar-section d-flex justify-content-center">
-			<li><a href="#research">Research</a></li>
-			<li><a href="#pub">Publication</a></li>
-			<li><a href="#teaching">Teaching</a></li>
-			<li><a href="#services">Academic Services</a></li>
-			<li><a href="#awards">Awards</a></li>
-			<li>|</li>
-			<li><a href="#">CV</a></li>
-			<li><a href="#contact">Contact</a></li>
-		</div>
-	</div>
 
+	<nav class="navbar fixed-top navbar-expand-lg navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-brand"></div>
+		  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<img style="height: 20px; width: 20px;" src="menu.svg">
+		  </button>
+		  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+			<ul class="navbar-nav">
+				<li><a href="#research">Research</a></li>
+				<li><a href="#pub">Publication</a></li>
+				<li><a href="#teaching">Teaching</a></li>
+				<li><a href="#services">Academic Services</a></li>
+				<li><a href="#awards">Awards</a></li>
+				<li><a href="#">CV</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		  </div>
+		</div>
+	  </nav>
 
 	<!-- home page intro -->
-	<!-- <div class="container">
-		<div class="row">
-			<div class="sec-cnt intro-container col-md-8 offset-md-2">
-				<div class="row no-gutters h-100">
-					<div class="col-md-4 my-auto text-center intro-container-l">
-						<img src="avatar.png" style="width: 150px;" class="img-responsive">
-						<h1>Farzana Anowar</h1>
-					</div>
-					<div class="col-md-8 my-auto intro-container-r">
-						<p>I am a Ph.D. candidate at the Department of Computer Science, University of Regina. Previously, I was dealing with imbalanced bidding data to classify the fraud bidders in e-auction at e-Bay. Now, my research focuses on virtual and cost-sensitive incremental and decremental learning to classify the fraud data for e-commerce sites in real-time. Thus, my research is mainly focused on Data Mining, Machine Learning, Neural Network, Knowledge Discovery, and Artificial Intelligence. Also, I'm working in a project partnering with one of the leading telecommunications companies to handle high dimensional network data.</p>
-					</div>
+
+	<div class="intro">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4 offset-md-1">
+					<img style="height: 400px;" src="profile.PNG" class="img-responsive" style="width: 100%;">
+				</div>
+				<div class="col-md-6">
+					<h1 class="intro-title">Farzana Anowar</h1>
+					<p>I am a Ph.D. candidate at the Department of Computer Science, University of Regina. Previously, I was dealing with imbalanced bidding data to classify the fraud bidders in e-auction at e-Bay. Now, my research focuses on virtual and cost-sensitive incremental and decremental learning to classify the fraud data for e-commerce sites in real-time. Thus, my research is mainly focused on Data Mining, Machine Learning, Neural Network, Knowledge Discovery, and Artificial Intelligence. Also, I'm working in a project partnering with one of the leading telecommunications companies to handle high dimensional network data.</p>
+					<button class="btn btn-intro">Learn More</button>
 				</div>
 			</div>
 		</div>
-	</div> -->
-	<style type="text/css">
-		body{
-		}
-		.intro{
-			height: 100vh;
-			background-color: var(--white-1);
-			color: var(--blue-1);
-			display: flex;
-  justify-content: center;
-  align-items: center; 
-		}
-		.intro h1{
-			font-weight: 700;
-			font-size: 70px;
-			margin-bottom: 40px;
-background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-		}
-		.intro p{
-			line-height: 30px;
-			font-size: 16px;
-			color: #1c1c1e;
-		}
-	</style>
-	<div class="intro">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-8 offset-md-2">
-				<!-- <img src="avatar.png" style="height: 150px;" class="img-responsive"> --><h1>Farzana Anowar</h1>
-			</div>
-			<div class="col-md-6 offset-md-3 text-justify">
-				<p>I am a Ph.D. candidate at the Department of Computer Science, University of Regina. Previously, I was dealing with imbalanced bidding data to classify the fraud bidders in e-auction at e-Bay. Now, my research focuses on virtual and cost-sensitive incremental and decremental learning to classify the fraud data for e-commerce sites in real-time. Thus, my research is mainly focused on Data Mining, Machine Learning, Neural Network, Knowledge Discovery, and Artificial Intelligence. Also, I'm working in a project partnering with one of the leading telecommunications companies to handle high dimensional network data.</p>
-			</div>
-		</div>
-	</div>
 	</div>
 
 	<!-- research -->
-	<div class="container" id="research">
+	<div class="container sec-cnt" id="research">
 		<div class="row">
-			<div class="sec-cnt research-container col-md-8 offset-md-2">
-				<div class="row no-gutters">
-					<h1 class="section-title">Research</h1>
+			<div class="col-md-4">
+				<h1 class="section-title">Research</h1>
+				<div class="research-profiles">
+					<p><a href="https://scholar.google.com/citations?user=rpstTDQAAAAJ">Google Scholar</a></p>
+					<p><a href="https://www.researchgate.net/profile/Farzana_Anowar">ResearchGate</a></p>
 				</div>
-				<div class="row">
-					<div class="research-profiles">
-						<a href="https://scholar.google.com/citations?user=rpstTDQAAAAJ"><img src="gscholar.png" style="width: 150px;"></a><a href="https://www.researchgate.net/profile/Farzana_Anowar"><img src="rgate.svg" style="width: 150px;"></a>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 my-auto">
-						<div class="research-item">
-							<p>Machine Learning</p>
-						</div>
-					</div>
-					<div class="col-md-6 my-auto">
-						<div class="research-item">
-							<p>Data Science</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 my-auto">
-						<div class="research-item">
-							<p>Data Analysis</p>
-						</div>
-					</div>
-					<div class="col-md-6 my-auto">
-						<div class="research-item">
-							<p>Fraud Detection</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 my-auto">
-						<div class="research-item">
-							<p>Incremental-Decremental Learning</p>
-						</div>
-					</div>
-					<div class="col-md-6 my-auto">
-						<div class="research-item">
-							<p>Dimensionality Reduction</p>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-md-6 my-auto">
-						<div class="research-item">
-							<p>Pattern Recognition</p>
-						</div>
-					</div>
-				</div>
-				
+			</div>
+			<div class="col-md-4 research-items">
+				<p>Machine Learning</p>
+				<p>Data Science</p>
+				<p>Data Analysis</p>
+			</div>
+			<div class="col-md-4 research-items">
+				<p>Incremental-Decremental Learning</p>
+				<p>Dimensionality Reduction</p>
+				<p>Pattern Recognition</p>
+				<p>Fraud Detection</p>
 			</div>
 		</div>
 	</div>
 
 
 	<!-- publication -->
-	<div class="container" id="pub">
+	<div class="container sec-cnt" id="pub">
 		<div class="row">
-			<div class="sec-cnt pub-container col-md-8 offset-md-2">
+			<div class="col-md-4">
 				<h1 class="section-title">Publication</h1>
+			</div>
+			<div class="pub-container col-md-8">
 					<h4>Peer Reviewd Journal</h4>
 					<ol>
 						<li><b>Farzana Anowar</b> and Sadaoui Samira. “Detection of Auction Fraud in Commercial Sites.” In Journal of Theoretical and Applied Electronic Commerce Research (JTAER), H Index=25, 15(1), pp. 81-98, Jan. 2019.</li>
@@ -176,20 +113,20 @@ background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100
 	</div>
 
 	<!-- Teaching -->
-	<div class="container" id="teaching">
+	<div class=" sec-cnt container" id="teaching">
 		<div class="row">
-			<div class="sec-cnt teach-container col-md-8 offset-md-2">
-				<div class="row no-gutters">
-					<h1 class="section-title">Teaching</h1>
-				</div>
+			<div class="col-md-4">
+				<h1 class="section-title">Teaching</h1>
+			</div>
+			<div class="teach-container col-md-8">
 				<div class="row">
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6">
 						<div class="teach-item">
 							<p class="timespan">2019/05 to 2020/04</p>
 							<p>Lab Instructor, University of Regina, Computer Science</p>
 						</div>
 					</div>
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6">
 						<div class="teach-item">
 							<p class="timespan">2018/01 to 2018/12</p>
 							<p>Teaching Assistant, University of Regina, Computer Science</p>
@@ -197,13 +134,13 @@ background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6">
 						<div class="teach-item">
 							<p class="timespan">2016/01 to 2016/12</p>
 							<p>Graduate Teaching Assistant, University of Windsor, Computer Science</p>
 						</div>
 					</div>
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6">
 						<div class="teach-item">
 							<p class="timespan">2015/06 to 2015/12</p>
 							<p>Lecturer, Primeasia University, Computer Science</p>
@@ -211,7 +148,7 @@ background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6">
 						<div class="teach-item">
 							<p class="timespan">2014/10 to 2015/05</p>
 							<p>Lecturer, Royal University of Dhaka, Computer Science</p>
@@ -223,31 +160,31 @@ background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100
 	</div>
 
 	<!-- Academic Services -->
-	<div class="container" id="services">
+	<div class="container sec-cnt" id="services">
 		<div class="row">
-			<div class="sec-cnt teach-container col-md-8 offset-md-2">
-				<div class="row no-gutters">
-					<h1 class="section-title">Academic Services</h1>
-				</div>
+			<div class="col-md-4">
+				<h1 class="section-title">Academic Services</h1>
+			</div>
+			<div class="teach-container col-md-8">
 				<div class="row">
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6">
 						<div class="teach-item">
 							<p>External Reviewer, 18th International Conference on Machine Learning and Applications (ICMLA), Florida, USA, 2019</p>
 						</div>
 					</div>
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6">
 						<div class="teach-item">
 							<p>External Reviewer, 31st International Conference on Tools with Artificial Intelligence (ICTAI), Oregon, USA, 2019</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6">
 						<div class="teach-item">
 							<p>External Reviewer, 33rd International FLAIRS Conference, Florida, USA, 2020</p>
 						</div>
 					</div>
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6">
 						<div class="teach-item">
 							<p>External Reviewer, 33rd Canadian Conferences on Artificial Intelligence, Ottawa, Canada, 2020</p>
 						</div>
@@ -258,55 +195,55 @@ background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100
 	</div>
 
 	<!-- Awards -->
-	<div class="container" id="awards">
+	<div class="container sec-cnt" id="awards">
 		<div class="row">
-			<div class="sec-cnt teach-container col-md-8 offset-md-2">
-				<div class="row no-gutters">
-					<h1 class="section-title">Awards</h1>
-				</div>
+			<div class="col-md-4">
+				<h1 class="section-title">Awards</h1>
+			</div>
+			<div class="teach-container col-md-8">
 				<div class="row">
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6 ">
 						<div class="teach-item">
 							<p>Mitacs Research Grant, 2020-2022</p>
 						</div>
 					</div>
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6 ">
 						<div class="teach-item">
 							<p>UR Graduate Scholarship, January 2020</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6 ">
 						<div class="teach-item">
 							<p>UR Graduate Scholarship, September 2019</p>
 						</div>
 					</div>
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6 ">
 						<div class="teach-item">
 							<p>UR Scholarship Award, May 2019</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6 ">
 						<div class="teach-item">
 							<p>Computer Science Travel Award, University of Regina December 2018</p>
 						</div>
 					</div>
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6 ">
 						<div class="teach-item">
 							<p>NSERC Research Grant, 2018-2019</p>
 						</div>
 					</div>
 				</div>
 				<div class="row">
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6 ">
 						<div class="teach-item">
 							<p>Master's Award, University of Regina, May-December, 2018</p>
 						</div>
 					</div>
-					<div class="col-md-6 my-auto">
+					<div class="col-md-6 ">
 						<div class="teach-item">
 							<p>Bursary Award, University of Regina, January 2018</p>
 						</div>
@@ -327,74 +264,35 @@ background: -webkit-linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100
 
 	<!-- contact -->
 <!-- Awards -->
-	<div class="container" id="contact">
-		<div class="row">
-			<div class="sec-cnt contact-container col-md-8 offset-md-2">
-				<h1 class="section-title text-center">Get in touch</h1>
-				<div class="row">
-				<div class="col-md-4 text-center">
-					<!-- <h4>Office</h4> -->
-					<img src="https://img.icons8.com/nolan/2x/marker.png" style="height: 70px;">
-					<p>CW 308.19</p>
+	<div class="contact-container" id="contact">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<h1 class="section-title">Contact</h1>
 				</div>
-				<div class="col-md-4 text-center">
-					<!-- <h4>Email</h4> -->
-					<img src="https://img.icons8.com/nolan/2x/email-open.png" style="height: 70px;">
-					<p style="margin-bottom: 0;"><a href="mailto:anowar@uregina.ca">anowar@uregina.ca</a><br><a href="mailto:farzana.anowar@ericsson.com">farzana.anowar@ericsson.com</a></p>
-				</div>
-				<div class="col-md-4 text-center">
-					<!-- <h4>Phone</h4> -->
-					<img src="https://img.icons8.com/nolan/2x/sms.png" style="height: 70px;">
-					<p><a href="tel:+16045555555">+1 604 555 5555</a></p>
-				</div>
+				<div class="col-md-8">
+					<div class="row">
+					<div class="col-md-4 text-center">
+						<!-- <h4>Office</h4> -->
+						<img src="https://img.icons8.com/nolan/2x/marker.png" style="height: 70px;">
+						<p>CW 308.19</p>
+					</div>
+					<div class="col-md-4 text-center">
+						<!-- <h4>Email</h4> -->
+						<img src="https://img.icons8.com/nolan/2x/email-open.png" style="height: 70px;">
+						<p style="margin-bottom: 0;"><a href="mailto:anowar@uregina.ca">anowar@uregina.ca</a><br><a href="mailto:farzana.anowar@ericsson.com">farzana.anowar@ericsson.com</a></p>
+					</div>
+					<div class="col-md-4 text-center">
+						<!-- <h4>Phone</h4> -->
+						<img src="https://img.icons8.com/nolan/2x/sms.png" style="height: 70px;">
+						<p><a href="tel:+16045555555">+1 604 555 5555</a></p>
+					</div>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-	<script type="text/javascript">
-		gsap.from(".intro h1", {x: -60, opacity:0, duration: 2, ease: "power4.inOut"});
-		gsap.from(".intro p", {y: -10, opacity:0, duration: 0.8, ease: "power3.out", delay: 1.5})
-		gsap.from(".topbar", {y: -10, opacity:0, duration: 0.8, ease: "power3.out", delay: 2.2})
-	</script>
-	<script type="text/javascript">
-	// Select all links with hashes
-	$('a[href*="#"]')
-	  // Remove links that don't actually link to anything
-	  .not('[href="#"]')
-	  .not('[href="#0"]')
-	  .click(function(event) {
-	    // On-page links
-	    if (
-	      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-	      && 
-	      location.hostname == this.hostname
-	    ) {
-	      // Figure out element to scroll to
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-	      // Does a scroll target exist?
-	      if (target.length) {
-	        // Only prevent default if animation is actually gonna happen
-	        event.preventDefault();
-	        $('html, body').animate({
-	          scrollTop: target.offset().top
-	        }, 1000, function() {
-	          // Callback after animation
-	          // Must change focus!
-	          var $target = $(target);
-	          $target.focus();
-	          if ($target.is(":focus")) { // Checking if the target was focused
-	            return false;
-	          } else {
-	            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-	            $target.focus(); // Set focus again
-	          };
-	        });
-	      }
-	    }
-  });
-	</script>
+	<!-- <script type="text/javascript" src="https://code.jquery.com/jquery-latest.min.js"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 </body>
 </html>
